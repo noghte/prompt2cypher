@@ -5,16 +5,14 @@ import datetime
 import subprocess
 from helpers.schema_utils import load_schema 
 from generate_cypher_baseline import generate_cypher_query as cypher_gen
-
 from dotenv import load_dotenv
-load_dotenv()
 
-NEO4J_DATABASE_NAME = os.getenv("NEO4J_DATABASE_NAME")
-KG_NAME = None
-if NEO4J_DATABASE_NAME == "neo4j":
-    KG_NAME = "ionchannels"
-elif NEO4J_DATABASE_NAME == "prokino-kg":
-    KG_NAME = "prokino"
+load_dotenv()
+KG_NAME = os.getenv("NEO4J_DATABASE_NAME")
+NEO4J_URI = os.getenv("NEO4J_URI")
+NEO4J_USERNAME = os.getenv("NEO4J_USERNAME")
+NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD")
+NEO4J_DATABASE_NAME = KG_NAME #Assuming the database name is the same as the KG name, otherwise change this line
 
 # LOCAL
 # MODEL_INFO = {"name":"mradermacher/CodeLlama-7b-CypherGen-GGUF", "is_local":True}
@@ -46,9 +44,6 @@ SCHEMA_COMMENTS_PATH = f"./kgmetadata/{KG_NAME}/schema_comments.json"
 INSTRUCTIONS_PATH = f"./kgmetadata/{KG_NAME}/instructions/instructions-[VERSION].txt"
 RESULTS_PATH = f"./results/{KG_NAME}/"
 
-NEO4J_URI = os.getenv("NEO4J_URI")
-NEO4J_USERNAME = os.getenv("NEO4J_USERNAME")
-NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD")
 
 schema, schema_comments = load_schema(SCHEMA_PATH, SCHEMA_COMMENTS_PATH)
 schema["nodes_description"] = schema_comments['nodes_description']

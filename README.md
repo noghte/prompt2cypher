@@ -13,7 +13,7 @@
 
 1. Only once, or when test queries have changed, run `baseline_cypher_execution.py` to create `./results/<kg>`
 
-2. The `app.py` script generates cypher for user queries.
+2. The `run_benchmarks.py` script generates cypher for user queries.
     - Baseline: `from generate_cypher_baseline import generate_cypher_query as cypher_gen`
     - P2C approach: `from generate_cypher_p2c import generate_cypher_query as cypher_gen`
   
