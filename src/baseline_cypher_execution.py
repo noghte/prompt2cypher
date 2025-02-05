@@ -11,6 +11,7 @@ NEO4J_USERNAME = os.getenv("NEO4J_USERNAME")
 NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD")
 NEO4J_DATABASE_NAME = KG_NAME #Assuming the database name is the same as the KG name, otherwise change this line
 
+
 input_file_path = f'./data/{KG_NAME}/test_queries.json'
 output_file_path = input_file_path.replace('.json', '-with_results.json')
 
