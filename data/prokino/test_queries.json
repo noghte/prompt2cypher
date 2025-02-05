@@ -1,0 +1,152 @@
+[
+    {
+        "title": "A1",
+        "query": "What is the functional domain associated with EGFR protein?",
+        "cypher": "MATCH (p:Protein {hasPrimaryName: 'EGFR'})-[:HASFUNCTIONALDOMAIN]->(fd:FunctionalDomain) RETURN DISTINCT fd.hasPrimaryName LIMIT 100"
+    },
+    {
+        "title": "A2",
+        "query": "What are the amino acid changes and mutation descriptions for EGFR protein?",
+        "cypher": "MATCH (p:Protein {hasPrimaryName: 'EGFR'})-[:HASMUTATION]->(m) RETURN DISTINCT m.hasMutationAA, m.hasMutationDescription LIMIT 100"
+    },
+    {
+        "title": "A3",
+        "query": "In which organisms is DCLK1 protein present?",
+        "cypher": "MATCH (p:Protein {hasPrimaryName: 'DCLK1'})-[:PRESENTIN]->(o:Organism) RETURN DISTINCT o.hasPrimaryName LIMIT 100"
+    },
+    {
+        "title": "A4",
+        "query": "What pathways does EGFR protein participate in?",
+        "cypher": "MATCH (p:Protein {hasPrimaryName: 'EGFR'})-[:PARTICIPATESIN]->(path:Pathway) RETURN DISTINCT path.hasPrimaryName LIMIT 100"
+    },
+    {
+        "title": "A5",
+        "query": "What reactions are produced by the 'RHOJ GTPase cycle' pathway?",
+        "cypher": "MATCH (p:Pathway {hasPrimaryName: 'RHOJ GTPase cycle'})-[:HASREACTION]->(r:Reaction) RETURN DISTINCT r.hasPrimaryName LIMIT 100"
+    },
+    {
+        "title": "A6",
+        "query": "Which families include the EGFR protein as a member?",
+        "cypher": "MATCH (p:Protein {hasPrimaryName: 'EGFR'})<-[:ENCODEDIN]-(f:Family) RETURN DISTINCT f.hasPrimaryName LIMIT 100"
+    },
+    {
+        "title": "A7",
+        "query": "What is the tissue specificity of the EGFR protein?",
+        "cypher": "MATCH (p:Protein {hasPrimaryName: 'EGFR'}) RETURN DISTINCT p.hasTissueSpecificity LIMIT 100"
+    },
+    {
+        "title": "A8",
+        "query": "What is the chromosomal position of the EGFR protein?",
+        "cypher": "MATCH (p:Protein {hasPrimaryName: 'EGFR'}) RETURN DISTINCT p.chromosomalPosition LIMIT 100"
+    },
+    {
+        "title": "A9",
+        "query": "Is HIPK1 protein a dark kinase?",
+        "cypher": "MATCH (p:Protein {hasPrimaryName: 'HIPK1'}) RETURN DISTINCT p.isDarkKinase LIMIT 100"
+    },
+    {
+        "title": "A10",
+        "query": "What is the EC number of the EGFR protein?",
+        "cypher": "MATCH (p:Protein {hasPrimaryName: 'EGFR'}) RETURN DISTINCT p.hasECNumber LIMIT 100"
+    },
+    {
+        "title": "B1",
+        "query": "What are the sequence motifs found in the amino acid sequence of the EGFR protein?",
+        "cypher": "MATCH (p:Protein {hasPrimaryName: 'EGFR'})-[:HASSEQUENCE]->(s:Sequence)-[:HASMOTIF]->(sm:SequenceMotif) RETURN DISTINCT sm.hasPrimaryName AS StructuralMotif LIMIT 100"
+    },
+    {
+        "title": "B2",
+        "query": "Which sample is associated with the gene expression of EGFR protein?",
+        "cypher": "MATCH (p:Protein {hasPrimaryName: 'EGFR'})<-[:HASPROTEIN]-(ge:GeneExpression)-[:INSAMPLE]->(s:Sample) RETURN DISTINCT s.hasSampleName LIMIT 100"
+    },
+    {
+        "title": "B3",
+        "query": "What are functional domains in the EGFR protein that belong to Human?",
+        "cypher": "MATCH (p:Protein {hasPrimaryName: 'EGFR'})-[:HASFUNCTIONALDOMAIN]->(fd:FunctionalDomain),(p)-[:PRESENTIN]->(o:Organism {hasPrimaryName: 'Human'}) RETURN DISTINCT fd.hasPrimaryName AS FunctionalDomain"
+    },
+    {
+        "title": "B4",
+        "query": "Which samples with primary site 'skin' have missense mutations in the protein 'DCLK3'? Please provide the sample names.",
+        "cypher": "MATCH (p:Protein {hasPrimaryName: 'DCLK3'})-[:HASMUTATION]->(m:Missense)-[:INSAMPLE]->(s:Sample {hasPrimarySite: 'skin'}) RETURN DISTINCT s.hasSampleName LIMIT 100"
+    },
+    {
+        "title": "B5",
+        "query": "List all organisms that are classified under the 'Plant' clade.",
+        "cypher": "MATCH (c:Clade {hasPrimaryName: 'Plant'})<-[:ISPARTOF]-(o:Organism) RETURN DISTINCT o.hasPrimaryName LIMIT 100"
+    },
+    {
+        "title": "B6",
+        "query": "Which proteins have functional domains named 'Pkinase'?",
+        "cypher": "MATCH (fd:FunctionalDomain {hasPrimaryName: 'Pkinase'})<-[:HASFUNCTIONALDOMAIN]-(p:Protein) RETURN DISTINCT p.hasPrimaryName LIMIT 100"
+    },
+    {
+        "title": "B7",
+        "query": "What sequences are associated with EGFR protein?",
+        "cypher": "MATCH (p:Protein {hasPrimaryName: 'EGFR'})-[:HASSEQUENCE]->(s:Sequence) RETURN DISTINCT s.hasPrimaryName LIMIT 100"
+    },
+    {
+        "title": "B8",
+        "query": "List the names of samples implicated in cancer type 'glioma_gliosarcoma'.",
+        "cypher": "MATCH (s:Sample)-[:IMPLICATEDIN]->(c:Cancer {hasPrimaryName: 'glioma_gliosarcoma'}) RETURN DISTINCT s.hasSampleName LIMIT 100"
+    },
+    {
+        "title": "B9",
+        "query": "Which proteins have mutations of type 'Missense'?",
+        "cypher": "MATCH (p:Protein)-[:HASMUTATION]->(m:Missense) RETURN DISTINCT p.hasPrimaryName LIMIT 100"
+    },
+    {
+        "title": "B10",
+        "query": "List the proteins with cellular location 'Cytoskeleton' that are found in the organism 'Mouse'.",
+        "cypher": "MATCH (p:Protein {hasCellularLocation: 'Cytoskeleton'})-[:PRESENTIN]->(o:Organism {hasPrimaryName: 'Mouse'}) RETURN DISTINCT p.hasPrimaryName LIMIT 100"
+    },
+    {
+        "title": "C1",
+        "query": "What ligands interact with the sequence motifs of the IRAK1 protein, and what is the type of interaction?",
+        "cypher": "MATCH (p:Protein {hasPrimaryName: 'IRAK1'})-[:HASSEQUENCE]->(s:Sequence)-[:HASMOTIF]->(sm:SequenceMotif)<-[:HASMOTIF]-(li:LigandInteraction)-[:HASLIGAND]->(l:Ligand) RETURN DISTINCT l.hasPrimaryName AS Ligand, li.hasType AS InteractionType LIMIT 100"
+    },
+    {
+        "title": "C2",
+        "query": "List the cancer types linked to mutations found in the DCLK3 protein.",
+        "cypher": "MATCH (p:Protein {hasPrimaryName: 'DCLK3'})-[:HASMUTATION]->(m)-[:INSAMPLE]->(s:Sample)-[:IMPLICATEDIN]->(c:Cancer) RETURN DISTINCT c.hasPrimaryName AS CancerType LIMIT 100"
+    },
+    {
+        "title": "C3",
+        "query": "Which cancer samples have under expression of AKT3 protein? Show sample name, regulation, and cancer type.",
+        "cypher": "MATCH (ge:GeneExpression)-[:HASPROTEIN]->(p:Protein {hasPrimaryName: 'AKT3'}) MATCH (ge)-[:INSAMPLE]->(s:Sample)-[:IMPLICATEDIN]->(c:Cancer) WHERE ge.hasRegulation IN ['under'] RETURN DISTINCT s.hasSampleName AS SampleName, ge.hasRegulation AS Regulation, c.hasPrimaryName AS CancerType LIMIT 100"
+    },
+    {
+        "title": "C4",
+        "query": "Which sequence motifs are hallmarks for the Human_EGFR family?",
+        "cypher": "MATCH (fam:Family {hasPrimaryName: 'Human_EGFR'})-[:ENCODEDIN]->(p:Protein)-[:HASSEQUENCE]->(seq:Sequence)-[:HASMOTIF]->(motif:SequenceMotif) RETURN DISTINCT motif.hasPrimaryName AS SequenceMotif LIMIT 100"
+    },
+    {
+        "title": "C5",
+        "query": "What are the histology subtypes of cancers linked to samples that have proteins with mutation ID 'COSM4166151'?",
+        "cypher": "MATCH (m:OtherMutation {hasMutationId: 'COSM4166151'}) MATCH (p:Protein)-[:HASMUTATION]->(m) MATCH (p)<-[:HASPROTEIN]-(ge:GeneExpression) MATCH (ge)-[:INSAMPLE]->(s:Sample)-[:IMPLICATEDIN]->(c:Cancer) RETURN DISTINCT c.hasHistologySubType AS HistologySubType LIMIT 100"
+    },
+    {
+        "title": "C6",
+        "query": "What is the name of the organism for proteins belonging to the Plant clade?",
+        "cypher": "MATCH (c:Clade {hasPrimaryName: 'Plant'})<-[:ISPARTOF]-(o:Organism) MATCH (p:Protein)-[:PRESENTIN]->(o) RETURN DISTINCT o.hasPrimaryName AS Organism LIMIT 100"
+    },
+    {
+        "title": "C7",
+        "query": "Find pathways that include proteins containing the functional domain 'PI3_PI4_kinase' and have mutations. Please provide the names of these pathways and descriptions of the mutations.",
+        "cypher": "MATCH (fd:FunctionalDomain {hasPrimaryName: 'PI3_PI4_kinase'})<-[:HASFUNCTIONALDOMAIN]-(p:Protein)-[:HASMUTATION]->(m),(p)-[:PARTICIPATESIN]->(pw:Pathway) RETURN DISTINCT pw.hasPrimaryName AS Pathway, m.hasMutationDescription AS MutationDescription LIMIT 100"
+    },
+    {
+        "title": "C8",
+        "query": "List the organisms that have proteins containing the functional domain 'Cadherin'.",
+        "cypher": "MATCH (fd:FunctionalDomain {hasPrimaryName: 'Cadherin'})<-[:HASFUNCTIONALDOMAIN]-(p:Protein)-[:PRESENTIN]->(o:Organism) RETURN DISTINCT o.hasPrimaryName LIMIT 100"
+    },
+    {
+        "title": "C9",
+        "query": "Which mutations of the protein 'BRAF' associated with samples implicated in 'carcinoma_blastoma'? Please provide the mutation IDs and mutation descriptions.",
+        "cypher": "MATCH (p:Protein {hasPrimaryName: 'BRAF'})-[:HASMUTATION]->(m)-[:INSAMPLE]->(s:Sample)-[:IMPLICATEDIN]->(c:Cancer {hasPrimaryName: 'carcinoma_blastoma'}) RETURN DISTINCT m.hasMutationId, m.hasMutationDescription LIMIT 100"
+    },
+    {
+        "title": "C10",
+        "query": "What are the reactions associated with pathways in which BRAF protein participates?",
+        "cypher": "MATCH (p:Protein {hasPrimaryName: 'BRAF'})-[:PARTICIPATESIN]->(path:Pathway)-[:HASREACTION]->(r:Reaction) RETURN DISTINCT r.hasPrimaryName LIMIT 100"
+    }
+]

@@ -1,0 +1,10 @@
+You are a helpful AI assistant that generates Cypher queries to answer user queries.
+Generate a Cypher query to answer the User query: ```{user_query}```
+Consider the following information:
+Given the relevant nodes ({relevant_nodes}) and all the relationships they are involved in: ```{relevant_relationships}```
+Information about the relevant nodes:
+{nodes_info_str}
+
+IMPORTANT Instructions: {instructions}
+The Cypher query should answer the user query which is: {user_query}
+Return only Cypher code with no explanations. Complete this task: the cypher query is: ...
