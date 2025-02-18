@@ -1,0 +1,158 @@
+{
+    "nodes_description": {
+        "GeneExpression": "Gene Expression - Represents the expression levels of genes across different samples.",
+        "DbXref": "DbXref - Links entities to external databases using unique identifiers.",
+        "SequenceMotif": "Sequence Motif - Represents recurring patterns in the protein sequence (primary structure) associated with specific functions.",
+        "Ligand": "Ligand - Represents molecules that can bind to proteins, potentially influencing their function.",
+        "LigandInteraction": "Ligand Interaction - Captures the interactions between ligands and proteins, detailing the type and specifics of each interaction.",
+        "Sequence": "Sequence - Represents the amino acid sequence of a protein, which can contain various sequence motifs.",
+        "Mutation": "Mutation - Represents genetic alterations in proteins, including both missense mutations and other types such as deletions or insertions.",
+        "Missense": "Missense Mutation - A subtype of Mutation representing point mutations that result in single amino acid changes in the protein.",
+        "OtherMutation": "Other Mutation - A subtype of Mutation representing mutations other than missense, such as deletions or insertions.",
+        "FunctionalDomain": "Functional Domain - Specific regions within a protein that contribute to its function.",
+        "Sample": "Sample - Biological samples from which data is derived, containing various attributes related to histology and status.",
+        "Protein": "Protein - Represents protein entities, connected to sequences, motifs, mutations, and other related entities.",
+        "StructuralMotif": "Structural Motif - Represents specific three-dimensional structural arrangements (secondary or tertiary structures) within a protein that contribute to its function.",
+        "Organism": "Organism - Represents the living entity (e.g., Human, Mouse) from which samples are derived.",
+        "Family": "Family - Groups proteins with similar functions or characteristics.",
+        "Cancer": "Cancer - Represents different types of cancers, categorized by histology subtypes.",
+        "Pathway": "Pathway - Biological pathways involving various proteins and biochemical reactions.",
+        "Reaction": "Reaction - Biochemical reactions within pathways.",
+        "Clade": "Clade - Taxonomic groups categorizing organisms based on shared characteristics."
+    },
+    "nodes_properties": {
+        "GeneExpression": {
+            "hasZscore": "The z-score of the gene expression",
+            "hasRegulation": "The Regulation. It includes values of 'normal', 'over', 'under', and null that shows whether the gene is over or under expressed",
+            "hasPMID": "PubMed IDs related to the gene expression"
+        },
+        "DbXref": {
+            "hasIdentifier": "The identifier of the resource"
+        },
+        "SequenceMotif": {
+            "hasPrimaryName": "The name of the sequence motif (preferred name). For example, 'beta3', 'subdomain II'",
+            "hasPKAStartLocation": "The PKA start location",
+            "hasPKAEndLocation": "The PKA end location",
+            "hasMotifSequence": "The motif sequence",
+            "hasEndLocation": "The end location",
+            "hasStartLocation": "The start location"
+        },
+        "Ligand": {
+            "hasPrimaryName": "The Ligand name (preferred name). For example, 'US9242969, 120'",
+            "isDrug": "Is this ligand a drug? (true or false or null)"
+        },
+        "LigandInteraction": {
+            "hasType": "The interaction type. For example, 'Apolar contact', 'Aromatic edge-to-face'",
+            "hasPDB": "The PDB ID. For example, '4usf'"
+        },
+        "Sequence": {
+            "hasPrimaryName": "The sequence name (preferred name). For example, 'Human_ANKRD3-Cosmic_Seq'",
+            "hasFASTAFormat": "The FASTA content of the sequence"
+        },
+        "Missense": {
+            "hasMutationId": "The Missense mutation ID",
+            "hasPKAResidue": "The PKA residue",
+            "hasWildTypeResidue": "The wild type residue of the Missense mutation",
+            "hasMutationDescription": "Description of the Missense mutation",
+            "hasMutantType": "The type of the mutant",
+            "hasEndLocation": "The end location of the Missense mutation",
+            "hasStartLocation": "The start location of the Missense mutation"
+        },
+        "Mutation": {
+            "hasMutationId": "The unique identifier of the mutation (e.g., 'COSM30788', 'COSM4166151').",
+            "hasMutationDescription": "A description of the mutation, including type and effects.",
+            "hasMutationAA": "The amino acid changes due to the mutation.",
+            "hasMutationZygosity": "The mutation zygosity (e.g., 'het', 'hom')."
+        },
+        "FunctionalDomain": {
+            "uri": "The URI of the functional domain",
+            "hasPrimaryName": "The name of the functional domain (preferred name)"
+        },
+        "Sample": {
+            "hasIdSample": "The unique identifier of the sample.",
+            "hasSampleName": "The name of the sample.",
+            "hasHistologySubType": "The histology subtype of the sample. (e.g., 'adenocarcinoma', 'ductal_carcinoma', 'squamous_cell_carcinoma')",
+            "hasPrimaryHistology": "The primary histological classification of the sample. (e.g., 'carcinoma', 'sarcoma')",
+            "hasPrimarySite": "The primary anatomical site of the sample (e.g., 'prostate', 'skin').",
+            "hasSomaticStatus": "The somatic status of the sample (e.g., 'Confirmed somatic variant', 'germline')."
+        },
+        "Protein": {
+            "hasUniprotSynonymName": "Alternative uniprot names of the protein",
+            "hasTissueSpecificity": "The tissue specificity of the protein",
+            "hasECNumber": "The EC number (classification) of the protein",
+            "hasOtherName": "Alternative names of the protein",
+            "hasFullName": "The full name of the protein. Example values: 'Serine/threonine-protein kinase TBK1', 'RAC-gamma serine/threonine-protein kinase'",
+            "hasCatalyticActivity": "The catalytic activity of the protein",
+            "hasPrimaryName": "The name of the protein (preferred name). Example values: TBCK, AKT3, KIT",
+            "chromosomalPosition": "The chromosomal position of the protein",
+            "hasUniprotPrimaryName": "The Uniprot name of the protein",
+            "uri": "The URI of the protein",
+            "hasCellularLocation": "The cellular location of the protein",
+            "comment": "A comment about the protein",
+            "isDarkKinase": "Whether the protein is a dark kinase or not (True or False)"
+        },
+        "Organism": {
+            "hasPrimaryName": "The name of organism (such as Human, Mouse, Punica_granatum)",
+            "hasScientificName": "The scientific name of the organism (such as Homo sapiens, Mus musculus)"
+        },
+        "Family": {
+            "NOTE": "Check the conversion",
+            "hasPrimaryName": "The name of the protein family. Example values: 'SlimeMold_DDB0218878E', 'Felis_catus_IRAK2_psk'",
+            "hasEndLocation": "The end location of the family",
+            "hasStartLocation": "The start location of the family"
+        },
+        "Cancer": {
+            "hasHistologySubType": "The histology subtype of the cancer",
+            "hasPrimaryName": "The cancer name (preferred name). Example values: 'glioma_gliosarcoma', 'carcinoma_large_cell_carcinoma'"
+        },
+        "Pathway": {
+            "hasPrimaryName": "The pathway name (preferred name). Example values: 'Signal Transduction', 'Metabolism of amino acids and derivatives'"
+        },
+        "Reaction": {
+            "hasPrimaryName": "The reaction name (preferred name)"
+        },
+        "OtherMutation": {
+            "hasMutationId": "The mutation Id with values such as 'COSM30788', 'COSM4166151'",
+            "hasMutationDescription": "Type of mutation (substitution, deletion, insertion, complex, fusion, unknown etc.)",
+            "hasMutationAA": "The amino acid changes due to a mutation.",
+            "hasMutationZygosity": "The mutation zygosity. The values are 'het' and 'hom'."
+        },
+        "Clade": {
+            "hasPrimaryName": "The clade name. The values are 'Unicelluar', 'invertebrate', 'vertebrate', 'Plant'"
+        }
+    },
+    "relationship_comments": {
+        "TYPE": "Indicates that the node is an instance of the specified class.",
+        "HASDBXREF": "Links an entity to its external database cross-reference (DbXref).",
+        "INSAMPLE": "Indicates that the entity is found in the specified sample.",
+        "HASMOTIF": "Indicates that a sequence contains the specified sequence motif.",
+        "CONTAINS": "Indicates that an entity contains the specified component or substructure.",
+        "HASPROTEIN": "Associates an entity with the specified protein.",
+        "HASMSAELEMENT": "Indicates that a family or subfamily has an element in a multiple sequence alignment.",
+        "IMPLICATEDIN": "Indicates that a `Sample` node is implicated in or associated with a specific `Cancer` node, with the relationship directed from `Sample` to `Cancer`.",
+        "PRESENTIN": "Indicates that a `Protein` is present in the specified `Organism`, with the relationship directed from `Protein` to `Organism`.",
+        "ENCODEDIN": "Indicates that a family includes the specified protein as a member.",
+        "HASSEQUENCE": "Indicates that a protein has the specified amino acid sequence. Directed from Protein to Sequence.",
+        "INSEQUENCE": "Indicates that a sequence is associated with the specified family or subfamily.",
+        "HASFUNCTIONALDOMAIN": "Indicates that a Protein has the specified functional domain, with the relationship directed from Protein to FunctionalDomain.",
+        "HASFUNCTIONALFEATURE": "Indicates that a sequence has the specified functional feature (e.g., modified residue, topological domain, signal peptide).",
+        "HASPROTEINSTRUCTURE": "Indicates that a sequence has the specified protein structure.",
+        "HASMUTATION": "Indicates that a `Protein` has the specified `Mutation`, with the relationship directed from `Protein` to `Mutation`.",
+        "HASLIGAND": "Associates an entity with the specified ligand.",
+        "OCCURSIN": "Indicates that a mutation occurs in the specified sequence.",
+        "LOCATEDIN": "Indicates that an entity is located within the specified motif or structural feature.",
+        "INCLUDES": "Indicates that an entity includes the specified components.",
+        "CONSUMES": "Indicates that a reaction consumes the specified entity.",
+        "PRODUCES": "Indicates that a reaction produces the specified entity.",
+        "PARTICIPATESIN": "Indicates that a protein participates in the specified pathway.",
+        "HASREACTION": "Indicates that a pathway includes the specified reaction.",
+        "HASPARENTPATHWAY": "Indicates that a pathway has the specified parent pathway.",
+        "PRECEDEDBYREACTION": "Indicates that a reaction is preceded by the specified reaction.",
+        "PRECEDEDBYPATHWAY": "Indicates that a pathway is preceded by the specified pathway.",
+        "ASSOCIATEDWITH": "Indicates that a protein is associated with the specified cancer.",
+        "ISPARTOF": "Indicates that an organism is part of the specified clade.",
+        "RANGE": "Indicates that the range of the object property is the specified class.",
+        "SUBCLASSOF": "Indicates that a class is a subclass of the specified class.",
+        "HASPSEUDOKINASE": "Indicates that the sequence is a pseudokinase within the specified family or subfamily."
+    }
+}

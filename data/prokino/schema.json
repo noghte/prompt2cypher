@@ -1,0 +1,2206 @@
+{
+    "labels": {
+        "GeneExpression": {
+            "hasZscore": "FLOAT",
+            "hasRegulation": "STRING",
+            "hasType": "STRING",
+            "uri": "STRING",
+            "label": "STRING",
+            "hasValue": "STRING",
+            "hasEvidence": "STRING",
+            "hasConfidence": "FLOAT",
+            "hasPMID": "STRING"
+        },
+        "DbXref": {
+            "label": "STRING",
+            "hasURI": "STRING",
+            "comment": "STRING",
+            "uri": "STRING",
+            "hasIdentifier": "STRING",
+            "hasNameSpace": "STRING",
+            "isPrimaryUniprotId": "BOOLEAN"
+        },
+        "SequenceMotif": {
+            "hasPrimaryName": "STRING",
+            "label": "STRING",
+            "hasPKAStartLocation": "INTEGER",
+            "hasPKAEndLocation": "INTEGER",
+            "comment": "STRING",
+            "uri": "STRING",
+            "hasMotifSequence": "STRING",
+            "hasEndLocation": "INTEGER",
+            "hasStartLocation": "INTEGER"
+        },
+        "Ligand": {
+            "label": "STRING",
+            "uri": "STRING",
+            "hasSMILES": "STRING",
+            "hasPrimaryName": "STRING",
+            "isDrug": "BOOLEAN"
+        },
+        "LigandInteraction": {
+            "uri": "STRING",
+            "label": "STRING",
+            "hasType": "STRING",
+            "hasPDB": "STRING",
+            "hasChain": "STRING"
+        },
+        "Sequence": {
+            "uri": "STRING",
+            "hasPrimaryName": "STRING",
+            "hasFASTAFormat": "STRING"
+        },
+        "Missense": {
+            "hasMutationId": "STRING",
+            "hasPKAResidue": "STRING",
+            "hasWildTypeResidue": "STRING",
+            "hasMutationDescription": "STRING",
+            "hasMutantType": "STRING",
+            "uri": "STRING",
+            "hasMutationZygosity": "STRING",
+            "hasMutationAA": "STRING",
+            "hasEndLocation": "INTEGER",
+            "hasStartLocation": "INTEGER",
+            "hasPKAStartLocation": "INTEGER",
+            "hasPKAEndLocation": "INTEGER"
+        },
+        "FunctionalDomain": {
+            "label": "STRING",
+            "uri": "STRING",
+            "comment": "STRING",
+            "hasPrimaryName": "STRING"
+        },
+        "Sample": {
+            "hasHistologySubType": "STRING",
+            "hasIdSample": "STRING",
+            "hasPrimaryHistology": "STRING",
+            "hasSampleName": "STRING",
+            "hasSiteSubType": "STRING",
+            "hasPrimarySite": "STRING",
+            "hasTumorOrigin": "STRING",
+            "hasSampleSource": "STRING",
+            "uri": "STRING",
+            "hasSomaticStatus": "STRING"
+        },
+        "Protein": {
+            "label": "STRING",
+            "hasUniprotSynonymName": "STRING",
+            "hasTissueSpecificity": "STRING",
+            "hasProteinName": "STRING",
+            "hasECNumber": "STRING",
+            "hasOtherName": "STRING",
+            "hasFullName": "STRING",
+            "hasCatalyticActivity": "STRING",
+            "hasPrimaryName": "STRING",
+            "chromosomalPosition": "STRING",
+            "hasUniprotPrimaryName": "STRING",
+            "uri": "STRING",
+            "hasCellularLocation": "STRING",
+            "comment": "STRING",
+            "isDarkKinase": "BOOLEAN",
+            "hasCoFactor": "STRING"
+        },
+        "StructuralMotif": {
+            "label": "STRING",
+            "hasPrimaryName": "STRING",
+            "uri": "STRING",
+            "comment": "STRING"
+        },
+        "Organism": {
+            "uri": "STRING",
+            "hasPrimaryName": "STRING",
+            "hasScientificName": "STRING",
+            "hasCommonName": "STRING"
+        },
+        "AlignedResidue": {
+            "label": "INTEGER",
+            "hasNativeResidue": "STRING",
+            "hasNativePosition": "INTEGER",
+            "hasAlignedPosition": "INTEGER",
+            "uri": "STRING"
+        },
+        "Deletion": {
+            "hasAlignedPosition": "INTEGER",
+            "uri": "STRING"
+        },
+        "Class": {
+            "label": "STRING",
+            "uri": "STRING",
+            "comment": "STRING"
+        },
+        "CodingSilent": {
+            "hasWildTypeResidue": "STRING",
+            "hasMutantType": "STRING",
+            "hasMutationId": "STRING",
+            "hasPKAResidue": "STRING",
+            "hasMutationDescription": "STRING",
+            "uri": "STRING",
+            "hasMutationZygosity": "STRING",
+            "hasMutationAA": "STRING",
+            "hasEndLocation": "INTEGER",
+            "hasStartLocation": "INTEGER",
+            "hasPKAStartLocation": "INTEGER",
+            "hasPKAEndLocation": "INTEGER"
+        },
+        "Family": {
+            "hasPrimaryName": "STRING"
+        },
+        "GenomeEncodedEntity": {
+            "hasPrimaryName": "STRING",
+            "uri": "STRING"
+        },
+        "Cancer": {
+            "label": "STRING",
+            "hasHistologySubType": "STRING",
+            "hasPrimaryName": "STRING",
+            "uri": "STRING",
+            "comment": "STRING",
+            "hasPrimaryHistology": "STRING"
+        },
+        "Subfamily": {
+            "hasPrimaryName": "STRING"
+        },
+        "SmallMoleculeEntity": {
+            "uri": "STRING",
+            "hasPrimaryName": "STRING"
+        },
+        "Nonsense": {
+            "hasMutationId": "STRING",
+            "hasPKAResidue": "STRING",
+            "hasWildTypeResidue": "STRING",
+            "hasMutationDescription": "STRING",
+            "hasMutantType": "STRING",
+            "uri": "STRING",
+            "hasMutationZygosity": "STRING",
+            "hasMutationAA": "STRING",
+            "hasEndLocation": "INTEGER",
+            "hasStartLocation": "INTEGER",
+            "hasPKAStartLocation": "INTEGER",
+            "hasPKAEndLocation": "INTEGER"
+        },
+        "Structure": {
+            "comment": "STRING",
+            "hasPrimaryName": "STRING",
+            "uri": "STRING",
+            "label": "STRING",
+            "hasPKDomain": "BOOLEAN"
+        },
+        "Complex": {
+            "hasPrimaryName": "STRING",
+            "uri": "STRING"
+        },
+        "Pathway": {
+            "uri": "STRING",
+            "hasPrimaryName": "STRING"
+        },
+        "Insertion": {
+            "hasLength": "INTEGER",
+            "hasNativeResidue": "STRING",
+            "hasNativePosition": "INTEGER",
+            "hasAlignedPosition": "INTEGER",
+            "uri": "STRING"
+        },
+        "EntitySet": {
+            "hasPrimaryName": "STRING",
+            "uri": "STRING"
+        },
+        "DeletionFrameshift": {
+            "hasMutationId": "STRING",
+            "hasWildTypeResidue": "STRING",
+            "hasMutationDescription": "STRING",
+            "hasPKAResidue": "STRING",
+            "hasMutationAA": "STRING",
+            "hasMutantType": "STRING",
+            "hasPKAStartLocation": "INTEGER",
+            "hasPKAEndLocation": "INTEGER",
+            "uri": "STRING",
+            "hasMutationZygosity": "STRING"
+        },
+        "null": {
+            "uri": "STRING"
+        },
+        "InsertionInframe": {
+            "hasMutationId": "STRING",
+            "hasWildTypeResidue": "STRING",
+            "hasMutationAA": "STRING",
+            "hasPKAResidue": "STRING",
+            "hasMutationDescription": "STRING",
+            "hasMutantType": "STRING",
+            "hasPKAStartLocation": "INTEGER",
+            "hasPKAEndLocation": "INTEGER",
+            "uri": "STRING",
+            "hasMutationZygosity": "STRING"
+        },
+        "LigandActivity": {
+            "label": "STRING",
+            "hasType": "STRING",
+            "uri": "STRING",
+            "hasValue": "FLOAT",
+            "hasPMID": "STRING",
+            "hasMOA": "STRING"
+        },
+        "TopologicalDomain": {
+            "comment": "STRING",
+            "uri": "STRING",
+            "label": "STRING",
+            "hasTopologicalDomainType": "STRING",
+            "hasEndLocation": "INTEGER",
+            "hasStartLocation": "INTEGER"
+        },
+        "Reaction": {
+            "hasPrimaryName": "STRING",
+            "uri": "STRING"
+        },
+        "ModifiedResidue": {
+            "label": "STRING",
+            "hasEndPosition": "INTEGER",
+            "hasStartPosition": "INTEGER",
+            "hasModificationType": "STRING",
+            "hasAlignedEndPosition": "INTEGER",
+            "comment": "STRING",
+            "uri": "STRING",
+            "hasAlignedStartPosition": "STRING",
+            "hasModifiedResidueType": "STRING",
+            "isModifiedBy": "STRING"
+        },
+        "OtherMutation": {
+            "hasWildTypeResidue": "STRING",
+            "hasMutantType": "STRING",
+            "hasPKAResidue": "STRING",
+            "hasMutationId": "STRING",
+            "hasMutationDescription": "STRING",
+            "hasMutationAA": "STRING",
+            "hasPKAStartLocation": "INTEGER",
+            "hasPKAEndLocation": "INTEGER",
+            "uri": "STRING",
+            "hasMutationZygosity": "STRING"
+        },
+        "DeletionInframe": {
+            "hasMutationId": "STRING",
+            "hasMutationDescription": "STRING",
+            "hasWildTypeResidue": "STRING",
+            "hasMutationAA": "STRING",
+            "hasMutantType": "STRING",
+            "hasPKAResidue": "STRING",
+            "hasPKAStartLocation": "INTEGER",
+            "hasPKAEndLocation": "INTEGER",
+            "uri": "STRING",
+            "hasMutationZygosity": "STRING"
+        },
+        "InsertionFrameshift": {
+            "hasMutationId": "STRING",
+            "hasMutationDescription": "STRING",
+            "hasWildTypeResidue": "STRING",
+            "hasMutationAA": "STRING",
+            "hasMutantType": "STRING",
+            "hasPKAResidue": "STRING",
+            "hasPKAStartLocation": "INTEGER",
+            "hasPKAEndLocation": "INTEGER",
+            "uri": "STRING",
+            "hasMutationZygosity": "STRING"
+        },
+        "SignalPeptide": {
+            "label": "STRING",
+            "hasEndLocation": "INTEGER",
+            "hasStartLocation": "INTEGER",
+            "comment": "STRING",
+            "uri": "STRING"
+        },
+        "LigandResponse": {
+            "label": "STRING",
+            "uri": "STRING",
+            "hasIC50": "STRING"
+        },
+        "ObjectProperty": {
+            "uri": "STRING",
+            "label": "STRING"
+        },
+        "ComplexDeletionInframe": {
+            "hasPKAResidue": "STRING",
+            "hasMutationId": "STRING",
+            "hasWildTypeResidue": "STRING",
+            "hasMutationAA": "STRING",
+            "hasMutantType": "STRING",
+            "hasMutationDescription": "STRING",
+            "hasPKAStartLocation": "INTEGER",
+            "hasPKAEndLocation": "INTEGER",
+            "uri": "STRING",
+            "hasMutationZygosity": "STRING"
+        },
+        "ComplexFrameshift": {
+            "hasMutationId": "STRING",
+            "hasMutationDescription": "STRING",
+            "hasWildTypeResidue": "STRING",
+            "hasMutationAA": "STRING",
+            "hasMutantType": "STRING",
+            "hasPKAResidue": "STRING",
+            "hasPKAStartLocation": "INTEGER",
+            "hasPKAEndLocation": "INTEGER",
+            "uri": "STRING",
+            "hasMutationZygosity": "STRING"
+        },
+        "CompoundSubstitution": {
+            "hasPKAResidue": "STRING",
+            "hasMutationId": "STRING",
+            "hasWildTypeResidue": "STRING",
+            "hasMutationDescription": "STRING",
+            "hasMutationAA": "STRING",
+            "hasMutantType": "STRING",
+            "hasPKAStartLocation": "INTEGER",
+            "hasPKAEndLocation": "INTEGER",
+            "uri": "STRING",
+            "hasMutationZygosity": "STRING"
+        },
+        "DatatypeProperty": {
+            "uri": "STRING",
+            "label": "STRING"
+        },
+        "Clade": {
+            "uri": "STRING",
+            "hasPrimaryName": "STRING"
+        },
+        "ComplexInsertionInframe": {
+            "hasMutationId": "STRING",
+            "hasWildTypeResidue": "STRING",
+            "hasMutationAA": "STRING",
+            "hasMutantType": "STRING",
+            "hasPKAResidue": "STRING",
+            "hasMutationDescription": "STRING",
+            "hasPKAStartLocation": "INTEGER",
+            "hasPKAEndLocation": "INTEGER",
+            "uri": "STRING",
+            "hasMutationZygosity": "STRING"
+        },
+        "AnnotationProperty": {
+            "uri": "STRING"
+        },
+        "Ontology": {
+            "label": "STRING",
+            "date": "STRING",
+            "kinbaseVersion": "STRING",
+            "uri": "STRING",
+            "msaVersion": "STRING",
+            "comment": "STRING",
+            "reactomeVersion": "STRING",
+            "cosmicVersion": "STRING",
+            "ligandVersion": "STRING",
+            "dataSources": "STRING",
+            "uniprotVersion": "STRING",
+            "subdomainsVersion": "STRING",
+            "pseudokinaseVersion": "STRING",
+            "versionInfo": "STRING"
+        }
+    },
+    "relationships": [
+        {
+            "name": "TYPE",
+            "from": "CodingSilent",
+            "to": "Class"
+        },
+        {
+            "name": "TYPE",
+            "from": "Class",
+            "to": "CodingSilent"
+        },
+        {
+            "name": "HASDBXREF",
+            "from": "Sample",
+            "to": "DbXref"
+        },
+        {
+            "name": "HASDBXREF",
+            "from": "DbXref",
+            "to": "Sample"
+        },
+        {
+            "name": "INSAMPLE",
+            "from": "GeneExpression",
+            "to": "Sample"
+        },
+        {
+            "name": "INSAMPLE",
+            "from": "Sample",
+            "to": "GeneExpression"
+        },
+        {
+            "name": "HASMOTIF",
+            "from": "Sequence",
+            "to": "SequenceMotif"
+        },
+        {
+            "name": "HASMOTIF",
+            "from": "SequenceMotif",
+            "to": "Sequence"
+        },
+        {
+            "name": "CONTAINS",
+            "from": "StructuralMotif",
+            "to": "SequenceMotif"
+        },
+        {
+            "name": "CONTAINS",
+            "from": "SequenceMotif",
+            "to": "StructuralMotif"
+        },
+        {
+            "name": "HASPROTEIN",
+            "from": "GeneExpression",
+            "to": "Protein"
+        },
+        {
+            "name": "HASPROTEIN",
+            "from": "Protein",
+            "to": "GeneExpression"
+        },
+        {
+            "name": "TYPE",
+            "from": "SequenceMotif",
+            "to": "Class"
+        },
+        {
+            "name": "TYPE",
+            "from": "Class",
+            "to": "SequenceMotif"
+        },
+        {
+            "name": "HASMSAELEMENT",
+            "from": "Family",
+            "to": "AlignedResidue"
+        },
+        {
+            "name": "HASMSAELEMENT",
+            "from": "AlignedResidue",
+            "to": "Family"
+        },
+        {
+            "name": "TYPE",
+            "from": "AlignedResidue",
+            "to": "Class"
+        },
+        {
+            "name": "TYPE",
+            "from": "Class",
+            "to": "AlignedResidue"
+        },
+        {
+            "name": "IMPLICATEDIN",
+            "from": "Sample",
+            "to": "Cancer"
+        },
+        {
+            "name": "IMPLICATEDIN",
+            "from": "Cancer",
+            "to": "Sample"
+        },
+        {
+            "name": "TYPE",
+            "from": "Sample",
+            "to": "Class"
+        },
+        {
+            "name": "TYPE",
+            "from": "Class",
+            "to": "Sample"
+        },
+        {
+            "name": "HASDBXREF",
+            "from": "DeletionFrameshift",
+            "to": "DbXref"
+        },
+        {
+            "name": "HASDBXREF",
+            "from": "DbXref",
+            "to": "DeletionFrameshift"
+        },
+        {
+            "name": "INSAMPLE",
+            "from": "Nonsense",
+            "to": "Sample"
+        },
+        {
+            "name": "INSAMPLE",
+            "from": "Sample",
+            "to": "Nonsense"
+        },
+        {
+            "name": "TYPE",
+            "from": "GeneExpression",
+            "to": "Class"
+        },
+        {
+            "name": "TYPE",
+            "from": "Class",
+            "to": "GeneExpression"
+        },
+        {
+            "name": "TYPE",
+            "from": "Sequence",
+            "to": "Class"
+        },
+        {
+            "name": "TYPE",
+            "from": "Class",
+            "to": "Sequence"
+        },
+        {
+            "name": "TYPE",
+            "from": "DbXref",
+            "to": "Class"
+        },
+        {
+            "name": "TYPE",
+            "from": "Class",
+            "to": "DbXref"
+        },
+        {
+            "name": "INSAMPLE",
+            "from": "Missense",
+            "to": "Sample"
+        },
+        {
+            "name": "INSAMPLE",
+            "from": "Sample",
+            "to": "Missense"
+        },
+        {
+            "name": "TYPE",
+            "from": "Missense",
+            "to": "Class"
+        },
+        {
+            "name": "TYPE",
+            "from": "Class",
+            "to": "Missense"
+        },
+        {
+            "name": "HASLIGAND",
+            "from": "LigandInteraction",
+            "to": "Ligand"
+        },
+        {
+            "name": "HASLIGAND",
+            "from": "Ligand",
+            "to": "LigandInteraction"
+        },
+        {
+            "name": "HASDBXREF",
+            "from": "Missense",
+            "to": "DbXref"
+        },
+        {
+            "name": "HASDBXREF",
+            "from": "DbXref",
+            "to": "Missense"
+        },
+        {
+            "name": "PRESENTIN",
+            "from": "Protein",
+            "to": "Organism"
+        },
+        {
+            "name": "PRESENTIN",
+            "from": "Organism",
+            "to": "Protein"
+        },
+        {
+            "name": "HASLIGAND",
+            "from": "LigandActivity",
+            "to": "Ligand"
+        },
+        {
+            "name": "HASLIGAND",
+            "from": "Ligand",
+            "to": "LigandActivity"
+        },
+        {
+            "name": "HASDBXREF",
+            "from": "CodingSilent",
+            "to": "DbXref"
+        },
+        {
+            "name": "HASDBXREF",
+            "from": "DbXref",
+            "to": "CodingSilent"
+        },
+        {
+            "name": "PRESENTIN",
+            "from": "Family",
+            "to": "Organism"
+        },
+        {
+            "name": "PRESENTIN",
+            "from": "Organism",
+            "to": "Family"
+        },
+        {
+            "name": "TYPE",
+            "from": "StructuralMotif",
+            "to": "Class"
+        },
+        {
+            "name": "TYPE",
+            "from": "Class",
+            "to": "StructuralMotif"
+        },
+        {
+            "name": "INSAMPLE",
+            "from": "CodingSilent",
+            "to": "Sample"
+        },
+        {
+            "name": "INSAMPLE",
+            "from": "Sample",
+            "to": "CodingSilent"
+        },
+        {
+            "name": "TYPE",
+            "from": "Deletion",
+            "to": "Class"
+        },
+        {
+            "name": "TYPE",
+            "from": "Class",
+            "to": "Deletion"
+        },
+        {
+            "name": "ENCODEDIN",
+            "from": "Family",
+            "to": "Protein"
+        },
+        {
+            "name": "ENCODEDIN",
+            "from": "Protein",
+            "to": "Family"
+        },
+        {
+            "name": "HASDBXREF",
+            "from": "GenomeEncodedEntity",
+            "to": "DbXref"
+        },
+        {
+            "name": "HASDBXREF",
+            "from": "DbXref",
+            "to": "GenomeEncodedEntity"
+        },
+        {
+            "name": "TYPE",
+            "from": "Ligand",
+            "to": "Class"
+        },
+        {
+            "name": "TYPE",
+            "from": "Class",
+            "to": "Ligand"
+        },
+        {
+            "name": "HASSEQUENCE",
+            "from": "Protein",
+            "to": "Sequence"
+        },
+        {
+            "name": "HASSEQUENCE",
+            "from": "Sequence",
+            "to": "Protein"
+        },
+        {
+            "name": "TYPE",
+            "from": "LigandInteraction",
+            "to": "Class"
+        },
+        {
+            "name": "TYPE",
+            "from": "Class",
+            "to": "LigandInteraction"
+        },
+        {
+            "name": "HASDBXREF",
+            "from": "EntitySet",
+            "to": "DbXref"
+        },
+        {
+            "name": "HASDBXREF",
+            "from": "DbXref",
+            "to": "EntitySet"
+        },
+        {
+            "name": "PRODUCES",
+            "from": "Reaction",
+            "to": "SmallMoleculeEntity"
+        },
+        {
+            "name": "PRODUCES",
+            "from": "SmallMoleculeEntity",
+            "to": "Reaction"
+        },
+        {
+            "name": "HASMOTIF",
+            "from": "Sequence",
+            "to": "StructuralMotif"
+        },
+        {
+            "name": "HASMOTIF",
+            "from": "StructuralMotif",
+            "to": "Sequence"
+        },
+        {
+            "name": "TYPE",
+            "from": "LigandActivity",
+            "to": "Class"
+        },
+        {
+            "name": "TYPE",
+            "from": "Class",
+            "to": "LigandActivity"
+        },
+        {
+            "name": "INSEQUENCE",
+            "from": "Family",
+            "to": "Sequence"
+        },
+        {
+            "name": "INSEQUENCE",
+            "from": "Sequence",
+            "to": "Family"
+        },
+        {
+            "name": "HASPROTEIN",
+            "from": "LigandActivity",
+            "to": "Protein"
+        },
+        {
+            "name": "HASPROTEIN",
+            "from": "Protein",
+            "to": "LigandActivity"
+        },
+        {
+            "name": "HASMOTIF",
+            "from": "LigandInteraction",
+            "to": "SequenceMotif"
+        },
+        {
+            "name": "HASMOTIF",
+            "from": "SequenceMotif",
+            "to": "LigandInteraction"
+        },
+        {
+            "name": "TYPE",
+            "from": "Nonsense",
+            "to": "Class"
+        },
+        {
+            "name": "TYPE",
+            "from": "Class",
+            "to": "Nonsense"
+        },
+        {
+            "name": "HASDBXREF",
+            "from": "Structure",
+            "to": "DbXref"
+        },
+        {
+            "name": "HASDBXREF",
+            "from": "DbXref",
+            "to": "Structure"
+        },
+        {
+            "name": "TYPE",
+            "from": "Family",
+            "to": "Class"
+        },
+        {
+            "name": "TYPE",
+            "from": "Class",
+            "to": "Family"
+        },
+        {
+            "name": "HASDBXREF",
+            "from": "Protein",
+            "to": "DbXref"
+        },
+        {
+            "name": "HASDBXREF",
+            "from": "DbXref",
+            "to": "Protein"
+        },
+        {
+            "name": "LOCATEDIN",
+            "from": "CodingSilent",
+            "to": "SequenceMotif"
+        },
+        {
+            "name": "LOCATEDIN",
+            "from": "SequenceMotif",
+            "to": "CodingSilent"
+        },
+        {
+            "name": "LOCATEDIN",
+            "from": "Missense",
+            "to": "SequenceMotif"
+        },
+        {
+            "name": "LOCATEDIN",
+            "from": "SequenceMotif",
+            "to": "Missense"
+        },
+        {
+            "name": "INCLUDES",
+            "from": "Complex",
+            "to": "EntitySet"
+        },
+        {
+            "name": "INCLUDES",
+            "from": "EntitySet",
+            "to": "Complex"
+        },
+        {
+            "name": "TYPE",
+            "from": "GenomeEncodedEntity",
+            "to": "Class"
+        },
+        {
+            "name": "TYPE",
+            "from": "Class",
+            "to": "GenomeEncodedEntity"
+        },
+        {
+            "name": "OCCURSIN",
+            "from": "Missense",
+            "to": "Sequence"
+        },
+        {
+            "name": "OCCURSIN",
+            "from": "Sequence",
+            "to": "Missense"
+        },
+        {
+            "name": "TYPE",
+            "from": "Complex",
+            "to": "Class"
+        },
+        {
+            "name": "TYPE",
+            "from": "Class",
+            "to": "Complex"
+        },
+        {
+            "name": "TYPE",
+            "from": "Structure",
+            "to": "Class"
+        },
+        {
+            "name": "TYPE",
+            "from": "Class",
+            "to": "Structure"
+        },
+        {
+            "name": "INCLUDES",
+            "from": "Complex",
+            "to": "Complex"
+        },
+        {
+            "name": "HASDBXREF",
+            "from": "Nonsense",
+            "to": "DbXref"
+        },
+        {
+            "name": "HASDBXREF",
+            "from": "DbXref",
+            "to": "Nonsense"
+        },
+        {
+            "name": "TYPE",
+            "from": "Protein",
+            "to": "Class"
+        },
+        {
+            "name": "TYPE",
+            "from": "Class",
+            "to": "Protein"
+        },
+        {
+            "name": "HASDBXREF",
+            "from": "Ligand",
+            "to": "DbXref"
+        },
+        {
+            "name": "HASDBXREF",
+            "from": "DbXref",
+            "to": "Ligand"
+        },
+        {
+            "name": "PRESENTIN",
+            "from": "Subfamily",
+            "to": "Organism"
+        },
+        {
+            "name": "PRESENTIN",
+            "from": "Organism",
+            "to": "Subfamily"
+        },
+        {
+            "name": "TYPE",
+            "from": "DeletionFrameshift",
+            "to": "Class"
+        },
+        {
+            "name": "TYPE",
+            "from": "Class",
+            "to": "DeletionFrameshift"
+        },
+        {
+            "name": "INCLUDES",
+            "from": "Complex",
+            "to": "Protein"
+        },
+        {
+            "name": "INCLUDES",
+            "from": "Protein",
+            "to": "Complex"
+        },
+        {
+            "name": "TYPE",
+            "from": "EntitySet",
+            "to": "Class"
+        },
+        {
+            "name": "TYPE",
+            "from": "Class",
+            "to": "EntitySet"
+        },
+        {
+            "name": "TYPE",
+            "from": "TopologicalDomain",
+            "to": "Class"
+        },
+        {
+            "name": "TYPE",
+            "from": "Class",
+            "to": "TopologicalDomain"
+        },
+        {
+            "name": "HASPSEUDOKINASE",
+            "from": "Sequence",
+            "to": "Family"
+        },
+        {
+            "name": "HASPSEUDOKINASE",
+            "from": "Family",
+            "to": "Sequence"
+        },
+        {
+            "name": "INCLUDES",
+            "from": "EntitySet",
+            "to": "GenomeEncodedEntity"
+        },
+        {
+            "name": "INCLUDES",
+            "from": "GenomeEncodedEntity",
+            "to": "EntitySet"
+        },
+        {
+            "name": "HASDBXREF",
+            "from": "Complex",
+            "to": "DbXref"
+        },
+        {
+            "name": "HASDBXREF",
+            "from": "DbXref",
+            "to": "Complex"
+        },
+        {
+            "name": "INCLUDES",
+            "from": "GenomeEncodedEntity",
+            "to": "Protein"
+        },
+        {
+            "name": "INCLUDES",
+            "from": "Protein",
+            "to": "GenomeEncodedEntity"
+        },
+        {
+            "name": "INCLUDES",
+            "from": "Complex",
+            "to": "GenomeEncodedEntity"
+        },
+        {
+            "name": "INCLUDES",
+            "from": "GenomeEncodedEntity",
+            "to": "Complex"
+        },
+        {
+            "name": "HASMSAELEMENT",
+            "from": "Family",
+            "to": "Deletion"
+        },
+        {
+            "name": "HASMSAELEMENT",
+            "from": "Deletion",
+            "to": "Family"
+        },
+        {
+            "name": "TYPE",
+            "from": "Insertion",
+            "to": "Class"
+        },
+        {
+            "name": "TYPE",
+            "from": "Class",
+            "to": "Insertion"
+        },
+        {
+            "name": "HASDBXREF",
+            "from": "Sequence",
+            "to": "DbXref"
+        },
+        {
+            "name": "HASDBXREF",
+            "from": "DbXref",
+            "to": "Sequence"
+        },
+        {
+            "name": "HASFUNCTIONALDOMAIN",
+            "from": "Protein",
+            "to": "FunctionalDomain"
+        },
+        {
+            "name": "HASFUNCTIONALDOMAIN",
+            "from": "FunctionalDomain",
+            "to": "Protein"
+        },
+        {
+            "name": "CONTAINS",
+            "from": "StructuralMotif",
+            "to": "Sequence"
+        },
+        {
+            "name": "CONTAINS",
+            "from": "Sequence",
+            "to": "StructuralMotif"
+        },
+        {
+            "name": "TYPE",
+            "from": "InsertionInframe",
+            "to": "Class"
+        },
+        {
+            "name": "TYPE",
+            "from": "Class",
+            "to": "InsertionInframe"
+        },
+        {
+            "name": "LOCATEDIN",
+            "from": "Nonsense",
+            "to": "SequenceMotif"
+        },
+        {
+            "name": "LOCATEDIN",
+            "from": "SequenceMotif",
+            "to": "Nonsense"
+        },
+        {
+            "name": "HASDBXREF",
+            "from": "SmallMoleculeEntity",
+            "to": "DbXref"
+        },
+        {
+            "name": "HASDBXREF",
+            "from": "DbXref",
+            "to": "SmallMoleculeEntity"
+        },
+        {
+            "name": "ENCODEDIN",
+            "from": "Subfamily",
+            "to": "Protein"
+        },
+        {
+            "name": "ENCODEDIN",
+            "from": "Protein",
+            "to": "Subfamily"
+        },
+        {
+            "name": "OCCURSIN",
+            "from": "Nonsense",
+            "to": "Sequence"
+        },
+        {
+            "name": "OCCURSIN",
+            "from": "Sequence",
+            "to": "Nonsense"
+        },
+        {
+            "name": "INSEQUENCE",
+            "from": "Subfamily",
+            "to": "Sequence"
+        },
+        {
+            "name": "INSEQUENCE",
+            "from": "Sequence",
+            "to": "Subfamily"
+        },
+        {
+            "name": "OCCURSIN",
+            "from": "CodingSilent",
+            "to": "Sequence"
+        },
+        {
+            "name": "OCCURSIN",
+            "from": "Sequence",
+            "to": "CodingSilent"
+        },
+        {
+            "name": "PRODUCES",
+            "from": "Reaction",
+            "to": "Complex"
+        },
+        {
+            "name": "PRODUCES",
+            "from": "Complex",
+            "to": "Reaction"
+        },
+        {
+            "name": "PARTICIPATESIN",
+            "from": "Protein",
+            "to": "Pathway"
+        },
+        {
+            "name": "PARTICIPATESIN",
+            "from": "Pathway",
+            "to": "Protein"
+        },
+        {
+            "name": "CONSUMES",
+            "from": "Reaction",
+            "to": "Complex"
+        },
+        {
+            "name": "CONSUMES",
+            "from": "Complex",
+            "to": "Reaction"
+        },
+        {
+            "name": "HASDBXREF",
+            "from": "InsertionInframe",
+            "to": "DbXref"
+        },
+        {
+            "name": "HASDBXREF",
+            "from": "DbXref",
+            "to": "InsertionInframe"
+        },
+        {
+            "name": "INSAMPLE",
+            "from": "InsertionInframe",
+            "to": "Sample"
+        },
+        {
+            "name": "INSAMPLE",
+            "from": "Sample",
+            "to": "InsertionInframe"
+        },
+        {
+            "name": "TYPE",
+            "from": "Reaction",
+            "to": "Class"
+        },
+        {
+            "name": "TYPE",
+            "from": "Class",
+            "to": "Reaction"
+        },
+        {
+            "name": "TYPE",
+            "from": "Subfamily",
+            "to": "Class"
+        },
+        {
+            "name": "TYPE",
+            "from": "Class",
+            "to": "Subfamily"
+        },
+        {
+            "name": "HASDBXREF",
+            "from": "Reaction",
+            "to": "DbXref"
+        },
+        {
+            "name": "HASDBXREF",
+            "from": "DbXref",
+            "to": "Reaction"
+        },
+        {
+            "name": "INSAMPLE",
+            "from": "DeletionFrameshift",
+            "to": "Sample"
+        },
+        {
+            "name": "INSAMPLE",
+            "from": "Sample",
+            "to": "DeletionFrameshift"
+        },
+        {
+            "name": "HASPSEUDOKINASE",
+            "from": "Sequence",
+            "to": "Subfamily"
+        },
+        {
+            "name": "HASPSEUDOKINASE",
+            "from": "Subfamily",
+            "to": "Sequence"
+        },
+        {
+            "name": "TYPE",
+            "from": "SmallMoleculeEntity",
+            "to": "Class"
+        },
+        {
+            "name": "TYPE",
+            "from": "Class",
+            "to": "SmallMoleculeEntity"
+        },
+        {
+            "name": "SUBCLASSOF",
+            "from": "Class",
+            "to": "Class"
+        },
+        {
+            "name": "CONSUMES",
+            "from": "Reaction",
+            "to": "SmallMoleculeEntity"
+        },
+        {
+            "name": "CONSUMES",
+            "from": "SmallMoleculeEntity",
+            "to": "Reaction"
+        },
+        {
+            "name": "TYPE",
+            "from": "Organism",
+            "to": "Class"
+        },
+        {
+            "name": "TYPE",
+            "from": "Class",
+            "to": "Organism"
+        },
+        {
+            "name": "LOCATEDIN",
+            "from": "Missense",
+            "to": "StructuralMotif"
+        },
+        {
+            "name": "LOCATEDIN",
+            "from": "StructuralMotif",
+            "to": "Missense"
+        },
+        {
+            "name": "HASREACTION",
+            "from": "Pathway",
+            "to": "Reaction"
+        },
+        {
+            "name": "HASREACTION",
+            "from": "Reaction",
+            "to": "Pathway"
+        },
+        {
+            "name": "TYPE",
+            "from": "Pathway",
+            "to": "Class"
+        },
+        {
+            "name": "TYPE",
+            "from": "Class",
+            "to": "Pathway"
+        },
+        {
+            "name": "HASPROTEINSTRUCTURE",
+            "from": "Sequence",
+            "to": "Structure"
+        },
+        {
+            "name": "HASPROTEINSTRUCTURE",
+            "from": "Structure",
+            "to": "Sequence"
+        },
+        {
+            "name": "HASPARENTPATHWAY",
+            "from": "Pathway",
+            "to": "Pathway"
+        },
+        {
+            "name": "CONSUMES",
+            "from": "Reaction",
+            "to": "GenomeEncodedEntity"
+        },
+        {
+            "name": "CONSUMES",
+            "from": "GenomeEncodedEntity",
+            "to": "Reaction"
+        },
+        {
+            "name": "TYPE",
+            "from": "ModifiedResidue",
+            "to": "Class"
+        },
+        {
+            "name": "TYPE",
+            "from": "Class",
+            "to": "ModifiedResidue"
+        },
+        {
+            "name": "HASDBXREF",
+            "from": "ModifiedResidue",
+            "to": "DbXref"
+        },
+        {
+            "name": "HASDBXREF",
+            "from": "DbXref",
+            "to": "ModifiedResidue"
+        },
+        {
+            "name": "LOCATEDIN",
+            "from": "CodingSilent",
+            "to": "StructuralMotif"
+        },
+        {
+            "name": "LOCATEDIN",
+            "from": "StructuralMotif",
+            "to": "CodingSilent"
+        },
+        {
+            "name": "HASDBXREF",
+            "from": "Pathway",
+            "to": "DbXref"
+        },
+        {
+            "name": "HASDBXREF",
+            "from": "DbXref",
+            "to": "Pathway"
+        },
+        {
+            "name": "PRECEDEDBYREACTION",
+            "from": "Reaction",
+            "to": "Reaction"
+        },
+        {
+            "name": "TYPE",
+            "from": "Cancer",
+            "to": "Class"
+        },
+        {
+            "name": "TYPE",
+            "from": "Class",
+            "to": "Cancer"
+        },
+        {
+            "name": "HASMSAELEMENT",
+            "from": "Subfamily",
+            "to": "AlignedResidue"
+        },
+        {
+            "name": "HASMSAELEMENT",
+            "from": "AlignedResidue",
+            "to": "Subfamily"
+        },
+        {
+            "name": "PRODUCES",
+            "from": "Reaction",
+            "to": "GenomeEncodedEntity"
+        },
+        {
+            "name": "PRODUCES",
+            "from": "GenomeEncodedEntity",
+            "to": "Reaction"
+        },
+        {
+            "name": "INSAMPLE",
+            "from": "OtherMutation",
+            "to": "Sample"
+        },
+        {
+            "name": "INSAMPLE",
+            "from": "Sample",
+            "to": "OtherMutation"
+        },
+        {
+            "name": "HASMSAELEMENT",
+            "from": "Subfamily",
+            "to": "Deletion"
+        },
+        {
+            "name": "HASMSAELEMENT",
+            "from": "Deletion",
+            "to": "Subfamily"
+        },
+        {
+            "name": "HASDBXREF",
+            "from": "OtherMutation",
+            "to": "DbXref"
+        },
+        {
+            "name": "HASDBXREF",
+            "from": "DbXref",
+            "to": "OtherMutation"
+        },
+        {
+            "name": "TYPE",
+            "from": "OtherMutation",
+            "to": "Class"
+        },
+        {
+            "name": "TYPE",
+            "from": "Class",
+            "to": "OtherMutation"
+        },
+        {
+            "name": "LOCATEDIN",
+            "from": "DeletionFrameshift",
+            "to": "SequenceMotif"
+        },
+        {
+            "name": "LOCATEDIN",
+            "from": "SequenceMotif",
+            "to": "DeletionFrameshift"
+        },
+        {
+            "name": "OCCURSIN",
+            "from": "DeletionFrameshift",
+            "to": "Sequence"
+        },
+        {
+            "name": "OCCURSIN",
+            "from": "Sequence",
+            "to": "DeletionFrameshift"
+        },
+        {
+            "name": "CONSUMES",
+            "from": "Reaction",
+            "to": "EntitySet"
+        },
+        {
+            "name": "CONSUMES",
+            "from": "EntitySet",
+            "to": "Reaction"
+        },
+        {
+            "name": "PRODUCES",
+            "from": "Reaction",
+            "to": "EntitySet"
+        },
+        {
+            "name": "PRODUCES",
+            "from": "EntitySet",
+            "to": "Reaction"
+        },
+        {
+            "name": "HASDBXREF",
+            "from": "FunctionalDomain",
+            "to": "DbXref"
+        },
+        {
+            "name": "HASDBXREF",
+            "from": "DbXref",
+            "to": "FunctionalDomain"
+        },
+        {
+            "name": "TYPE",
+            "from": "FunctionalDomain",
+            "to": "Class"
+        },
+        {
+            "name": "TYPE",
+            "from": "Class",
+            "to": "FunctionalDomain"
+        },
+        {
+            "name": "INCLUDES",
+            "from": "Complex",
+            "to": "SmallMoleculeEntity"
+        },
+        {
+            "name": "INCLUDES",
+            "from": "SmallMoleculeEntity",
+            "to": "Complex"
+        },
+        {
+            "name": "TYPE",
+            "from": "DeletionInframe",
+            "to": "Class"
+        },
+        {
+            "name": "TYPE",
+            "from": "Class",
+            "to": "DeletionInframe"
+        },
+        {
+            "name": "INSAMPLE",
+            "from": "InsertionFrameshift",
+            "to": "Sample"
+        },
+        {
+            "name": "INSAMPLE",
+            "from": "Sample",
+            "to": "InsertionFrameshift"
+        },
+        {
+            "name": "HASDBXREF",
+            "from": "DeletionInframe",
+            "to": "DbXref"
+        },
+        {
+            "name": "HASDBXREF",
+            "from": "DbXref",
+            "to": "DeletionInframe"
+        },
+        {
+            "name": "HASDBXREF",
+            "from": "InsertionFrameshift",
+            "to": "DbXref"
+        },
+        {
+            "name": "HASDBXREF",
+            "from": "DbXref",
+            "to": "InsertionFrameshift"
+        },
+        {
+            "name": "TYPE",
+            "from": "InsertionFrameshift",
+            "to": "Class"
+        },
+        {
+            "name": "TYPE",
+            "from": "Class",
+            "to": "InsertionFrameshift"
+        },
+        {
+            "name": "LOCATEDIN",
+            "from": "DeletionInframe",
+            "to": "SequenceMotif"
+        },
+        {
+            "name": "LOCATEDIN",
+            "from": "SequenceMotif",
+            "to": "DeletionInframe"
+        },
+        {
+            "name": "OCCURSIN",
+            "from": "DeletionInframe",
+            "to": "Sequence"
+        },
+        {
+            "name": "OCCURSIN",
+            "from": "Sequence",
+            "to": "DeletionInframe"
+        },
+        {
+            "name": "INSAMPLE",
+            "from": "DeletionInframe",
+            "to": "Sample"
+        },
+        {
+            "name": "INSAMPLE",
+            "from": "Sample",
+            "to": "DeletionInframe"
+        },
+        {
+            "name": "HASFUNCTIONALFEATURE",
+            "from": "Sequence",
+            "to": "ModifiedResidue"
+        },
+        {
+            "name": "HASFUNCTIONALFEATURE",
+            "from": "ModifiedResidue",
+            "to": "Sequence"
+        },
+        {
+            "name": "TYPE",
+            "from": "SignalPeptide",
+            "to": "Class"
+        },
+        {
+            "name": "TYPE",
+            "from": "Class",
+            "to": "SignalPeptide"
+        },
+        {
+            "name": "HASFUNCTIONALFEATURE",
+            "from": "Sequence",
+            "to": "TopologicalDomain"
+        },
+        {
+            "name": "HASFUNCTIONALFEATURE",
+            "from": "TopologicalDomain",
+            "to": "Sequence"
+        },
+        {
+            "name": "HASFUNCTIONALFEATURE",
+            "from": "Sequence",
+            "to": "SignalPeptide"
+        },
+        {
+            "name": "HASFUNCTIONALFEATURE",
+            "from": "SignalPeptide",
+            "to": "Sequence"
+        },
+        {
+            "name": "LOCATEDIN",
+            "from": "InsertionFrameshift",
+            "to": "SequenceMotif"
+        },
+        {
+            "name": "LOCATEDIN",
+            "from": "SequenceMotif",
+            "to": "InsertionFrameshift"
+        },
+        {
+            "name": "LOCATEDIN",
+            "from": "OtherMutation",
+            "to": "SequenceMotif"
+        },
+        {
+            "name": "LOCATEDIN",
+            "from": "SequenceMotif",
+            "to": "OtherMutation"
+        },
+        {
+            "name": "OCCURSIN",
+            "from": "InsertionFrameshift",
+            "to": "Sequence"
+        },
+        {
+            "name": "OCCURSIN",
+            "from": "Sequence",
+            "to": "InsertionFrameshift"
+        },
+        {
+            "name": "OCCURSIN",
+            "from": "OtherMutation",
+            "to": "Sequence"
+        },
+        {
+            "name": "OCCURSIN",
+            "from": "Sequence",
+            "to": "OtherMutation"
+        },
+        {
+            "name": "LOCATEDIN",
+            "from": "DeletionFrameshift",
+            "to": "StructuralMotif"
+        },
+        {
+            "name": "LOCATEDIN",
+            "from": "StructuralMotif",
+            "to": "DeletionFrameshift"
+        },
+        {
+            "name": "LOCATEDIN",
+            "from": "InsertionInframe",
+            "to": "SequenceMotif"
+        },
+        {
+            "name": "LOCATEDIN",
+            "from": "SequenceMotif",
+            "to": "InsertionInframe"
+        },
+        {
+            "name": "OCCURSIN",
+            "from": "InsertionInframe",
+            "to": "Sequence"
+        },
+        {
+            "name": "OCCURSIN",
+            "from": "Sequence",
+            "to": "InsertionInframe"
+        },
+        {
+            "name": "LOCATEDIN",
+            "from": "Nonsense",
+            "to": "StructuralMotif"
+        },
+        {
+            "name": "LOCATEDIN",
+            "from": "StructuralMotif",
+            "to": "Nonsense"
+        },
+        {
+            "name": "TYPE",
+            "from": "LigandResponse",
+            "to": "Class"
+        },
+        {
+            "name": "TYPE",
+            "from": "Class",
+            "to": "LigandResponse"
+        },
+        {
+            "name": "PRECEDEDBYPATHWAY",
+            "from": "Pathway",
+            "to": "Pathway"
+        },
+        {
+            "name": "HASLIGAND",
+            "from": "LigandResponse",
+            "to": "Ligand"
+        },
+        {
+            "name": "HASLIGAND",
+            "from": "Ligand",
+            "to": "LigandResponse"
+        },
+        {
+            "name": "INSAMPLE",
+            "from": "LigandResponse",
+            "to": "Sample"
+        },
+        {
+            "name": "INSAMPLE",
+            "from": "Sample",
+            "to": "LigandResponse"
+        },
+        {
+            "name": "INCLUDES",
+            "from": "EntitySet",
+            "to": "EntitySet"
+        },
+        {
+            "name": "RANGE",
+            "from": "ObjectProperty",
+            "to": "Class"
+        },
+        {
+            "name": "RANGE",
+            "from": "Class",
+            "to": "ObjectProperty"
+        },
+        {
+            "name": "INSAMPLE",
+            "from": "ComplexDeletionInframe",
+            "to": "Sample"
+        },
+        {
+            "name": "INSAMPLE",
+            "from": "Sample",
+            "to": "ComplexDeletionInframe"
+        },
+        {
+            "name": "HASDBXREF",
+            "from": "ComplexDeletionInframe",
+            "to": "DbXref"
+        },
+        {
+            "name": "HASDBXREF",
+            "from": "DbXref",
+            "to": "ComplexDeletionInframe"
+        },
+        {
+            "name": "TYPE",
+            "from": "ComplexDeletionInframe",
+            "to": "Class"
+        },
+        {
+            "name": "TYPE",
+            "from": "Class",
+            "to": "ComplexDeletionInframe"
+        },
+        {
+            "name": "INSAMPLE",
+            "from": "ComplexFrameshift",
+            "to": "Sample"
+        },
+        {
+            "name": "INSAMPLE",
+            "from": "Sample",
+            "to": "ComplexFrameshift"
+        },
+        {
+            "name": "HASDBXREF",
+            "from": "ComplexFrameshift",
+            "to": "DbXref"
+        },
+        {
+            "name": "HASDBXREF",
+            "from": "DbXref",
+            "to": "ComplexFrameshift"
+        },
+        {
+            "name": "TYPE",
+            "from": "ComplexFrameshift",
+            "to": "Class"
+        },
+        {
+            "name": "TYPE",
+            "from": "Class",
+            "to": "ComplexFrameshift"
+        },
+        {
+            "name": "LOCATEDIN",
+            "from": "ComplexDeletionInframe",
+            "to": "SequenceMotif"
+        },
+        {
+            "name": "LOCATEDIN",
+            "from": "SequenceMotif",
+            "to": "ComplexDeletionInframe"
+        },
+        {
+            "name": "OCCURSIN",
+            "from": "ComplexDeletionInframe",
+            "to": "Sequence"
+        },
+        {
+            "name": "OCCURSIN",
+            "from": "Sequence",
+            "to": "ComplexDeletionInframe"
+        },
+        {
+            "name": "HASMUTATION",
+            "from": "Protein",
+            "to": "Missense"
+        },
+        {
+            "name": "HASMUTATION",
+            "from": "Missense",
+            "to": "Protein"
+        },
+        {
+            "name": "HASMUTATION",
+            "from": "Protein",
+            "to": "OtherMutation"
+        },
+        {
+            "name": "HASMUTATION",
+            "from": "OtherMutation",
+            "to": "Protein"
+        },
+        {
+            "name": "HASMUTATION",
+            "from": "Protein",
+            "to": "InsertionFrameshift"
+        },
+        {
+            "name": "HASMUTATION",
+            "from": "InsertionFrameshift",
+            "to": "Protein"
+        },
+        {
+            "name": "HASMUTATION",
+            "from": "Protein",
+            "to": "DeletionFrameshift"
+        },
+        {
+            "name": "HASMUTATION",
+            "from": "DeletionFrameshift",
+            "to": "Protein"
+        },
+        {
+            "name": "ASSOCIATEDWITH",
+            "from": "Protein",
+            "to": "Cancer"
+        },
+        {
+            "name": "ASSOCIATEDWITH",
+            "from": "Cancer",
+            "to": "Protein"
+        },
+        {
+            "name": "HASMUTATION",
+            "from": "Protein",
+            "to": "CodingSilent"
+        },
+        {
+            "name": "HASMUTATION",
+            "from": "CodingSilent",
+            "to": "Protein"
+        },
+        {
+            "name": "HASMUTATION",
+            "from": "Protein",
+            "to": "Nonsense"
+        },
+        {
+            "name": "HASMUTATION",
+            "from": "Nonsense",
+            "to": "Protein"
+        },
+        {
+            "name": "HASMUTATION",
+            "from": "Protein",
+            "to": "InsertionInframe"
+        },
+        {
+            "name": "HASMUTATION",
+            "from": "InsertionInframe",
+            "to": "Protein"
+        },
+        {
+            "name": "HASMUTATION",
+            "from": "Protein",
+            "to": "DeletionInframe"
+        },
+        {
+            "name": "HASMUTATION",
+            "from": "DeletionInframe",
+            "to": "Protein"
+        },
+        {
+            "name": "OCCURSIN",
+            "from": "CompoundSubstitution",
+            "to": "Sequence"
+        },
+        {
+            "name": "OCCURSIN",
+            "from": "Sequence",
+            "to": "CompoundSubstitution"
+        },
+        {
+            "name": "LOCATEDIN",
+            "from": "CompoundSubstitution",
+            "to": "SequenceMotif"
+        },
+        {
+            "name": "LOCATEDIN",
+            "from": "SequenceMotif",
+            "to": "CompoundSubstitution"
+        },
+        {
+            "name": "HASDBXREF",
+            "from": "CompoundSubstitution",
+            "to": "DbXref"
+        },
+        {
+            "name": "HASDBXREF",
+            "from": "DbXref",
+            "to": "CompoundSubstitution"
+        },
+        {
+            "name": "TYPE",
+            "from": "CompoundSubstitution",
+            "to": "Class"
+        },
+        {
+            "name": "TYPE",
+            "from": "Class",
+            "to": "CompoundSubstitution"
+        },
+        {
+            "name": "INSAMPLE",
+            "from": "CompoundSubstitution",
+            "to": "Sample"
+        },
+        {
+            "name": "INSAMPLE",
+            "from": "Sample",
+            "to": "CompoundSubstitution"
+        },
+        {
+            "name": "HASDBXREF",
+            "from": "Organism",
+            "to": "DbXref"
+        },
+        {
+            "name": "HASDBXREF",
+            "from": "DbXref",
+            "to": "Organism"
+        },
+        {
+            "name": "ISPARTOF",
+            "from": "Organism",
+            "to": "Clade"
+        },
+        {
+            "name": "ISPARTOF",
+            "from": "Clade",
+            "to": "Organism"
+        },
+        {
+            "name": "LOCATEDIN",
+            "from": "ComplexFrameshift",
+            "to": "SequenceMotif"
+        },
+        {
+            "name": "LOCATEDIN",
+            "from": "SequenceMotif",
+            "to": "ComplexFrameshift"
+        },
+        {
+            "name": "OCCURSIN",
+            "from": "ComplexFrameshift",
+            "to": "Sequence"
+        },
+        {
+            "name": "OCCURSIN",
+            "from": "Sequence",
+            "to": "ComplexFrameshift"
+        },
+        {
+            "name": "LOCATEDIN",
+            "from": "InsertionFrameshift",
+            "to": "StructuralMotif"
+        },
+        {
+            "name": "LOCATEDIN",
+            "from": "StructuralMotif",
+            "to": "InsertionFrameshift"
+        },
+        {
+            "name": "INSAMPLE",
+            "from": "ComplexInsertionInframe",
+            "to": "Sample"
+        },
+        {
+            "name": "INSAMPLE",
+            "from": "Sample",
+            "to": "ComplexInsertionInframe"
+        },
+        {
+            "name": "HASDBXREF",
+            "from": "ComplexInsertionInframe",
+            "to": "DbXref"
+        },
+        {
+            "name": "HASDBXREF",
+            "from": "DbXref",
+            "to": "ComplexInsertionInframe"
+        },
+        {
+            "name": "TYPE",
+            "from": "ComplexInsertionInframe",
+            "to": "Class"
+        },
+        {
+            "name": "TYPE",
+            "from": "Class",
+            "to": "ComplexInsertionInframe"
+        },
+        {
+            "name": "LOCATEDIN",
+            "from": "InsertionInframe",
+            "to": "StructuralMotif"
+        },
+        {
+            "name": "LOCATEDIN",
+            "from": "StructuralMotif",
+            "to": "InsertionInframe"
+        },
+        {
+            "name": "LOCATEDIN",
+            "from": "ComplexInsertionInframe",
+            "to": "SequenceMotif"
+        },
+        {
+            "name": "LOCATEDIN",
+            "from": "SequenceMotif",
+            "to": "ComplexInsertionInframe"
+        },
+        {
+            "name": "OCCURSIN",
+            "from": "ComplexInsertionInframe",
+            "to": "Sequence"
+        },
+        {
+            "name": "OCCURSIN",
+            "from": "Sequence",
+            "to": "ComplexInsertionInframe"
+        },
+        {
+            "name": "HASMUTATION",
+            "from": "Protein",
+            "to": "ComplexFrameshift"
+        },
+        {
+            "name": "HASMUTATION",
+            "from": "ComplexFrameshift",
+            "to": "Protein"
+        },
+        {
+            "name": "INCLUDES",
+            "from": "EntitySet",
+            "to": "SmallMoleculeEntity"
+        },
+        {
+            "name": "INCLUDES",
+            "from": "SmallMoleculeEntity",
+            "to": "EntitySet"
+        },
+        {
+            "name": "LOCATEDIN",
+            "from": "OtherMutation",
+            "to": "StructuralMotif"
+        },
+        {
+            "name": "LOCATEDIN",
+            "from": "StructuralMotif",
+            "to": "OtherMutation"
+        },
+        {
+            "name": "LOCATEDIN",
+            "from": "ComplexDeletionInframe",
+            "to": "StructuralMotif"
+        },
+        {
+            "name": "LOCATEDIN",
+            "from": "StructuralMotif",
+            "to": "ComplexDeletionInframe"
+        },
+        {
+            "name": "LOCATEDIN",
+            "from": "DeletionInframe",
+            "to": "StructuralMotif"
+        },
+        {
+            "name": "LOCATEDIN",
+            "from": "StructuralMotif",
+            "to": "DeletionInframe"
+        },
+        {
+            "name": "TYPE",
+            "from": "Clade",
+            "to": "Class"
+        },
+        {
+            "name": "TYPE",
+            "from": "Class",
+            "to": "Clade"
+        },
+        {
+            "name": "HASMUTATION",
+            "from": "Protein",
+            "to": "ComplexDeletionInframe"
+        },
+        {
+            "name": "HASMUTATION",
+            "from": "ComplexDeletionInframe",
+            "to": "Protein"
+        },
+        {
+            "name": "HASMUTATION",
+            "from": "Protein",
+            "to": "CompoundSubstitution"
+        },
+        {
+            "name": "HASMUTATION",
+            "from": "CompoundSubstitution",
+            "to": "Protein"
+        },
+        {
+            "name": "LOCATEDIN",
+            "from": "ComplexFrameshift",
+            "to": "StructuralMotif"
+        },
+        {
+            "name": "LOCATEDIN",
+            "from": "StructuralMotif",
+            "to": "ComplexFrameshift"
+        },
+        {
+            "name": "HASMUTATION",
+            "from": "Protein",
+            "to": "ComplexInsertionInframe"
+        },
+        {
+            "name": "HASMUTATION",
+            "from": "ComplexInsertionInframe",
+            "to": "Protein"
+        }
+    ]
+}

@@ -1,0 +1,433 @@
+{
+    "labels": {
+        "Pathway": {
+            "id": "String",
+            "label": "String"
+        },
+        "FunctionalDomain": {
+            "id": "String",
+            "label": "String"
+        },
+        "LightKinase": {
+            "id": "String",
+            "label": "String"
+        },
+        "LightIonChannel": {
+            "id": "String",
+            "label": "String"
+        },
+        "BiologicalProcess": {
+            "id": "String",
+            "label": "String"
+        },
+        "MolecularFunction": {
+            "id": "String",
+            "label": "String"
+        },
+        "CellularComponent": {
+            "id": "String",
+            "label": "String"
+        },
+        "DarkKinase": {
+            "id": "String",
+            "label": "String"
+        },
+        "DarkIonChannel": {
+            "id": "String",
+            "label": "String"
+        },
+        "Chemical": {
+            "id": "String",
+            "label": "String"
+        },
+        "Disease": {
+            "id": "String",
+            "label": "String"
+        },
+        "IonChannelUnit": {
+            "id": "String",
+            "label": "String"
+        },
+        "Ion": {
+            "id": "String",
+            "label": "String"
+        },
+        "GateMechanism": {
+            "id": "String",
+            "label": "String"
+        },
+        "Group": {
+            "id": "String",
+            "label": "String"
+        },
+        "Family": {
+            "id": "String",
+            "label": "String"
+        },
+        "PTM": {
+            "id": "String",
+            "label": "String"
+        },
+        "Protein": {
+            "id": "String",
+            "label": "String"
+        }
+    },
+    "relationships": [
+        {
+            "name": "hasPathway",
+            "from": "Protein",
+            "to": "Pathway"
+        },
+        {
+            "name": "hasPathway",
+            "from": "LightKinase",
+            "to": "Pathway"
+        },
+        {
+            "name": "hasPathway",
+            "from": "LightIonChannel",
+            "to": "Pathway"
+        },
+        {
+            "name": "interact",
+            "from": "Protein",
+            "to": "Protein"
+        },
+        {
+            "name": "hasFunctionalDomain",
+            "from": "Protein",
+            "to": "FunctionalDomain"
+        },
+        {
+            "name": "hasPathway",
+            "from": "DarkKinase",
+            "to": "Pathway"
+        },
+        {
+            "name": "hasPathway",
+            "from": "DarkIonChannel",
+            "to": "Pathway"
+        },
+        {
+            "name": "hasFunctionalDomain",
+            "from": "LightIonChannel",
+            "to": "FunctionalDomain"
+        },
+        {
+            "name": "hasPTM",
+            "from": "Protein",
+            "to": "PTM"
+        },
+        {
+            "name": "hasPTM",
+            "from": "LightKinase",
+            "to": "PTM"
+        },
+        {
+            "name": "hasPTM",
+            "from": "DarkKinase",
+            "to": "PTM"
+        },
+        {
+            "name": "hasFunctionalDomain",
+            "from": "LightKinase",
+            "to": "FunctionalDomain"
+        },
+        {
+            "name": "hasFunctionalDomain",
+            "from": "DarkKinase",
+            "to": "FunctionalDomain"
+        },
+        {
+            "name": "hasFunctionalDomain",
+            "from": "DarkIonChannel",
+            "to": "FunctionalDomain"
+        },
+        {
+            "name": "hasBiologicalProcess",
+            "from": "Protein",
+            "to": "BiologicalProcess"
+        },
+        {
+            "name": "hasMolecularFunction",
+            "from": "Protein",
+            "to": "MolecularFunction"
+        },
+        {
+            "name": "hasBiologicalProcess",
+            "from": "LightKinase",
+            "to": "BiologicalProcess"
+        },
+        {
+            "name": "hasCellularComponent",
+            "from": "Protein",
+            "to": "CellularComponent"
+        },
+        {
+            "name": "hasMolecularFunction",
+            "from": "LightIonChannel",
+            "to": "MolecularFunction"
+        },
+        {
+            "name": "hasMolecularFunction",
+            "from": "DarkKinase",
+            "to": "MolecularFunction"
+        },
+        {
+            "name": "hasBiologicalProcess",
+            "from": "LightIonChannel",
+            "to": "BiologicalProcess"
+        },
+        {
+            "name": "hasBiologicalProcess",
+            "from": "DarkKinase",
+            "to": "BiologicalProcess"
+        },
+        {
+            "name": "hasMolecularFunction",
+            "from": "DarkIonChannel",
+            "to": "MolecularFunction"
+        },
+        {
+            "name": "hasMolecularFunction",
+            "from": "LightKinase",
+            "to": "MolecularFunction"
+        },
+        {
+            "name": "hasCellularComponent",
+            "from": "LightKinase",
+            "to": "CellularComponent"
+        },
+        {
+            "name": "hasCellularComponent",
+            "from": "DarkIonChannel",
+            "to": "CellularComponent"
+        },
+        {
+            "name": "hasCellularComponent",
+            "from": "LightIonChannel",
+            "to": "CellularComponent"
+        },
+        {
+            "name": "interact",
+            "from": "LightKinase",
+            "to": "Protein"
+        },
+        {
+            "name": "interact",
+            "from": "DarkKinase",
+            "to": "Protein"
+        },
+        {
+            "name": "interact",
+            "from": "LightKinase",
+            "to": "LightKinase"
+        },
+        {
+            "name": "interact",
+            "from": "LightKinase",
+            "to": "LightIonChannel"
+        },
+        {
+            "name": "interact",
+            "from": "LightKinase",
+            "to": "DarkKinase"
+        },
+        {
+            "name": "interact",
+            "from": "DarkKinase",
+            "to": "DarkKinase"
+        },
+        {
+            "name": "interact",
+            "from": "DarkKinase",
+            "to": "LightKinase"
+        },
+        {
+            "name": "hasCellularComponent",
+            "from": "DarkKinase",
+            "to": "CellularComponent"
+        },
+        {
+            "name": "hasBiologicalProcess",
+            "from": "DarkIonChannel",
+            "to": "BiologicalProcess"
+        },
+        {
+            "name": "assoWithGene",
+            "from": "Chemical",
+            "to": "Protein"
+        },
+        {
+            "name": "assoWithGene",
+            "from": "Chemical",
+            "to": "LightIonChannel"
+        },
+        {
+            "name": "assoWithDisease",
+            "from": "Chemical",
+            "to": "Disease"
+        },
+        {
+            "name": "assoWithBiologicalProcess",
+            "from": "Chemical",
+            "to": "BiologicalProcess"
+        },
+        {
+            "name": "assoWithCellularComponent",
+            "from": "Chemical",
+            "to": "CellularComponent"
+        },
+        {
+            "name": "assoWithMolecularFunction",
+            "from": "Chemical",
+            "to": "MolecularFunction"
+        },
+        {
+            "name": "assoWithGene",
+            "from": "Chemical",
+            "to": "DarkIonChannel"
+        },
+        {
+            "name": "assoWithGene",
+            "from": "Chemical",
+            "to": "LightKinase"
+        },
+        {
+            "name": "implicatedInDisease",
+            "from": "Protein",
+            "to": "Disease"
+        },
+        {
+            "name": "implicatedInDisease",
+            "from": "DarkIonChannel",
+            "to": "Disease"
+        },
+        {
+            "name": "implicatedInDisease",
+            "from": "LightIonChannel",
+            "to": "Disease"
+        },
+        {
+            "name": "assoWithGene",
+            "from": "Chemical",
+            "to": "DarkKinase"
+        },
+        {
+            "name": "interact",
+            "from": "LightIonChannel",
+            "to": "LightIonChannel"
+        },
+        {
+            "name": "interact",
+            "from": "Protein",
+            "to": "LightIonChannel"
+        },
+        {
+            "name": "interact",
+            "from": "DarkIonChannel",
+            "to": "DarkIonChannel"
+        },
+        {
+            "name": "interact",
+            "from": "LightIonChannel",
+            "to": "Protein"
+        },
+        {
+            "name": "interact",
+            "from": "LightIonChannel",
+            "to": "DarkIonChannel"
+        },
+        {
+            "name": "interact",
+            "from": "DarkIonChannel",
+            "to": "LightIonChannel"
+        },
+        {
+            "name": "interact",
+            "from": "DarkIonChannel",
+            "to": "Protein"
+        },
+        {
+            "name": "interact",
+            "from": "Protein",
+            "to": "DarkIonChannel"
+        },
+        {
+            "name": "hasUnit",
+            "from": "LightIonChannel",
+            "to": "IonChannelUnit"
+        },
+        {
+            "name": "hasUnit",
+            "from": "DarkIonChannel",
+            "to": "IonChannelUnit"
+        },
+        {
+            "name": "hasUnit",
+            "from": "Protein",
+            "to": "IonChannelUnit"
+        },
+        {
+            "name": "hasIonAsso",
+            "from": "LightIonChannel",
+            "to": "Ion"
+        },
+        {
+            "name": "hasIonAsso",
+            "from": "DarkIonChannel",
+            "to": "Ion"
+        },
+        {
+            "name": "hasIonAsso",
+            "from": "Protein",
+            "to": "Ion"
+        },
+        {
+            "name": "hasGateMechanism",
+            "from": "LightIonChannel",
+            "to": "GateMechanism"
+        },
+        {
+            "name": "hasGateMechanism",
+            "from": "DarkIonChannel",
+            "to": "GateMechanism"
+        },
+        {
+            "name": "hasGateMechanism",
+            "from": "Protein",
+            "to": "GateMechanism"
+        },
+        {
+            "name": "hasGroup",
+            "from": "Family",
+            "to": "Group"
+        },
+        {
+            "name": "hasFamily",
+            "from": "LightIonChannel",
+            "to": "Family"
+        },
+        {
+            "name": "hasFamily",
+            "from": "DarkIonChannel",
+            "to": "Family"
+        },
+        {
+            "name": "hasFamily",
+            "from": "Protein",
+            "to": "Family"
+        },
+        {
+            "name": "hasFamily",
+            "from": "DarkKinase",
+            "to": "Family"
+        },
+        {
+            "name": "hasFamily",
+            "from": "LightKinase",
+            "to": "Family"
+        }
+    ]
+}

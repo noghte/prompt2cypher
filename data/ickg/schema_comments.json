@@ -1,0 +1,119 @@
+{
+    "nodes_description": {
+      "Protein": "Protein - The fundamental unit representing proteins in the knowledge graph. Including both kinases and ion channels. Proteins can have various properties and participate in multiple biological processes.",
+      "LightKinase": "Light Kinase - A subtype of Protein.",
+      "DarkKinase": "Dark Kinase - A subtype of Protein.",
+      "LightIonChannel": "Light Ion Channel - A subtype of Protein.",
+      "DarkIonChannel": "Dark Ion Channel - A subtype of Protein that is an ion channel with limited characterization and experimental data.",
+      "FunctionalDomain": "Functional Domain - Specific regions within a protein that contribute to its function. Functional domains are critical for the protein's activity.",
+      "PTM": "Post-Translational Modification (PTM) - Represents chemical modifications that occur to a protein after its synthesis, influencing its function and activity.",
+      "Pathway": "Pathway - Biological pathways involving various proteins and biochemical reactions. Pathways represent a series of actions among molecules in a cell.",
+      "BiologicalProcess": "Biological Process - Represents processes vital to the functioning of living organisms, such as cell signaling or metabolism.",
+      "MolecularFunction": "Molecular Function - Describes activities that occur at the molecular level, such as binding or catalysis performed by proteins.",
+      "CellularComponent": "Cellular Component - Indicates the locations within a cell where proteins are active, such as the nucleus or membrane.",
+      "Chemical": "Chemical - Represents chemical compounds that can interact with proteins, potentially affecting their function.",
+      "Disease": "Disease - Represents medical conditions that proteins may be implicated in, including genetic disorders and cancers.",
+      "IonChannelUnit": "Ion Channel Unit - Subunits or components that make up an ion channel protein complex.",
+      "Ion": "Ion - Represents charged atoms or molecules that pass through ion channels, such as sodium (Na+) or potassium (K+).",
+      "GateMechanism": "Gate Mechanism - Describes the method by which an ion channel opens or closes, controlling ion flow.",
+      "Group": "Group - A higher-level classification that groups families of proteins based on shared characteristics.",
+      "Family": "Family - Groups proteins with similar sequences, structures, or functions."
+    },
+  
+    "nodes_properties": {
+      "Protein": {
+        "id": "Unique identifier for the protein, typically a UniProt ID (e.g., 'P12345').",
+        "label": "The name of the protein (preferred name)."
+      },
+      "LightKinase": {
+        "id": "The UniProt ID of the light kinase (e.g., 'A2RU49').",
+        "label": "The name of the light kinase (e.g., 'PIK3CD', 'HYKK')."
+      },
+      "DarkKinase": {
+        "id": "The UniProt ID of the dark kinase. (e.g., 'O14730')",
+        "label": "The name of the dark kinase. (e.g., 'RIOK3')"
+      },
+      "LightIonChannel": {
+        "id": "The UniProt ID of the light ion channel (e.g., 'O14520').",
+        "label": "The name of the light ion channel (e.g., 'CLIC2', 'AQP7')."
+      },
+      "DarkIonChannel": {
+        "id": "The UniProt ID of the dark ion channel.",
+        "label": "The name of the dark ion channel."
+      },
+      "FunctionalDomain": {
+        "id": "Unique identifier for the functional domain (e.g., 'Flavodoxin_2', 'PglD_N').",
+        "label": "The name of the functional domain (e.g., 'Flavodoxin_2', 'PglD_N')."
+      },
+      "PTM": {
+        "id": "Unique identifier for the post-translational modification. (e.g., 'PKA_197_Phosphorylation_O15530')",
+        "label": "The type of PTM (e.g., 'PDPK1')."
+      },
+      "Pathway": {
+        "id": "Unique identifier for the pathway. (e.g., '8852135')",
+        "label": "The name of the pathway (e.g., 'Protein ubiquitination')."
+      },
+      "BiologicalProcess": {
+        "id": "Unique identifier for the biological process. (e.g., 'GO:1904595')",
+        "label": "The name of the biological process (e.g., 'positive regulation of termination of RNA polymerase II transcription')."
+      },
+      "MolecularFunction": {
+        "id": "Unique identifier for the molecular function. (e.g., 'GO:0005497')",
+        "label": "The name of the molecular function (e.g., 'androgen binding')."
+      },
+      "CellularComponent": {
+        "id": "Unique identifier for the cellular component. (e.g., 'GO:0035859')",
+        "label": "The name of the cellular component (e.g., 'Seh1-associated complex')."
+      },
+      "Chemical": {
+        "id": "Unique identifier for the chemical compound (e.g., 'C000499').",
+        "label": "The name of the chemical (e.g., 'ferric oxide')."
+      },
+      "Disease": {
+        "id": "Unique identifier for the disease (e.g., 'MESH:D009361').",
+        "label": "The name of the disease (e.g., 'Neoplasm Invasiveness')."
+      },
+      "IonChannelUnit": {
+        "id": "Unique identifier for the ion channel unit. (e.g., 'auxiliary_unit').",
+        "label": "The name of the ion channel unit. (i.e., 'auxiliary_unit', 'label: parital pore', 'label: transporter related', 'pore')."
+      },
+      "Ion": {
+        "id": "Unique identifier for the ion. (e.g., 'monocarboxylates').",
+        "label": "The name of the ion (e.g., 'monocarboxylates', 'chloride')."
+      },
+      "GateMechanism": {
+        "id": "Unique identifier for the gate mechanism. (e.g., 'leak (open)', 'no activity').",
+        "label": "The type of gate mechanism (e.g., 'leak (open)', 'no activity')."
+      },
+      "Group": {
+        "id": "Unique identifier for the group. (e.g., 'VGIC unclassified_Gro', 'VGIC_Gro').",
+        "label": "The name of the group. (e.g., 'VGIC unclassified', 'VGIC')."
+      },
+      "Family": {
+        "id": "Unique identifier for the family. (e.g., 'Na_V_Fam', 'GABA_A_receptor_Fam').",
+        "label": "The name of the family (e.g., 'Na', 'GABA_A_receptor_Fam')."
+      }
+    },
+  
+    "relationship_comments": {
+      "hasPathway": "Indicates that a protein participates in the specified pathway, directed from Protein to Pathway.",
+      "hasFunctionalDomain": "Indicates that a protein contains the specified functional domain, directed from Protein to FunctionalDomain.",
+      "hasPTM": "Indicates that a protein undergoes the specified post-translational modification.",
+      "hasBiologicalProcess": "Associates a protein (Protein, DarkKinase, LightKinase, DarkIonChannel, LightIonChannel) with the specified biological process, directed from Protein to BiologicalProcess.",
+      "hasMolecularFunction": "Associates a protein (Protein, DarkKinase, LightKinase, DarkIonChannel, LightIonChannel) with the specified molecular function.",
+      "hasCellularComponent": "Indicates that a protein is located in or associated with the specified cellular component.",
+      "interact": "Represents an interaction between two proteins.",
+      "assoWithGene": "Associates a chemical compound with a protein, indicating a relationship such as inhibition or activation, directed from Chemical to Protein",
+      "assoWithDisease": "Associates a chemical compound with a disease, indicating potential therapeutic relevance.",
+      "assoWithBiologicalProcess": "Associates a chemical compound with a biological process it may influence, directed from Chemical to BiologicalProcess.",
+      "assoWithCellularComponent": "Associates a chemical compound with a cellular component it may affect.",
+      "assoWithMolecularFunction": "Associates a protein with the specified molecular function, directed from Protein to MolecularFunction.",
+      "implicatedInDisease": "Indicates that a protein is implicated in the specified disease, directed from Protein to Disease.",
+      "hasUnit": "Indicates that an ion channel protein consists of the specified ion channel unit.",
+      "hasIonAsso": "Indicates that a protein is associated with the specified ion, directed from Protein to Ion.",
+      "hasGateMechanism": "Indicates that an ion channel protein operates via the specified gate mechanism.",
+      "hasGroup": "Indicates that a family is part of the specified group.",
+      "hasFamily": "Indicates that a protein (Protein, DarkKinase, LightKinase, DarkIonChannel, LightIonChannel) belongs to the specified family, directed from Protein (or its subtypes) to Family."
+    }
+  }
+  
