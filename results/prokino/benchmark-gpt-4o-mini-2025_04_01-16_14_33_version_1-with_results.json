@@ -1,0 +1,3342 @@
+[
+    {
+        "title": "A1",
+        "description": "What is the functional domain associated with EGFR protein?",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein {hasPrimaryName: 'EGFR'})-[:HASFUNCTIONALDOMAIN]->(fd:FunctionalDomain) RETURN fd.hasPrimaryName LIMIT 100",
+                "time_taken": 13.411312818527222,
+                "cypher_result": [
+                    [
+                        "PK_Tyr_Ser-Thr"
+                    ],
+                    [
+                        "Furin-like"
+                    ],
+                    [
+                        "PK_Tyr_Ser-Thr"
+                    ],
+                    [
+                        "PK_Tyr_Ser-Thr"
+                    ],
+                    [
+                        "Furin-like"
+                    ],
+                    [
+                        "Recep_L_domain"
+                    ],
+                    [
+                        "GF_recep_IV"
+                    ],
+                    [
+                        "GF_recep_IV"
+                    ],
+                    [
+                        "Recep_L_domain"
+                    ],
+                    [
+                        "GF_recep_IV"
+                    ],
+                    [
+                        "Furin-like"
+                    ],
+                    [
+                        "Recep_L_domain"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "title": "A2",
+        "description": "What are the amino acid changes and mutation descriptions for EGFR protein?",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein {hasPrimaryName: 'EGFR'})-[:HASMUTATION]->(m:Missense) RETURN m.hasWildTypeResidue, m.hasMutationDescription LIMIT 100",
+                "time_taken": 2.4328196048736572,
+                "cypher_result": [
+                    [
+                        "R",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "R",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "D",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "A",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "I",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "A",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "L",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "F",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "V",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "G",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "L",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "N",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "R",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "R",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "P",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "I",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "G",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "E",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "L",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "E",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "S",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "V",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "G",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "D",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "G",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "W",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "V",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "A",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "P",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "Q",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "G",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "R",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "P",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "L",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "H",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "D",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "D",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "A",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "E",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "D",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "G",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "R",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "N",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "R",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "C",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "Y",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "V",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "R",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "G",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "P",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "A",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "A",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "V",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "R",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "P",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "W",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "L",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "A",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "A",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "G",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "L",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "L",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "W",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "S",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "R",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "P",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "P",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "I",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "V",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "Q",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "R",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "Q",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "I",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "E",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "G",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "L",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "G",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "G",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "P",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "A",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "A",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "R",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "R",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "T",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "R",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "D",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "P",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "D",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "I",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "R",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "E",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "F",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "S",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "T",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "C",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "C",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "V",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "M",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "Y",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "I",
+                        "Substitution - Missense"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "title": "A3",
+        "description": "In which organisms is DCLK1 protein present?",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein {hasPrimaryName: 'DCLK1'})-[:PRESENTIN]->(o:Organism) RETURN o.hasPrimaryName LIMIT 100",
+                "time_taken": 3.502814292907715,
+                "cypher_result": [
+                    [
+                        "Human"
+                    ],
+                    [
+                        "Mouse"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "title": "A4",
+        "description": "What pathways does EGFR protein participate in?",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein {hasPrimaryName: 'EGFR'})-[:PARTICIPATESIN]->(path:Pathway) RETURN path.hasPrimaryName LIMIT 100",
+                "time_taken": 1.8525505065917969,
+                "cypher_result": [
+                    [
+                        "Signal Transduction"
+                    ],
+                    [
+                        "Signal Transduction"
+                    ],
+                    [
+                        "Signal Transduction"
+                    ],
+                    [
+                        "Downregulation of ERBB4 signaling"
+                    ],
+                    [
+                        "Vesicle-mediated transport"
+                    ],
+                    [
+                        "Vesicle-mediated transport"
+                    ],
+                    [
+                        "Vesicle-mediated transport"
+                    ],
+                    [
+                        "RNA Polymerase II Transcription"
+                    ],
+                    [
+                        "GAB1 signalosome"
+                    ],
+                    [
+                        "GAB1 signalosome"
+                    ],
+                    [
+                        "GAB1 signalosome"
+                    ],
+                    [
+                        "Developmental Biology"
+                    ],
+                    [
+                        "Developmental Biology"
+                    ],
+                    [
+                        "Developmental Biology"
+                    ],
+                    [
+                        "Intracellular signaling by second messengers"
+                    ],
+                    [
+                        "Intracellular signaling by second messengers"
+                    ],
+                    [
+                        "Intracellular signaling by second messengers"
+                    ],
+                    [
+                        "Signaling by Non-Receptor Tyrosine Kinases"
+                    ],
+                    [
+                        "Signaling by Non-Receptor Tyrosine Kinases"
+                    ],
+                    [
+                        "Signaling by Nuclear Receptors"
+                    ],
+                    [
+                        "Signaling by Nuclear Receptors"
+                    ],
+                    [
+                        "Signaling by Nuclear Receptors"
+                    ],
+                    [
+                        "Signaling by Receptor Tyrosine Kinases"
+                    ],
+                    [
+                        "Signaling by Receptor Tyrosine Kinases"
+                    ],
+                    [
+                        "Signaling by Receptor Tyrosine Kinases"
+                    ],
+                    [
+                        "Signaling by ERBB4"
+                    ],
+                    [
+                        "Signaling by ERBB4"
+                    ],
+                    [
+                        "Signaling by ERBB4"
+                    ],
+                    [
+                        "Axon guidance"
+                    ],
+                    [
+                        "Axon guidance"
+                    ],
+                    [
+                        "Axon guidance"
+                    ],
+                    [
+                        "Nuclear signaling by ERBB4"
+                    ],
+                    [
+                        "Signaling by EGFR"
+                    ],
+                    [
+                        "Signaling by EGFR"
+                    ],
+                    [
+                        "Signaling by EGFR"
+                    ],
+                    [
+                        "MAPK1/MAPK3 signaling"
+                    ],
+                    [
+                        "MAPK1/MAPK3 signaling"
+                    ],
+                    [
+                        "MAPK1/MAPK3 signaling"
+                    ],
+                    [
+                        "Negative regulation of the PI3K/AKT network"
+                    ],
+                    [
+                        "Negative regulation of the PI3K/AKT network"
+                    ],
+                    [
+                        "Negative regulation of the PI3K/AKT network"
+                    ],
+                    [
+                        "Nervous system development"
+                    ],
+                    [
+                        "Nervous system development"
+                    ],
+                    [
+                        "Nervous system development"
+                    ],
+                    [
+                        "GPCR downstream signalling"
+                    ],
+                    [
+                        "GPCR downstream signalling"
+                    ],
+                    [
+                        "GPCR downstream signalling"
+                    ],
+                    [
+                        "PIP3 activates AKT signaling"
+                    ],
+                    [
+                        "PIP3 activates AKT signaling"
+                    ],
+                    [
+                        "PIP3 activates AKT signaling"
+                    ],
+                    [
+                        "Signaling by ERBB2"
+                    ],
+                    [
+                        "Signaling by ERBB2"
+                    ],
+                    [
+                        "Signaling by ERBB2"
+                    ],
+                    [
+                        "Signaling by PTK6"
+                    ],
+                    [
+                        "Signaling by PTK6"
+                    ],
+                    [
+                        "RAF/MAP kinase cascade"
+                    ],
+                    [
+                        "RAF/MAP kinase cascade"
+                    ],
+                    [
+                        "RAF/MAP kinase cascade"
+                    ],
+                    [
+                        "Generic Transcription Pathway"
+                    ],
+                    [
+                        "Membrane Trafficking"
+                    ],
+                    [
+                        "Membrane Trafficking"
+                    ],
+                    [
+                        "Membrane Trafficking"
+                    ],
+                    [
+                        "L1CAM interactions"
+                    ],
+                    [
+                        "L1CAM interactions"
+                    ],
+                    [
+                        "L1CAM interactions"
+                    ],
+                    [
+                        "MAPK family signaling cascades"
+                    ],
+                    [
+                        "MAPK family signaling cascades"
+                    ],
+                    [
+                        "MAPK family signaling cascades"
+                    ],
+                    [
+                        "Extra-nuclear estrogen signaling"
+                    ],
+                    [
+                        "Extra-nuclear estrogen signaling"
+                    ],
+                    [
+                        "PI5P, PP2A and IER3 Regulate PI3K/AKT Signaling"
+                    ],
+                    [
+                        "PI5P, PP2A and IER3 Regulate PI3K/AKT Signaling"
+                    ],
+                    [
+                        "PI5P, PP2A and IER3 Regulate PI3K/AKT Signaling"
+                    ],
+                    [
+                        "ESR-mediated signaling"
+                    ],
+                    [
+                        "ESR-mediated signaling"
+                    ],
+                    [
+                        "ESR-mediated signaling"
+                    ],
+                    [
+                        "Gene expression (Transcription)"
+                    ],
+                    [
+                        "Signaling by GPCR"
+                    ],
+                    [
+                        "Signaling by GPCR"
+                    ],
+                    [
+                        "Signaling by GPCR"
+                    ],
+                    [
+                        "Gastrin-CREB signalling pathway via PKC and MAPK"
+                    ],
+                    [
+                        "Gastrin-CREB signalling pathway via PKC and MAPK"
+                    ],
+                    [
+                        "Gastrin-CREB signalling pathway via PKC and MAPK"
+                    ],
+                    [
+                        "G alpha (q) signalling events"
+                    ],
+                    [
+                        "G alpha (q) signalling events"
+                    ],
+                    [
+                        "G alpha (q) signalling events"
+                    ],
+                    [
+                        "Signal transduction by L1"
+                    ],
+                    [
+                        "Signal transduction by L1"
+                    ],
+                    [
+                        "Signal transduction by L1"
+                    ],
+                    [
+                        "Diseases of signal transduction by growth factor receptors and second messengers"
+                    ],
+                    [
+                        "Semaphorin interactions"
+                    ],
+                    [
+                        "Downregulation of ERBB2:ERBB3 signaling"
+                    ],
+                    [
+                        "Downregulation of ERBB2 signaling"
+                    ],
+                    [
+                        "Downregulation of ERBB2 signaling"
+                    ],
+                    [
+                        "Downregulation of ERBB2 signaling"
+                    ],
+                    [
+                        "EGFR Transactivation by Gastrin"
+                    ],
+                    [
+                        "EGFR Transactivation by Gastrin"
+                    ],
+                    [
+                        "EGFR Transactivation by Gastrin"
+                    ],
+                    [
+                        "Estrogen-dependent gene expression"
+                    ],
+                    [
+                        "Infectious disease"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "title": "A5",
+        "description": "What reactions are produced by the 'RHOJ GTPase cycle' pathway?",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Pathway {hasPrimaryName: 'RHOJ GTPase cycle'})-[:HASREACTION]->(r:Reaction)  RETURN r.hasPrimaryName  LIMIT 100",
+                "time_taken": 2.2727017402648926,
+                "cypher_result": [
+                    [
+                        "RHOJ GEFs activate RHOJ"
+                    ],
+                    [
+                        "RHOJ GAPs stimulate RHOJ GTPase activity"
+                    ],
+                    [
+                        "RHOJ binds effectors at the plasma membrane"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "title": "A6",
+        "description": "Which families include the EGFR protein as a member?",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein {hasPrimaryName: 'EGFR'})-[:ENCODEDIN]->(f:Family) RETURN f.hasPrimaryName LIMIT 100",
+                "time_taken": 1.4859907627105713,
+                "cypher_result": []
+            }
+        }
+    },
+    {
+        "title": "A7",
+        "description": "What is the tissue specificity of the EGFR protein?",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein {hasPrimaryName: 'EGFR'})  RETURN p.hasTissueSpecificity  LIMIT 100",
+                "time_taken": 1.6824498176574707,
+                "cypher_result": [
+                    [
+                        "Ubiquitously expressed. Isoform 2 is also expressed in ovarian cancers."
+                    ],
+                    [
+                        "Ubiquitously expressed in embryos. In larvae, uniform expression is seen in wing disks, genital disk, anlagen of testis and ovary, and brain cortex. In eye-antenna disk, highest expression is anterior to morphogenetic furrow, levels remain high in photoreceptor precursor cells. This pattern is reversed in posterior eye disk. In adults expression is high in brain cortex and thoracic and abdominal ganglia."
+                    ],
+                    [
+                        null
+                    ],
+                    [
+                        null
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "title": "A8",
+        "description": "What is the chromosomal position of the EGFR protein?",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein {hasPrimaryName: 'EGFR'}) RETURN p.chromosomalPosition LIMIT 100",
+                "time_taken": 1.6789276599884033,
+                "cypher_result": [
+                    [
+                        "7p11.1-p11.2"
+                    ],
+                    [
+                        "57F5--8"
+                    ],
+                    [
+                        null
+                    ],
+                    [
+                        null
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "title": "A9",
+        "description": "Is HIPK1 protein a dark kinase?",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein {hasPrimaryName: 'HIPK1'}) RETURN p.isDarkKinase LIMIT 100",
+                "time_taken": 2.3547253608703613,
+                "cypher_result": [
+                    [
+                        true
+                    ],
+                    [
+                        null
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "title": "A10",
+        "description": "What is the EC number of the EGFR protein?",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein {hasPrimaryName: 'EGFR'}) RETURN p.hasECNumber LIMIT 100",
+                "time_taken": 1.9694461822509766,
+                "cypher_result": [
+                    [
+                        "2.7.10.1"
+                    ],
+                    [
+                        "2.7.10.1"
+                    ],
+                    [
+                        "2.7.10.1"
+                    ],
+                    [
+                        null
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "title": "B1",
+        "description": "What are the sequence motifs found in the amino acid sequence of the EGFR protein?",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein {hasPrimaryName: 'EGFR'})-[:HASSEQUENCE]->(s:Sequence)-[:HASMOTIF]->(m:SequenceMotif) RETURN m.hasPrimaryName LIMIT 100",
+                "time_taken": 1.7181651592254639,
+                "cypher_result": [
+                    [
+                        "g.l.9"
+                    ],
+                    [
+                        "III.19"
+                    ],
+                    [
+                        "hinge.47"
+                    ],
+                    [
+                        "I.3"
+                    ],
+                    [
+                        "c.l.75"
+                    ],
+                    [
+                        "II.13"
+                    ],
+                    [
+                        "III.16"
+                    ],
+                    [
+                        "xDFG.82"
+                    ],
+                    [
+                        "alpha-C.21"
+                    ],
+                    [
+                        "alpha-D.59"
+                    ],
+                    [
+                        "alpha-C.24"
+                    ],
+                    [
+                        "hinge.48"
+                    ],
+                    [
+                        "alpha-D.54"
+                    ],
+                    [
+                        "linker.52"
+                    ],
+                    [
+                        "alpha-C.28"
+                    ],
+                    [
+                        "V.44"
+                    ],
+                    [
+                        "g.l.5"
+                    ],
+                    [
+                        "c.l.70"
+                    ],
+                    [
+                        "hinge.46"
+                    ],
+                    [
+                        "GK.45"
+                    ],
+                    [
+                        "xDFG.80"
+                    ],
+                    [
+                        "linker.49"
+                    ],
+                    [
+                        "alpha-D.55"
+                    ],
+                    [
+                        "II.11"
+                    ],
+                    [
+                        "b.l.36"
+                    ],
+                    [
+                        "linker.51"
+                    ],
+                    [
+                        "c.l.74"
+                    ],
+                    [
+                        "g.l.7"
+                    ],
+                    [
+                        "xDFG.81"
+                    ],
+                    [
+                        "linker.50"
+                    ],
+                    [
+                        "xDFG.83"
+                    ],
+                    [
+                        "III.15"
+                    ],
+                    [
+                        "a.l.85"
+                    ],
+                    [
+                        "a.l.84"
+                    ],
+                    [
+                        "b.l.37"
+                    ],
+                    [
+                        "g.l.8"
+                    ],
+                    [
+                        "IV.38"
+                    ],
+                    [
+                        "VII.77"
+                    ],
+                    [
+                        "V.43"
+                    ],
+                    [
+                        "g.l.6"
+                    ],
+                    [
+                        "III.17"
+                    ],
+                    [
+                        "g.l.4"
+                    ],
+                    [
+                        "alpha-C.25"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "title": "B2",
+        "description": "Which sample is associated with the gene expression of EGFR protein?",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein {hasPrimaryName: 'EGFR'})-[:HASPROTEIN]-(ge:GeneExpression) MATCH (ge)-[:INSAMPLE]-(s:Sample) RETURN s.hasSampleName LIMIT 100",
+                "time_taken": 2.619127035140991,
+                "cypher_result": [
+                    [
+                        "TCGA-A6-3810-01"
+                    ],
+                    [
+                        "TCGA-G4-6588-01"
+                    ],
+                    [
+                        "TCGA-DI-A0WH-01"
+                    ],
+                    [
+                        "TCGA-FP-7735-01"
+                    ],
+                    [
+                        "TCGA-AA-3675-01"
+                    ],
+                    [
+                        "TCGA-CG-5724-01"
+                    ],
+                    [
+                        "TCGA-KK-A6DY-01"
+                    ],
+                    [
+                        "TCGA-RY-A840-01"
+                    ],
+                    [
+                        "TCGA-ZF-AA56-01"
+                    ],
+                    [
+                        "TCGA-DJ-A2Q7-01"
+                    ],
+                    [
+                        "TCGA-XS-A8TJ-01"
+                    ],
+                    [
+                        "TCGA-D8-A1J8-01"
+                    ],
+                    [
+                        "TCGA-AA-3489-01"
+                    ],
+                    [
+                        "TCGA-FD-A6TE-01"
+                    ],
+                    [
+                        "TCGA-DD-A73B-01"
+                    ],
+                    [
+                        "TCGA-06-0168-01"
+                    ],
+                    [
+                        "TCGA-EK-A2PG-01"
+                    ],
+                    [
+                        "TCGA-75-6203-01"
+                    ],
+                    [
+                        "TCGA-66-2727-01"
+                    ],
+                    [
+                        "TCGA-GV-A3QH-01"
+                    ],
+                    [
+                        "TCGA-HC-A8D1-01"
+                    ],
+                    [
+                        "TCGA-G3-A3CG-01"
+                    ],
+                    [
+                        "TCGA-KR-A7K7-01"
+                    ],
+                    [
+                        "TCGA-D8-A141-01"
+                    ],
+                    [
+                        "TCGA-BH-A1EX-01"
+                    ],
+                    [
+                        "TCGA-EK-A2R7-01"
+                    ],
+                    [
+                        "TCGA-29-1761-01"
+                    ],
+                    [
+                        "TCGA-AA-A02J-01"
+                    ],
+                    [
+                        "TCGA-CM-6172-01"
+                    ],
+                    [
+                        "TCGA-BR-A4PF-01"
+                    ],
+                    [
+                        "TCGA-80-5607-01"
+                    ],
+                    [
+                        "TCGA-DK-A6B1-01"
+                    ],
+                    [
+                        "TCGA-VM-A8CF-01"
+                    ],
+                    [
+                        "TCGA-FC-A5OB-01"
+                    ],
+                    [
+                        "TCGA-AX-A3G9-01"
+                    ],
+                    [
+                        "TCGA-D9-A4Z2-01"
+                    ],
+                    [
+                        "TCGA-EE-A2GP-06"
+                    ],
+                    [
+                        "TCGA-DD-A4NL-01"
+                    ],
+                    [
+                        "TCGA-CR-7389-01"
+                    ],
+                    [
+                        "TCGA-A2-A3XS-01"
+                    ],
+                    [
+                        "TCGA-56-A5DS-01"
+                    ],
+                    [
+                        "TCGA-AN-A0XU-01"
+                    ],
+                    [
+                        "TCGA-LD-A7W6-01"
+                    ],
+                    [
+                        "TCGA-WE-AAA0-06"
+                    ],
+                    [
+                        "TCGA-DD-AAW2-01"
+                    ],
+                    [
+                        "TCGA-E2-A15K-06"
+                    ],
+                    [
+                        "TCGA-EW-A1P4-01"
+                    ],
+                    [
+                        "TCGA-AQ-A54N-01"
+                    ],
+                    [
+                        "TCGA-AJ-A3TW-01"
+                    ],
+                    [
+                        "TCGA-UB-AA0V-01"
+                    ],
+                    [
+                        "TCGA-A7-A26G-01"
+                    ],
+                    [
+                        "TCGA-CJ-4644-01"
+                    ],
+                    [
+                        "TCGA-AB-2969-03"
+                    ],
+                    [
+                        "TCGA-25-1627-01"
+                    ],
+                    [
+                        "TCGA-DC-4749-01"
+                    ],
+                    [
+                        "TCGA-DY-A0XA-01"
+                    ],
+                    [
+                        "TCGA-FS-A1ZT-06"
+                    ],
+                    [
+                        "TCGA-CH-5764-01"
+                    ],
+                    [
+                        "HCC1937"
+                    ],
+                    [
+                        "TCGA-F7-8298-01"
+                    ],
+                    [
+                        "TCGA-CV-7423-01"
+                    ],
+                    [
+                        "TCGA-77-8008-01"
+                    ],
+                    [
+                        "TCGA-55-6980-01"
+                    ],
+                    [
+                        "TCGA-GS-A9U3-01"
+                    ],
+                    [
+                        "TCGA-G3-AAV6-01"
+                    ],
+                    [
+                        "TCGA-FD-A62P-01"
+                    ],
+                    [
+                        "TCGA-B2-A4SR-01"
+                    ],
+                    [
+                        "TCGA-AP-A05H-01"
+                    ],
+                    [
+                        "TCGA-D5-6923-01"
+                    ],
+                    [
+                        "TCGA-TM-A84L-01"
+                    ],
+                    [
+                        "TCGA-DK-A1A7-01"
+                    ],
+                    [
+                        "TCGA-EO-A3L0-01"
+                    ],
+                    [
+                        "TCGA-19-1787-01"
+                    ],
+                    [
+                        "TCGA-BR-7715-01"
+                    ],
+                    [
+                        "TCGA-D8-A1XA-01"
+                    ],
+                    [
+                        "TCGA-50-5045-01"
+                    ],
+                    [
+                        "TCGA-Q1-A5R3-01"
+                    ],
+                    [
+                        "TCGA-P3-A6T0-01"
+                    ],
+                    [
+                        "TCGA-A6-2677-01"
+                    ],
+                    [
+                        "TCGA-B0-5710-01"
+                    ],
+                    [
+                        "TCGA-CJ-4882-01"
+                    ],
+                    [
+                        "TCGA-HF-7134-01"
+                    ],
+                    [
+                        "TCGA-02-0055-01"
+                    ],
+                    [
+                        "TCGA-BA-4074-01"
+                    ],
+                    [
+                        "TCGA-QU-A6IO-01"
+                    ],
+                    [
+                        "TCGA-30-1891-01"
+                    ],
+                    [
+                        "TCGA-PQ-A6FN-01"
+                    ],
+                    [
+                        "TCGA-VS-A9V2-01"
+                    ],
+                    [
+                        "TCGA-DG-A2KK-01"
+                    ],
+                    [
+                        "TCGA-30-1718-01"
+                    ],
+                    [
+                        "TCGA-ZS-A9CF-01"
+                    ],
+                    [
+                        "TCGA-A8-A085-01"
+                    ],
+                    [
+                        "TCGA-D8-A27W-01"
+                    ],
+                    [
+                        "TCGA-2A-A8VO-01"
+                    ],
+                    [
+                        "TCGA-19-2624-01"
+                    ],
+                    [
+                        "TCGA-AB-2818-03"
+                    ],
+                    [
+                        "TCGA-98-A53J-01"
+                    ],
+                    [
+                        "TCGA-DD-A39Z-01"
+                    ],
+                    [
+                        "TCGA-D3-A8GI-06"
+                    ],
+                    [
+                        "TCGA-CN-6019-01"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "title": "B3",
+        "description": "What are functional domains in the EGFR protein that belong to Human?",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (o:Organism {hasPrimaryName: 'Human'})<-[:PRESENTIN]-(p:Protein {hasPrimaryName: 'EGFR'}) MATCH (p)-[:HASFUNCTIONALDOMAIN]->(fd:FunctionalDomain) RETURN fd.hasPrimaryName LIMIT 100",
+                "time_taken": 2.5179460048675537,
+                "cypher_result": [
+                    [
+                        "Furin-like"
+                    ],
+                    [
+                        "GF_recep_IV"
+                    ],
+                    [
+                        "Recep_L_domain"
+                    ],
+                    [
+                        "PK_Tyr_Ser-Thr"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "title": "B4",
+        "description": "Which samples with primary site 'skin' have missense mutations in the protein 'DCLK3'? Please provide the sample names.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (s:Sample) WHERE s.hasPrimarySite = 'skin' MATCH (m:Missense)-[:INSAMPLE]->(s) MATCH (p:Protein) WHERE p.hasPrimaryName = 'DCLK3' MATCH (p)<-[:HASMUTATION]-(m) RETURN s.hasSampleName LIMIT 100",
+                "time_taken": 4.015768766403198,
+                "cypher_result": []
+            }
+        }
+    },
+    {
+        "title": "B5",
+        "description": "List all organisms that are classified under the 'Plant' clade.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (c:Clade {hasPrimaryName: 'Plant'})<-[:ISPARTOF]-(o:Organism) RETURN o.hasPrimaryName LIMIT 100",
+                "time_taken": 2.641360282897949,
+                "cypher_result": [
+                    [
+                        "S.moellendorffii"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "title": "B6",
+        "description": "Which proteins have functional domains named 'Pkinase'?",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (fd:FunctionalDomain {hasPrimaryName: 'Pkinase'})<-[:HASFUNCTIONALDOMAIN]-(p:Protein) RETURN p.hasPrimaryName LIMIT 100",
+                "time_taken": 3.302309989929199,
+                "cypher_result": [
+                    [
+                        "81955.M00037"
+                    ],
+                    [
+                        "92429.M00114"
+                    ],
+                    [
+                        "86756.M00093"
+                    ],
+                    [
+                        "85357.M00065"
+                    ],
+                    [
+                        "92513.M00171"
+                    ],
+                    [
+                        "93204.M00186"
+                    ],
+                    [
+                        "93204.M00188"
+                    ],
+                    [
+                        "93204.M00229"
+                    ],
+                    [
+                        "93204.M00236"
+                    ],
+                    [
+                        "95500.M00015"
+                    ],
+                    [
+                        "82065.M00013"
+                    ],
+                    [
+                        "TVAG_166980"
+                    ],
+                    [
+                        "84915.M00114"
+                    ],
+                    [
+                        "96252.M00300"
+                    ],
+                    [
+                        "91227.M00021"
+                    ],
+                    [
+                        "96252.M00271"
+                    ],
+                    [
+                        "96252.M00287"
+                    ],
+                    [
+                        "86001.M00221"
+                    ],
+                    [
+                        "86001.M00247"
+                    ],
+                    [
+                        "86001.M00185"
+                    ],
+                    [
+                        "82140.M00126"
+                    ],
+                    [
+                        "81037.M00072"
+                    ],
+                    [
+                        "83629.M00130"
+                    ],
+                    [
+                        "83629.M00142"
+                    ],
+                    [
+                        "84404.M00108"
+                    ],
+                    [
+                        "84404.M00105"
+                    ],
+                    [
+                        "84404.M00103"
+                    ],
+                    [
+                        "85165.M00039"
+                    ],
+                    [
+                        "85165.M00032"
+                    ],
+                    [
+                        "92321.M00073"
+                    ],
+                    [
+                        "80459.M00156"
+                    ],
+                    [
+                        "80459.M00164"
+                    ],
+                    [
+                        "93256.M00047"
+                    ],
+                    [
+                        "93256.M00031"
+                    ],
+                    [
+                        "84085.M00108"
+                    ],
+                    [
+                        "83948.M00059"
+                    ],
+                    [
+                        "84085.M00082"
+                    ],
+                    [
+                        "84085.M00089"
+                    ],
+                    [
+                        "94472.M00077"
+                    ],
+                    [
+                        "84221.M00095"
+                    ],
+                    [
+                        "94266.M00066"
+                    ],
+                    [
+                        "88471.M00106"
+                    ],
+                    [
+                        "88471.M00087"
+                    ],
+                    [
+                        "88471.M00086"
+                    ],
+                    [
+                        "TVAG_079450"
+                    ],
+                    [
+                        "96098.M00089"
+                    ],
+                    [
+                        "82952.M00170"
+                    ],
+                    [
+                        "82952.M00151"
+                    ],
+                    [
+                        "88645.M00187"
+                    ],
+                    [
+                        "81933.M00078"
+                    ],
+                    [
+                        "88645.M00153"
+                    ],
+                    [
+                        "82488.M00083"
+                    ],
+                    [
+                        "90959.M00003"
+                    ],
+                    [
+                        "84076.M00041"
+                    ],
+                    [
+                        "83057.M00087"
+                    ],
+                    [
+                        "93444.M00137"
+                    ],
+                    [
+                        "93444.M00159"
+                    ],
+                    [
+                        "89397.M00103"
+                    ],
+                    [
+                        "89397.M00076"
+                    ],
+                    [
+                        "86485.M00568"
+                    ],
+                    [
+                        "86485.M00553"
+                    ],
+                    [
+                        "86485.M00466"
+                    ],
+                    [
+                        "87640.M00151"
+                    ],
+                    [
+                        "87054.M00094"
+                    ],
+                    [
+                        "81399.M00051"
+                    ],
+                    [
+                        "81399.M00045"
+                    ],
+                    [
+                        "83695.M00117"
+                    ],
+                    [
+                        "87054.M00118"
+                    ],
+                    [
+                        "83695.M00113"
+                    ],
+                    [
+                        "92477.M00178"
+                    ],
+                    [
+                        "92477.M00219"
+                    ],
+                    [
+                        "92477.M00232"
+                    ],
+                    [
+                        "92477.M00243"
+                    ],
+                    [
+                        "87875.M00080"
+                    ],
+                    [
+                        "87875.M00084"
+                    ],
+                    [
+                        "87875.M00064"
+                    ],
+                    [
+                        "85335.M00147"
+                    ],
+                    [
+                        "84316.M00054"
+                    ],
+                    [
+                        "88200.M00230"
+                    ],
+                    [
+                        "88200.M00281"
+                    ],
+                    [
+                        "86673.M00415"
+                    ],
+                    [
+                        "TVAG_294670"
+                    ],
+                    [
+                        "95258.M00098"
+                    ],
+                    [
+                        "92880.M00135"
+                    ],
+                    [
+                        "92880.M00184"
+                    ],
+                    [
+                        "92880.M00170"
+                    ],
+                    [
+                        "81732.M00007"
+                    ],
+                    [
+                        "81732.M00008"
+                    ],
+                    [
+                        "86673.M00318"
+                    ],
+                    [
+                        "86673.M00347"
+                    ],
+                    [
+                        "86673.M00362"
+                    ],
+                    [
+                        "86673.M00324"
+                    ],
+                    [
+                        "81146.M00064"
+                    ],
+                    [
+                        "89135.M00259"
+                    ],
+                    [
+                        "89135.M00265"
+                    ],
+                    [
+                        "91913.M00065"
+                    ],
+                    [
+                        "96732.M00538"
+                    ],
+                    [
+                        "94262.M00256"
+                    ],
+                    [
+                        "94262.M00278"
+                    ],
+                    [
+                        "88116.M00086"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "title": "B7",
+        "description": "What sequences are associated with EGFR protein?",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein {hasPrimaryName: 'EGFR'})-[:HASSEQUENCE]->(s:Sequence) RETURN s.hasPrimaryName LIMIT 100",
+                "time_taken": 2.9358372688293457,
+                "cypher_result": [
+                    [
+                        "Human_EGFR-Kinbase_Seq"
+                    ],
+                    [
+                        "Human_EGFR-Isoform1_Seq"
+                    ],
+                    [
+                        "Human_EGFR-Isoform3_Seq"
+                    ],
+                    [
+                        "Human_EGFR-Isoform2_Seq"
+                    ],
+                    [
+                        "Human_EGFR-Isoform4_Seq"
+                    ],
+                    [
+                        "Human_EGFR-Cosmic_Seq"
+                    ],
+                    [
+                        "Human_EGFR-UniProt_Seq"
+                    ],
+                    [
+                        "FruitFly_EGFR-Isoform2_Seq"
+                    ],
+                    [
+                        "FruitFly_EGFR-UniProt_Seq"
+                    ],
+                    [
+                        "FruitFly_EGFR-Isoform1_Seq"
+                    ],
+                    [
+                        "FruitFly_EGFR-Kinbase_Seq"
+                    ],
+                    [
+                        "Mouse_EGFR-Kinbase_Seq"
+                    ],
+                    [
+                        "Mouse_EGFR-UniProt_Seq"
+                    ],
+                    [
+                        "SeaUrchin_EGFR-Kinbase_Seq"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "title": "B8",
+        "description": "List the names of samples implicated in cancer type 'glioma_gliosarcoma'.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (c:Cancer {hasPrimaryName: 'glioma_gliosarcoma'})<-[:IMPLICATEDIN]-(s:Sample) RETURN s.hasSampleName LIMIT 100",
+                "time_taken": 2.106698989868164,
+                "cypher_result": [
+                    [
+                        "2760844"
+                    ],
+                    [
+                        "2701737"
+                    ],
+                    [
+                        "2701739"
+                    ],
+                    [
+                        "2701741"
+                    ],
+                    [
+                        "2701740"
+                    ],
+                    [
+                        "P-0001049-T01-IM3"
+                    ],
+                    [
+                        "P-0011026-T01-IM5"
+                    ],
+                    [
+                        "P-0009649-T01-IM5"
+                    ],
+                    [
+                        "P-0008380-T02-IM5"
+                    ],
+                    [
+                        "E40430"
+                    ],
+                    [
+                        "1285427"
+                    ],
+                    [
+                        "2114472"
+                    ],
+                    [
+                        "2240680"
+                    ],
+                    [
+                        "1036327"
+                    ],
+                    [
+                        "1036330"
+                    ],
+                    [
+                        "1036331"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "title": "B9",
+        "description": "Which proteins have mutations of type 'Missense'?",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (m:Missense)  WHERE m.hasMutantType = 'Missense'  MATCH (p:Protein)-[:HASMUTATION]->(m)  RETURN p.hasPrimaryName  LIMIT 100",
+                "time_taken": 1.7435259819030762,
+                "cypher_result": []
+            }
+        }
+    },
+    {
+        "title": "B10",
+        "description": "List the proteins with cellular location 'Cytoskeleton' that are found in the organism 'Mouse'.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (o:Organism {hasPrimaryName: 'Mouse'})<-[:PRESENTIN]-(p:Protein {hasCellularLocation: 'Cytoskeleton'}) RETURN p.hasPrimaryName LIMIT 100",
+                "time_taken": 7.386911630630493,
+                "cypher_result": [
+                    [
+                        "DCLK2"
+                    ],
+                    [
+                        "MAK"
+                    ],
+                    [
+                        "PKN2"
+                    ],
+                    [
+                        "PAK1"
+                    ],
+                    [
+                        "SCYL1"
+                    ],
+                    [
+                        "SMMLCK"
+                    ],
+                    [
+                        "MYO3B"
+                    ],
+                    [
+                        "BRSK2"
+                    ],
+                    [
+                        "CDKL5"
+                    ],
+                    [
+                        "CDK10"
+                    ],
+                    [
+                        "ERK7"
+                    ],
+                    [
+                        "SGK269"
+                    ],
+                    [
+                        "CDK6"
+                    ],
+                    [
+                        "TRB2"
+                    ],
+                    [
+                        "TRAD"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "title": "C1",
+        "description": "What ligands interact with the sequence motifs of the IRAK1 protein, and what is the type of interaction?",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein {hasPrimaryName: 'IRAK1'})-[:HASSEQUENCE]->(s:Sequence)-[:HASMOTIF]->(sm:SequenceMotif)<-[:HASMOTIF]-(li:LigandInteraction)-[:HASLIGAND]->(l:Ligand) RETURN l.hasPrimaryName, li.hasType LIMIT 100",
+                "time_taken": 4.792193651199341,
+                "cypher_result": [
+                    [
+                        "N-[2-methoxy-4-(morpholin-4-yl)phenyl]-6-(1H-pyrazol-5-yl)pyridine-2-carboxamide",
+                        "Apolar contact"
+                    ],
+                    [
+                        "N-[2-methoxy-4-(morpholin-4-yl)phenyl]-6-(1H-pyrazol-5-yl)pyridine-2-carboxamide",
+                        "Apolar contact"
+                    ],
+                    [
+                        "N-[2-methoxy-4-(morpholin-4-yl)phenyl]-6-(1H-pyrazol-5-yl)pyridine-2-carboxamide",
+                        "Apolar contact"
+                    ],
+                    [
+                        "N-[2-methoxy-4-(morpholin-4-yl)phenyl]-6-(1H-pyrazol-5-yl)pyridine-2-carboxamide",
+                        "Apolar contact"
+                    ],
+                    [
+                        "N-[2-methoxy-4-(morpholin-4-yl)phenyl]-6-(1H-pyrazol-5-yl)pyridine-2-carboxamide",
+                        "Apolar contact"
+                    ],
+                    [
+                        "N-[2-methoxy-4-(morpholin-4-yl)phenyl]-6-(1H-pyrazol-5-yl)pyridine-2-carboxamide",
+                        "Apolar contact"
+                    ],
+                    [
+                        "N-[2-methoxy-4-(morpholin-4-yl)phenyl]-6-(1H-pyrazol-5-yl)pyridine-2-carboxamide",
+                        "Apolar contact"
+                    ],
+                    [
+                        "N-[2-methoxy-4-(morpholin-4-yl)phenyl]-6-(1H-pyrazol-5-yl)pyridine-2-carboxamide",
+                        "Aromatic edge-to-face"
+                    ],
+                    [
+                        "N-[2-methoxy-4-(morpholin-4-yl)phenyl]-6-(1H-pyrazol-5-yl)pyridine-2-carboxamide",
+                        "Apolar contact"
+                    ],
+                    [
+                        "N-[2-methoxy-4-(morpholin-4-yl)phenyl]-6-(1H-pyrazol-5-yl)pyridine-2-carboxamide",
+                        "Apolar contact"
+                    ],
+                    [
+                        "N-[2-methoxy-4-(morpholin-4-yl)phenyl]-6-(1H-pyrazol-5-yl)pyridine-2-carboxamide",
+                        "Aromatic edge-to-face"
+                    ],
+                    [
+                        "N-[2-methoxy-4-(morpholin-4-yl)phenyl]-6-(1H-pyrazol-5-yl)pyridine-2-carboxamide",
+                        "Apolar contact"
+                    ],
+                    [
+                        "N-[2-methoxy-4-(morpholin-4-yl)phenyl]-6-(1H-pyrazol-5-yl)pyridine-2-carboxamide",
+                        "Aromatic face-to-face"
+                    ],
+                    [
+                        "N-[2-methoxy-4-(morpholin-4-yl)phenyl]-6-(1H-pyrazol-5-yl)pyridine-2-carboxamide",
+                        "Apolar contact"
+                    ],
+                    [
+                        "N-[2-methoxy-4-(morpholin-4-yl)phenyl]-6-(1H-pyrazol-5-yl)pyridine-2-carboxamide",
+                        "Aromatic face-to-face"
+                    ],
+                    [
+                        "N-[2-methoxy-4-(morpholin-4-yl)phenyl]-6-(1H-pyrazol-5-yl)pyridine-2-carboxamide",
+                        "Apolar contact"
+                    ],
+                    [
+                        "N-[2-methoxy-4-(morpholin-4-yl)phenyl]-6-(1H-pyrazol-5-yl)pyridine-2-carboxamide",
+                        "Apolar contact"
+                    ],
+                    [
+                        "N-[2-methoxy-4-(morpholin-4-yl)phenyl]-6-(1H-pyrazol-5-yl)pyridine-2-carboxamide",
+                        "Aromatic face-to-face"
+                    ],
+                    [
+                        "N-[2-methoxy-4-(morpholin-4-yl)phenyl]-6-(1H-pyrazol-5-yl)pyridine-2-carboxamide",
+                        "Aromatic face-to-face"
+                    ],
+                    [
+                        "N-[2-methoxy-4-(morpholin-4-yl)phenyl]-6-(1H-pyrazol-5-yl)pyridine-2-carboxamide",
+                        "Apolar contact"
+                    ],
+                    [
+                        "N-[2-methoxy-4-(morpholin-4-yl)phenyl]-6-(1H-pyrazol-5-yl)pyridine-2-carboxamide",
+                        "Apolar contact"
+                    ],
+                    [
+                        "N-[2-methoxy-4-(morpholin-4-yl)phenyl]-6-(1H-pyrazol-5-yl)pyridine-2-carboxamide",
+                        "Hydrogen bond donor (protein)"
+                    ],
+                    [
+                        "N-[2-methoxy-4-(morpholin-4-yl)phenyl]-6-(1H-pyrazol-5-yl)pyridine-2-carboxamide",
+                        "Hydrogen bond donor (protein)"
+                    ],
+                    [
+                        "N-[2-methoxy-4-(morpholin-4-yl)phenyl]-6-(1H-pyrazol-5-yl)pyridine-2-carboxamide",
+                        "Apolar contact"
+                    ],
+                    [
+                        "N-[2-methoxy-4-(morpholin-4-yl)phenyl]-6-(1H-pyrazol-5-yl)pyridine-2-carboxamide",
+                        "Apolar contact"
+                    ],
+                    [
+                        "N-[2-methoxy-4-(morpholin-4-yl)phenyl]-6-(1H-pyrazol-5-yl)pyridine-2-carboxamide",
+                        "Hydrogen bond donor (protein)"
+                    ],
+                    [
+                        "N-[2-methoxy-4-(morpholin-4-yl)phenyl]-6-(1H-pyrazol-5-yl)pyridine-2-carboxamide",
+                        "Hydrogen bond donor (protein)"
+                    ],
+                    [
+                        "N-[2-methoxy-4-(morpholin-4-yl)phenyl]-6-(1H-pyrazol-5-yl)pyridine-2-carboxamide",
+                        "Apolar contact"
+                    ],
+                    [
+                        "N-[2-methoxy-4-(morpholin-4-yl)phenyl]-6-(1H-pyrazol-5-yl)pyridine-2-carboxamide",
+                        "Apolar contact"
+                    ],
+                    [
+                        "N-[2-methoxy-4-(morpholin-4-yl)phenyl]-6-(1H-pyrazol-5-yl)pyridine-2-carboxamide",
+                        "Apolar contact"
+                    ],
+                    [
+                        "N-[2-methoxy-4-(morpholin-4-yl)phenyl]-6-(1H-pyrazol-5-yl)pyridine-2-carboxamide",
+                        "Apolar contact"
+                    ],
+                    [
+                        "N-[2-methoxy-4-(morpholin-4-yl)phenyl]-6-(1H-pyrazol-5-yl)pyridine-2-carboxamide",
+                        "Apolar contact"
+                    ],
+                    [
+                        "N-[2-methoxy-4-(morpholin-4-yl)phenyl]-6-(1H-pyrazol-5-yl)pyridine-2-carboxamide",
+                        "Apolar contact"
+                    ],
+                    [
+                        "N-[2-methoxy-4-(morpholin-4-yl)phenyl]-6-(1H-pyrazol-5-yl)pyridine-2-carboxamide",
+                        "Apolar contact"
+                    ],
+                    [
+                        "N-[2-methoxy-4-(morpholin-4-yl)phenyl]-6-(1H-pyrazol-5-yl)pyridine-2-carboxamide",
+                        "Apolar contact"
+                    ],
+                    [
+                        "N-[2-methoxy-4-(morpholin-4-yl)phenyl]-6-(1H-pyrazol-5-yl)pyridine-2-carboxamide",
+                        "Apolar contact"
+                    ],
+                    [
+                        "N-[2-methoxy-4-(morpholin-4-yl)phenyl]-6-(1H-pyrazol-5-yl)pyridine-2-carboxamide",
+                        "Apolar contact"
+                    ],
+                    [
+                        "N-[2-methoxy-4-(morpholin-4-yl)phenyl]-6-(1H-pyrazol-5-yl)pyridine-2-carboxamide",
+                        "Apolar contact"
+                    ],
+                    [
+                        "N-[2-methoxy-4-(morpholin-4-yl)phenyl]-6-(1H-pyrazol-5-yl)pyridine-2-carboxamide",
+                        "Apolar contact"
+                    ],
+                    [
+                        "N-[2-methoxy-4-(morpholin-4-yl)phenyl]-6-(1H-pyrazol-5-yl)pyridine-2-carboxamide",
+                        "Apolar contact"
+                    ],
+                    [
+                        "N-[2-methoxy-4-(morpholin-4-yl)phenyl]-6-(1H-pyrazol-5-yl)pyridine-2-carboxamide",
+                        "Apolar contact"
+                    ],
+                    [
+                        "N-[2-methoxy-4-(morpholin-4-yl)phenyl]-6-(1H-pyrazol-5-yl)pyridine-2-carboxamide",
+                        "Apolar contact"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "title": "C2",
+        "description": "List the cancer types linked to mutations found in the DCLK3 protein.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein {hasPrimaryName: 'DCLK3'})-[:HASMUTATION]->(m:Missense)-[:INSAMPLE]->(s:Sample)-[:IMPLICATEDIN]->(c:Cancer) RETURN c.hasPrimaryName LIMIT 100",
+                "time_taken": 1.6492571830749512,
+                "cypher_result": [
+                    [
+                        "malignant_melanoma_NS"
+                    ],
+                    [
+                        "carcinoma_adenocarcinoma"
+                    ],
+                    [
+                        "carcinoma_endometrioid_carcinoma"
+                    ],
+                    [
+                        "malignant_melanoma_NS"
+                    ],
+                    [
+                        "carcinoma_large_cell_neuroendocrine_carcinoma"
+                    ],
+                    [
+                        "carcinoma_adenocarcinoma"
+                    ],
+                    [
+                        "malignant_melanoma_NS"
+                    ],
+                    [
+                        "carcinoma_ductal_carcinoma"
+                    ],
+                    [
+                        "carcinoma_adenocarcinoma"
+                    ],
+                    [
+                        "carcinoma_adenocarcinoma"
+                    ],
+                    [
+                        "carcinoma_adenocarcinoma"
+                    ],
+                    [
+                        "carcinoma_adenocarcinoma"
+                    ],
+                    [
+                        "carcinoma_adenocarcinoma"
+                    ],
+                    [
+                        "carcinoma_basal_cell_carcinoma"
+                    ],
+                    [
+                        "carcinoma_basal_cell_carcinoma"
+                    ],
+                    [
+                        "carcinoma_endometrioid_carcinoma"
+                    ],
+                    [
+                        "carcinoma_endometrioid_carcinoma"
+                    ],
+                    [
+                        "malignant_melanoma_NS"
+                    ],
+                    [
+                        "carcinoma_squamous_cell_carcinoma"
+                    ],
+                    [
+                        "malignant_melanoma_NS"
+                    ],
+                    [
+                        "carcinoma_adenocarcinoma"
+                    ],
+                    [
+                        "carcinoma_adenocarcinoma"
+                    ],
+                    [
+                        "carcinoma_endometrioid_carcinoma"
+                    ],
+                    [
+                        "malignant_melanoma_NS"
+                    ],
+                    [
+                        "carcinoma_clear_cell_renal_cell_carcinoma"
+                    ],
+                    [
+                        "malignant_melanoma_NS"
+                    ],
+                    [
+                        "carcinoma_adenocarcinoma"
+                    ],
+                    [
+                        "carcinoma_NS"
+                    ],
+                    [
+                        "carcinoma_squamous_cell_carcinoma"
+                    ],
+                    [
+                        "lymphoid_neoplasm_mantle_cell_lymphoma"
+                    ],
+                    [
+                        "lymphoid_neoplasm_mantle_cell_lymphoma"
+                    ],
+                    [
+                        "lymphoid_neoplasm_mantle_cell_lymphoma"
+                    ],
+                    [
+                        "malignant_melanoma_NS"
+                    ],
+                    [
+                        "lymphoid_neoplasm_mycosis_fungoides-Sezary_syndrome"
+                    ],
+                    [
+                        "malignant_melanoma_NS"
+                    ],
+                    [
+                        "carcinoma_adenocarcinoma"
+                    ],
+                    [
+                        "other_neoplasm"
+                    ],
+                    [
+                        "malignant_melanoma_desmoplastic"
+                    ],
+                    [
+                        "carcinoma_adenocarcinoma"
+                    ],
+                    [
+                        "carcinoma_intestinal_adenocarcinoma"
+                    ],
+                    [
+                        "carcinoma_adenocarcinoma"
+                    ],
+                    [
+                        "carcinoma_adenocarcinoma"
+                    ],
+                    [
+                        "other_neoplasm"
+                    ],
+                    [
+                        "carcinoma_NS"
+                    ],
+                    [
+                        "carcinoma_adenocarcinoma"
+                    ],
+                    [
+                        "carcinoma_NS"
+                    ],
+                    [
+                        "malignant_melanoma_NS"
+                    ],
+                    [
+                        "carcinoma_squamous_cell_carcinoma"
+                    ],
+                    [
+                        "carcinoma_endometrioid_carcinoma"
+                    ],
+                    [
+                        "malignant_melanoma_NS"
+                    ],
+                    [
+                        "malignant_melanoma_NS"
+                    ],
+                    [
+                        "carcinoma_adenocarcinoma"
+                    ],
+                    [
+                        "carcinoma_adenocarcinoma"
+                    ],
+                    [
+                        "carcinoma_NS"
+                    ],
+                    [
+                        "carcinoma_adenocarcinoma"
+                    ],
+                    [
+                        "carcinoma_adenocarcinoma"
+                    ],
+                    [
+                        "carcinoma_adenocarcinoma"
+                    ],
+                    [
+                        "carcinoma_adenocarcinoma"
+                    ],
+                    [
+                        "carcinoma_squamous_cell_carcinoma"
+                    ],
+                    [
+                        "carcinoma_basal_cell_carcinoma"
+                    ],
+                    [
+                        "carcinoma_adenocarcinoma"
+                    ],
+                    [
+                        "carcinoma_endometrioid_carcinoma"
+                    ],
+                    [
+                        "malignant_melanoma_NS"
+                    ],
+                    [
+                        "malignant_melanoma_desmoplastic"
+                    ],
+                    [
+                        "malignant_melanoma_NS"
+                    ],
+                    [
+                        "malignant_melanoma_NS"
+                    ],
+                    [
+                        "carcinoma_squamous_cell_carcinoma"
+                    ],
+                    [
+                        "carcinoma_adenocarcinoma"
+                    ],
+                    [
+                        "malignant_melanoma_NS"
+                    ],
+                    [
+                        "carcinoma_NS"
+                    ],
+                    [
+                        "carcinoma_adenocarcinoma"
+                    ],
+                    [
+                        "carcinoma_endometrioid_carcinoma"
+                    ],
+                    [
+                        "carcinoma_adenocarcinoma"
+                    ],
+                    [
+                        "carcinoma_adenocarcinoma"
+                    ],
+                    [
+                        "carcinoma_endometrioid_carcinoma"
+                    ],
+                    [
+                        "malignant_melanoma_NS"
+                    ],
+                    [
+                        "carcinoma_squamous_cell_carcinoma"
+                    ],
+                    [
+                        "carcinoma_adenocarcinoma"
+                    ],
+                    [
+                        "malignant_melanoma_NS"
+                    ],
+                    [
+                        "lymphoid_neoplasm_acute_lymphoblastic_B_cell_leukaemia"
+                    ],
+                    [
+                        "carcinoma_adenocarcinoma"
+                    ],
+                    [
+                        "glioma_NS"
+                    ],
+                    [
+                        "other_neoplasm"
+                    ],
+                    [
+                        "carcinoma_adenocarcinoma"
+                    ],
+                    [
+                        "malignant_melanoma_NS"
+                    ],
+                    [
+                        "carcinoma_basal_cell_carcinoma"
+                    ],
+                    [
+                        "carcinoma_adenocarcinoma"
+                    ],
+                    [
+                        "carcinoma_adenocarcinoma"
+                    ],
+                    [
+                        "carcinoma_NS"
+                    ],
+                    [
+                        "carcinoma_NS"
+                    ],
+                    [
+                        "carcinoma_adenocarcinoma"
+                    ],
+                    [
+                        "carcinoma_adenocarcinoma"
+                    ],
+                    [
+                        "carcinoma_ductal_carcinoma"
+                    ],
+                    [
+                        "malignant_melanoma_NS"
+                    ],
+                    [
+                        "malignant_melanoma_NS"
+                    ],
+                    [
+                        "malignant_melanoma_NS"
+                    ],
+                    [
+                        "malignant_melanoma_NS"
+                    ],
+                    [
+                        "carcinoma_endometrioid_carcinoma"
+                    ],
+                    [
+                        "carcinoma_adenocarcinoma"
+                    ],
+                    [
+                        "malignant_melanoma_NS"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "title": "C3",
+        "description": "Which cancer samples have under expression of AKT3 protein? Show sample name, regulation, and cancer type.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein {hasPrimaryName: 'AKT3'})-[r:HASPROTEIN]->(ge:GeneExpression {hasRegulation: 'under'}) MATCH (ge)-[:INSAMPLE]->(s:Sample) MATCH (s)-[:IMPLICATEDIN]->(c:Cancer) RETURN s.hasSampleName AS SampleName, ge.hasRegulation AS Regulation, c.hasPrimaryName AS CancerType LIMIT 100",
+                "time_taken": 3.531559944152832,
+                "cypher_result": []
+            }
+        }
+    },
+    {
+        "title": "C4",
+        "description": "Which sequence motifs are hallmarks for the Human_EGFR family?",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (f:Family {hasPrimaryName: 'Human_EGFR'})-[:ENCODEDIN]->(p:Protein) MATCH (p)-[:HASSEQUENCE]->(s:Sequence) MATCH (s)-[:HASMOTIF]->(m:SequenceMotif) RETURN m.hasPrimaryName LIMIT 100",
+                "time_taken": 4.0301079750061035,
+                "cypher_result": [
+                    [
+                        "g.l.9"
+                    ],
+                    [
+                        "III.19"
+                    ],
+                    [
+                        "hinge.47"
+                    ],
+                    [
+                        "I.3"
+                    ],
+                    [
+                        "c.l.75"
+                    ],
+                    [
+                        "II.13"
+                    ],
+                    [
+                        "III.16"
+                    ],
+                    [
+                        "xDFG.82"
+                    ],
+                    [
+                        "alpha-C.21"
+                    ],
+                    [
+                        "alpha-D.59"
+                    ],
+                    [
+                        "alpha-C.24"
+                    ],
+                    [
+                        "hinge.48"
+                    ],
+                    [
+                        "alpha-D.54"
+                    ],
+                    [
+                        "linker.52"
+                    ],
+                    [
+                        "alpha-C.28"
+                    ],
+                    [
+                        "V.44"
+                    ],
+                    [
+                        "g.l.5"
+                    ],
+                    [
+                        "c.l.70"
+                    ],
+                    [
+                        "hinge.46"
+                    ],
+                    [
+                        "GK.45"
+                    ],
+                    [
+                        "xDFG.80"
+                    ],
+                    [
+                        "linker.49"
+                    ],
+                    [
+                        "alpha-D.55"
+                    ],
+                    [
+                        "II.11"
+                    ],
+                    [
+                        "b.l.36"
+                    ],
+                    [
+                        "linker.51"
+                    ],
+                    [
+                        "c.l.74"
+                    ],
+                    [
+                        "g.l.7"
+                    ],
+                    [
+                        "xDFG.81"
+                    ],
+                    [
+                        "linker.50"
+                    ],
+                    [
+                        "xDFG.83"
+                    ],
+                    [
+                        "III.15"
+                    ],
+                    [
+                        "a.l.85"
+                    ],
+                    [
+                        "a.l.84"
+                    ],
+                    [
+                        "b.l.37"
+                    ],
+                    [
+                        "g.l.8"
+                    ],
+                    [
+                        "IV.38"
+                    ],
+                    [
+                        "VII.77"
+                    ],
+                    [
+                        "V.43"
+                    ],
+                    [
+                        "g.l.6"
+                    ],
+                    [
+                        "III.17"
+                    ],
+                    [
+                        "g.l.4"
+                    ],
+                    [
+                        "alpha-C.25"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "title": "C5",
+        "description": "What are the histology subtypes of cancers linked to samples that have proteins with mutation ID 'COSM4166151'?",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein)-[:HASMUTATION]->(m:Missense {hasMutationId: 'COSM4166151'}) MATCH (p)<-[:HASPROTEIN]-(g:GeneExpression)-[:INSAMPLE]->(s:Sample) MATCH (s)-[:IMPLICATEDIN]->(c:Cancer) RETURN DISTINCT c.hasHistologySubType LIMIT 100",
+                "time_taken": 3.695132255554199,
+                "cypher_result": []
+            }
+        }
+    },
+    {
+        "title": "C6",
+        "description": "What is the name of the organism for proteins belonging to the Plant clade?",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (clade:CladeCladeTaxonomicgroupscategorizingorganismsbasedonsharedcharacteristics {hasPrimaryName: 'Plant'}) MATCH (organism:Organism)-[:ISPARTOF]->(clade) MATCH (protein:Protein)-[:PRESENTIN]->(organism) RETURN organism.hasPrimaryName LIMIT 100",
+                "time_taken": 3.126391649246216,
+                "cypher_result": []
+            }
+        }
+    },
+    {
+        "title": "C7",
+        "description": "Find pathways that include proteins containing the functional domain 'PI3_PI4_kinase' and have mutations. Please provide the names of these pathways and descriptions of the mutations.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (fd:FunctionalDomain {hasPrimaryName: 'PI3_PI4_kinase'})<-[:HASFUNCTIONALDOMAIN]-(p:Protein) MATCH (p)-[:HASMUTATION]->(m) MATCH (p)-[:PARTICIPATESIN]->(path:Pathway) RETURN DISTINCT path.hasPrimaryName AS pathwayName,         CASE             WHEN m:Missense THEN m.hasMutationDescription             ELSE m.hasMutationDescription         END AS mutationDescription LIMIT 100",
+                "time_taken": 4.89896035194397,
+                "cypher_result": [
+                    [
+                        "Post-translational protein modification",
+                        "Substitution - coding silent"
+                    ],
+                    [
+                        "Post-translational protein modification",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "Post-translational protein modification",
+                        "Substitution - Nonsense"
+                    ],
+                    [
+                        "Post-translational protein modification",
+                        "Deletion - Frameshift"
+                    ],
+                    [
+                        "Post-translational protein modification",
+                        "Deletion - In frame"
+                    ],
+                    [
+                        "Post-translational protein modification",
+                        "Insertion - Frameshift"
+                    ],
+                    [
+                        "Post-translational protein modification",
+                        ""
+                    ],
+                    [
+                        "Chromatin modifying enzymes",
+                        "Substitution - coding silent"
+                    ],
+                    [
+                        "Chromatin modifying enzymes",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "Chromatin modifying enzymes",
+                        "Substitution - Nonsense"
+                    ],
+                    [
+                        "Chromatin modifying enzymes",
+                        "Deletion - Frameshift"
+                    ],
+                    [
+                        "Chromatin modifying enzymes",
+                        "Deletion - In frame"
+                    ],
+                    [
+                        "Chromatin modifying enzymes",
+                        "Insertion - Frameshift"
+                    ],
+                    [
+                        "Chromatin modifying enzymes",
+                        ""
+                    ],
+                    [
+                        "Signaling by WNT",
+                        "Substitution - coding silent"
+                    ],
+                    [
+                        "Signaling by WNT",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "Signaling by WNT",
+                        "Substitution - Nonsense"
+                    ],
+                    [
+                        "Signaling by WNT",
+                        "Deletion - Frameshift"
+                    ],
+                    [
+                        "Signaling by WNT",
+                        "Deletion - In frame"
+                    ],
+                    [
+                        "Signaling by WNT",
+                        "Insertion - Frameshift"
+                    ],
+                    [
+                        "Signaling by WNT",
+                        ""
+                    ],
+                    [
+                        "Signal Transduction",
+                        "Substitution - coding silent"
+                    ],
+                    [
+                        "Signal Transduction",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "Signal Transduction",
+                        "Substitution - Nonsense"
+                    ],
+                    [
+                        "Signal Transduction",
+                        "Deletion - Frameshift"
+                    ],
+                    [
+                        "Signal Transduction",
+                        "Deletion - In frame"
+                    ],
+                    [
+                        "Signal Transduction",
+                        "Insertion - Frameshift"
+                    ],
+                    [
+                        "Signal Transduction",
+                        ""
+                    ],
+                    [
+                        "Ub-specific processing proteases",
+                        "Substitution - coding silent"
+                    ],
+                    [
+                        "Ub-specific processing proteases",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "Ub-specific processing proteases",
+                        "Substitution - Nonsense"
+                    ],
+                    [
+                        "Ub-specific processing proteases",
+                        "Deletion - Frameshift"
+                    ],
+                    [
+                        "Ub-specific processing proteases",
+                        "Deletion - In frame"
+                    ],
+                    [
+                        "Ub-specific processing proteases",
+                        "Insertion - Frameshift"
+                    ],
+                    [
+                        "Ub-specific processing proteases",
+                        ""
+                    ],
+                    [
+                        "Metabolism of proteins",
+                        "Substitution - coding silent"
+                    ],
+                    [
+                        "Metabolism of proteins",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "Metabolism of proteins",
+                        "Substitution - Nonsense"
+                    ],
+                    [
+                        "Metabolism of proteins",
+                        "Deletion - Frameshift"
+                    ],
+                    [
+                        "Metabolism of proteins",
+                        "Deletion - In frame"
+                    ],
+                    [
+                        "Metabolism of proteins",
+                        "Insertion - Frameshift"
+                    ],
+                    [
+                        "Metabolism of proteins",
+                        ""
+                    ],
+                    [
+                        "Deubiquitination",
+                        "Substitution - coding silent"
+                    ],
+                    [
+                        "Deubiquitination",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "Deubiquitination",
+                        "Substitution - Nonsense"
+                    ],
+                    [
+                        "Deubiquitination",
+                        "Deletion - Frameshift"
+                    ],
+                    [
+                        "Deubiquitination",
+                        "Deletion - In frame"
+                    ],
+                    [
+                        "Deubiquitination",
+                        "Insertion - Frameshift"
+                    ],
+                    [
+                        "Deubiquitination",
+                        ""
+                    ],
+                    [
+                        "Formation of the beta-catenin:TCF transactivating complex",
+                        "Substitution - coding silent"
+                    ],
+                    [
+                        "Formation of the beta-catenin:TCF transactivating complex",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "Formation of the beta-catenin:TCF transactivating complex",
+                        "Substitution - Nonsense"
+                    ],
+                    [
+                        "Formation of the beta-catenin:TCF transactivating complex",
+                        "Deletion - Frameshift"
+                    ],
+                    [
+                        "Formation of the beta-catenin:TCF transactivating complex",
+                        "Deletion - In frame"
+                    ],
+                    [
+                        "Formation of the beta-catenin:TCF transactivating complex",
+                        "Insertion - Frameshift"
+                    ],
+                    [
+                        "Formation of the beta-catenin:TCF transactivating complex",
+                        ""
+                    ],
+                    [
+                        "HATs acetylate histones",
+                        "Substitution - coding silent"
+                    ],
+                    [
+                        "HATs acetylate histones",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "HATs acetylate histones",
+                        "Substitution - Nonsense"
+                    ],
+                    [
+                        "HATs acetylate histones",
+                        "Deletion - Frameshift"
+                    ],
+                    [
+                        "HATs acetylate histones",
+                        "Deletion - In frame"
+                    ],
+                    [
+                        "HATs acetylate histones",
+                        "Insertion - Frameshift"
+                    ],
+                    [
+                        "HATs acetylate histones",
+                        ""
+                    ],
+                    [
+                        "Chromatin organization",
+                        "Substitution - coding silent"
+                    ],
+                    [
+                        "Chromatin organization",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "Chromatin organization",
+                        "Substitution - Nonsense"
+                    ],
+                    [
+                        "Chromatin organization",
+                        "Deletion - Frameshift"
+                    ],
+                    [
+                        "Chromatin organization",
+                        "Deletion - In frame"
+                    ],
+                    [
+                        "Chromatin organization",
+                        "Insertion - Frameshift"
+                    ],
+                    [
+                        "Chromatin organization",
+                        ""
+                    ],
+                    [
+                        "TCF dependent signaling in response to WNT",
+                        "Substitution - coding silent"
+                    ],
+                    [
+                        "TCF dependent signaling in response to WNT",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "TCF dependent signaling in response to WNT",
+                        "Substitution - Nonsense"
+                    ],
+                    [
+                        "TCF dependent signaling in response to WNT",
+                        "Deletion - Frameshift"
+                    ],
+                    [
+                        "TCF dependent signaling in response to WNT",
+                        "Deletion - In frame"
+                    ],
+                    [
+                        "TCF dependent signaling in response to WNT",
+                        "Insertion - Frameshift"
+                    ],
+                    [
+                        "TCF dependent signaling in response to WNT",
+                        ""
+                    ],
+                    [
+                        "Signal Transduction",
+                        "Frameshift"
+                    ],
+                    [
+                        "Signal Transduction",
+                        "Insertion - In frame"
+                    ],
+                    [
+                        "Cellular response to starvation",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "Cellular response to starvation",
+                        "Deletion - In frame"
+                    ],
+                    [
+                        "Cellular response to starvation",
+                        "Substitution - coding silent"
+                    ],
+                    [
+                        "Cellular response to starvation",
+                        "Substitution - Nonsense"
+                    ],
+                    [
+                        "Cellular response to starvation",
+                        "Insertion - Frameshift"
+                    ],
+                    [
+                        "Cellular response to starvation",
+                        "Deletion - Frameshift"
+                    ],
+                    [
+                        "Cellular response to starvation",
+                        "Frameshift"
+                    ],
+                    [
+                        "Cellular response to starvation",
+                        "Insertion - In frame"
+                    ],
+                    [
+                        "Regulation of TP53 Activity",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "Regulation of TP53 Activity",
+                        "Deletion - In frame"
+                    ],
+                    [
+                        "Regulation of TP53 Activity",
+                        "Substitution - coding silent"
+                    ],
+                    [
+                        "Regulation of TP53 Activity",
+                        "Substitution - Nonsense"
+                    ],
+                    [
+                        "Regulation of TP53 Activity",
+                        "Insertion - Frameshift"
+                    ],
+                    [
+                        "Regulation of TP53 Activity",
+                        "Deletion - Frameshift"
+                    ],
+                    [
+                        "Regulation of TP53 Activity",
+                        "Frameshift"
+                    ],
+                    [
+                        "Regulation of TP53 Activity",
+                        "Insertion - In frame"
+                    ],
+                    [
+                        "VEGFA-VEGFR2 Pathway",
+                        "Substitution - Missense"
+                    ],
+                    [
+                        "VEGFA-VEGFR2 Pathway",
+                        "Deletion - In frame"
+                    ],
+                    [
+                        "VEGFA-VEGFR2 Pathway",
+                        "Substitution - coding silent"
+                    ],
+                    [
+                        "VEGFA-VEGFR2 Pathway",
+                        "Substitution - Nonsense"
+                    ],
+                    [
+                        "VEGFA-VEGFR2 Pathway",
+                        "Insertion - Frameshift"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "title": "C8",
+        "description": "List the organisms that have proteins containing the functional domain 'Cadherin'.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (f:FunctionalDomain {hasPrimaryName: 'Cadherin'})<-[:HASFUNCTIONALDOMAIN]-(p:Protein) MATCH (p)-[:PRESENTIN]->(o:Organism) RETURN o.hasPrimaryName LIMIT 100",
+                "time_taken": 1.5053927898406982,
+                "cypher_result": [
+                    [
+                        "Mouse"
+                    ],
+                    [
+                        "M.brevicollis"
+                    ],
+                    [
+                        "M.brevicollis"
+                    ],
+                    [
+                        "M.brevicollis"
+                    ],
+                    [
+                        "M.brevicollis"
+                    ],
+                    [
+                        "Human"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "title": "C9",
+        "description": "Which mutations of the protein 'BRAF' associated with samples implicated in 'carcinoma_blastoma'? Please provide the mutation IDs and mutation descriptions.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (c:Cancer {hasPrimaryName: 'carcinoma_blastoma'})<-[:IMPLICATEDIN]-(s:Sample) MATCH (s)-[:INSAMPLE]->(m:Missense)<-[:HASMUTATION]-(p:Protein {hasPrimaryName: 'BRAF'}) RETURN m.hasMutationId, m.hasMutationDescription LIMIT 100",
+                "time_taken": 3.0617518424987793,
+                "cypher_result": []
+            }
+        }
+    },
+    {
+        "title": "C10",
+        "description": "What are the reactions associated with pathways in which BRAF protein participates?",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein {hasPrimaryName: 'BRAF'})-[:PARTICIPATESIN]->(w:Pathway) MATCH (w)-[:HASREACTION]->(r:Reaction) RETURN r.hasPrimaryName LIMIT 100",
+                "time_taken": 2.154940128326416,
+                "cypher_result": [
+                    [
+                        "CBL ubiquitinates FRS2 and FGFR2"
+                    ],
+                    [
+                        "p-CBL:GRB2 binds p-FRS2:activated FGFR2"
+                    ],
+                    [
+                        "Activated ERK1/2 threonine-phosphorylates FGFR2-associated FRS2"
+                    ],
+                    [
+                        "CBL ubiquitinates FRS2 and FGFR2"
+                    ],
+                    [
+                        "p-CBL:GRB2 binds p-FRS2:activated FGFR2"
+                    ],
+                    [
+                        "Activated ERK1/2 threonine-phosphorylates FGFR2-associated FRS2"
+                    ],
+                    [
+                        "KAL1 binds FGFR1c"
+                    ],
+                    [
+                        "p-CBL:GRB2 binds p-FRS2:activated FGFR1"
+                    ],
+                    [
+                        "Activated ERK1/2 threonine-phosphorylates FGFR1-associated FRS2."
+                    ],
+                    [
+                        "CBL ubiquitinates FRS2 and FGFR1"
+                    ],
+                    [
+                        "KAL1 binds FGFR1c"
+                    ],
+                    [
+                        "p-CBL:GRB2 binds p-FRS2:activated FGFR1"
+                    ],
+                    [
+                        "Activated ERK1/2 threonine-phosphorylates FGFR1-associated FRS2."
+                    ],
+                    [
+                        "CBL ubiquitinates FRS2 and FGFR1"
+                    ],
+                    [
+                        "CBL ubiquitinates FRS2 and FGFR3"
+                    ],
+                    [
+                        "Activated ERK1/2 threonine-phosphorylates FGFR3-associated FRS2."
+                    ],
+                    [
+                        "p-CBL:GRB2 binds p-FRS2:activated FGFR3"
+                    ],
+                    [
+                        "CBL ubiquitinates FRS2 and FGFR3"
+                    ],
+                    [
+                        "Activated ERK1/2 threonine-phosphorylates FGFR3-associated FRS2."
+                    ],
+                    [
+                        "p-CBL:GRB2 binds p-FRS2:activated FGFR3"
+                    ],
+                    [
+                        "Activated ERK1/2 threonine-phosphorylates FGFR4-associated FRS2."
+                    ],
+                    [
+                        "CBL ubiquitinates FRS2 and FGFR4"
+                    ],
+                    [
+                        "p-CBL:GRB2 binds p-FRS2:activated FGFR4"
+                    ],
+                    [
+                        "Activated ERK1/2 threonine-phosphorylates FGFR4-associated FRS2."
+                    ],
+                    [
+                        "CBL ubiquitinates FRS2 and FGFR4"
+                    ],
+                    [
+                        "p-CBL:GRB2 binds p-FRS2:activated FGFR4"
+                    ],
+                    [
+                        "RAF phosphorylates MAP2K dimer"
+                    ],
+                    [
+                        "Dual mechanism MAP2K inhibitors bind MAP2Ks"
+                    ],
+                    [
+                        "MAP2Ks phosphorylate MAPKs"
+                    ],
+                    [
+                        "MAP2Ks and MAPKs bind to the activated RAF complex"
+                    ],
+                    [
+                        "Dissociation of RAS:RAF complex"
+                    ],
+                    [
+                        "Single mechanism MAP2K inhibitors bind phosphorylated MAP2Ks"
+                    ],
+                    [
+                        "IL17RD binds p-2S MAP2Ks and MAPKs"
+                    ],
+                    [
+                        "MAP2Ks phosphorylate MAPK at the Golgi membrane"
+                    ],
+                    [
+                        "WDR83:LAMTOR2:LAMTOR3 binds MAPK components"
+                    ],
+                    [
+                        "Dual mechanism MAPK inhibitors bind MAPKs"
+                    ],
+                    [
+                        "Single mechanism MAPK inhibitors bind phosphorylated MAPK"
+                    ],
+                    [
+                        "RAF phosphorylates MAP2K dimer"
+                    ],
+                    [
+                        "Dual mechanism MAP2K inhibitors bind MAP2Ks"
+                    ],
+                    [
+                        "MAP2Ks phosphorylate MAPKs"
+                    ],
+                    [
+                        "MAP2Ks and MAPKs bind to the activated RAF complex"
+                    ],
+                    [
+                        "Dissociation of RAS:RAF complex"
+                    ],
+                    [
+                        "Single mechanism MAP2K inhibitors bind phosphorylated MAP2Ks"
+                    ],
+                    [
+                        "IL17RD binds p-2S MAP2Ks and MAPKs"
+                    ],
+                    [
+                        "MAP2Ks phosphorylate MAPK at the Golgi membrane"
+                    ],
+                    [
+                        "WDR83:LAMTOR2:LAMTOR3 binds MAPK components"
+                    ],
+                    [
+                        "Dual mechanism MAPK inhibitors bind MAPKs"
+                    ],
+                    [
+                        "Single mechanism MAPK inhibitors bind phosphorylated MAPK"
+                    ],
+                    [
+                        "YWHAB dimer dissociates from KSR1:MARK3"
+                    ],
+                    [
+                        "Raf dimer inhibitors bind RAF heterodimers"
+                    ],
+                    [
+                        "MRAS:SHOC2:PPP1CC dephosphorylates inactive RAFs"
+                    ],
+                    [
+                        "p-S311,S406 KSR1:MARK3 binds YWHAB dimer"
+                    ],
+                    [
+                        "Phosphorylation of RAF"
+                    ],
+                    [
+                        "\"Activator\" RAF:YWHAB dimer binds RAS:GTP"
+                    ],
+                    [
+                        "RAS:GTP:'activator' RAF homo/heterodimerizes with other RAF monomers"
+                    ],
+                    [
+                        "Inactive RAFs bind YWHAB"
+                    ],
+                    [
+                        "PP2A dephosphorylates KSR1"
+                    ],
+                    [
+                        "PP2A dephosphorylates inactive RAFs"
+                    ],
+                    [
+                        "MARK3 phosphorylates KSR1"
+                    ],
+                    [
+                        "YWHAB dimer dissociates from dephosphorylated RAF"
+                    ],
+                    [
+                        "YWHAB dimer dissociates from KSR1:MARK3"
+                    ],
+                    [
+                        "Raf dimer inhibitors bind RAF heterodimers"
+                    ],
+                    [
+                        "MRAS:SHOC2:PPP1CC dephosphorylates inactive RAFs"
+                    ],
+                    [
+                        "p-S311,S406 KSR1:MARK3 binds YWHAB dimer"
+                    ],
+                    [
+                        "Phosphorylation of RAF"
+                    ],
+                    [
+                        "\"Activator\" RAF:YWHAB dimer binds RAS:GTP"
+                    ],
+                    [
+                        "RAS:GTP:'activator' RAF homo/heterodimerizes with other RAF monomers"
+                    ],
+                    [
+                        "Inactive RAFs bind YWHAB"
+                    ],
+                    [
+                        "PP2A dephosphorylates KSR1"
+                    ],
+                    [
+                        "PP2A dephosphorylates inactive RAFs"
+                    ],
+                    [
+                        "MARK3 phosphorylates KSR1"
+                    ],
+                    [
+                        "YWHAB dimer dissociates from dephosphorylated RAF"
+                    ],
+                    [
+                        "RAS GEFs promote RAS nucleotide exchange"
+                    ],
+                    [
+                        "PEA15 binds MAPK monomers and dimers"
+                    ],
+                    [
+                        "RAS intrinsic GTPase activity hydrolyzes GTP to GDP"
+                    ],
+                    [
+                        "RAS:GTP binds PI3K"
+                    ],
+                    [
+                        "Intrinsic nucleotide exchange on RAS"
+                    ],
+                    [
+                        "p-T,Y MAPKs dimerize"
+                    ],
+                    [
+                        "RAS:GTP binds RAL GDS proteins"
+                    ],
+                    [
+                        "RAS GEFs promote RAS nucleotide exchange"
+                    ],
+                    [
+                        "PEA15 binds MAPK monomers and dimers"
+                    ],
+                    [
+                        "RAS intrinsic GTPase activity hydrolyzes GTP to GDP"
+                    ],
+                    [
+                        "RAS:GTP binds PI3K"
+                    ],
+                    [
+                        "Intrinsic nucleotide exchange on RAS"
+                    ],
+                    [
+                        "p-T,Y MAPKs dimerize"
+                    ],
+                    [
+                        "RAS:GTP binds RAL GDS proteins"
+                    ],
+                    [
+                        "PPA2A dephosphorylates SPRY2"
+                    ],
+                    [
+                        "PPTN11 dephosphorylates SPRY2"
+                    ],
+                    [
+                        "CBL dissociates from ubiquitinated p-SPRY2"
+                    ],
+                    [
+                        "SPRY2 binds CBL"
+                    ],
+                    [
+                        "SRC phosphorylates SPRY2 on Y55 and Y227"
+                    ],
+                    [
+                        "SPRY2 binds GRB2"
+                    ],
+                    [
+                        "Phosphorylated SPRY2 is ubiquitinated by CBL"
+                    ],
+                    [
+                        "SPRY2 translocates to the plasma membrane"
+                    ],
+                    [
+                        "B-RAF dissociates from S111/S120 p-SPRY2"
+                    ],
+                    [
+                        "SPRY2 is phosphorylated by phosphorylated MNK1"
+                    ],
+                    [
+                        "PPA2A dephosphorylates SPRY2"
+                    ],
+                    [
+                        "PPTN11 dephosphorylates SPRY2"
+                    ],
+                    [
+                        "CBL dissociates from ubiquitinated p-SPRY2"
+                    ],
+                    [
+                        "SPRY2 binds CBL"
+                    ]
+                ]
+            }
+        }
+    }
+]

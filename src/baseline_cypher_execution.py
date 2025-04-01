@@ -5,11 +5,15 @@ from neo4j import GraphDatabase
 from neo4j.exceptions import Neo4jError
 
 load_dotenv()
-KG_NAME = os.getenv("NEO4J_DATABASE_NAME")
+NEO4J_DATABASE_NAME = os.getenv("NEO4J_DATABASE_NAME")
+KG_NAME = None # the folder name in kgmetadata and results should match this name
+if NEO4J_DATABASE_NAME == "neo4j":
+    KG_NAME = "ionchannels"
+elif NEO4J_DATABASE_NAME == "prokino-kg":
+    KG_NAME = "prokino"
 NEO4J_URI = os.getenv("NEO4J_URI")
 NEO4J_USERNAME = os.getenv("NEO4J_USERNAME")
 NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD")
-NEO4J_DATABASE_NAME = KG_NAME #Assuming the database name is the same as the KG name, otherwise change this line
 
 
 input_file_path = f'./data/{KG_NAME}/test_queries.json'

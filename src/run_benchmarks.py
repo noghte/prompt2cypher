@@ -4,15 +4,20 @@ import json
 import datetime
 import subprocess
 from helpers.schema_utils import load_schema 
-from generate_cypher_baseline import generate_cypher_query as cypher_gen
+# from generate_cypher_baseline import generate_cypher_query as cypher_gen
+from generate_cypher_p2c import generate_cypher_query as cypher_gen
 from dotenv import load_dotenv
 
 load_dotenv()
-KG_NAME = os.getenv("NEO4J_DATABASE_NAME")
+NEO4J_DATABASE_NAME = os.getenv("NEO4J_DATABASE_NAME")
+KG_NAME = None
+if NEO4J_DATABASE_NAME == "neo4j":
+    KG_NAME = "ionchannels"
+elif NEO4J_DATABASE_NAME == "prokino-kg":
+    KG_NAME = "prokino"
 NEO4J_URI = os.getenv("NEO4J_URI")
 NEO4J_USERNAME = os.getenv("NEO4J_USERNAME")
 NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD")
-NEO4J_DATABASE_NAME = KG_NAME #Assuming the database name is the same as the KG name, otherwise change this line
 
 # LOCAL
 # MODEL_INFO = {"name":"mradermacher/CodeLlama-7b-CypherGen-GGUF", "is_local":True}
@@ -38,10 +43,10 @@ elif MODEL_INFO["name"].startswith("nvidia"): # NVIDIA
 else: # OpenAI
     llm_config = {"config_list": [{"model": MODEL_INFO["name"], "litemodel": MODEL_INFO["litemodel"], "api_key": os.getenv("OPENAI_API_KEY")}]}
 
-TEST_QUERIES_PATH = f"./kgmetadata/{KG_NAME}/test_queries.json"
-SCHEMA_PATH = f"./kgmetadata/{KG_NAME}/schema.json"
-SCHEMA_COMMENTS_PATH = f"./kgmetadata/{KG_NAME}/schema_comments.json"
-INSTRUCTIONS_PATH = f"./kgmetadata/{KG_NAME}/instructions/instructions-[VERSION].txt"
+TEST_QUERIES_PATH = f"./data/{KG_NAME}/test_queries.json"
+SCHEMA_PATH = f"./data/{KG_NAME}/schema.json"
+SCHEMA_COMMENTS_PATH = f"./data/{KG_NAME}/schema_comments.json"
+INSTRUCTIONS_PATH = f"./prompts/{KG_NAME}_instructions.txt"
 RESULTS_PATH = f"./results/{KG_NAME}/"
 
 
@@ -79,7 +84,8 @@ def run_benchmark(generate_cypher_query_func, user_query):
 
 def save_benchmark_results(benchmark_results, version):
     timestamp = datetime.datetime.now().strftime("%Y_%m_%d-%H_%M_%S")
-    save_path = f"{RESULTS_PATH}baseline_benchmark-{MODEL_INFO['filename']}-{timestamp}_{version}.json"
+    save_path = f"{RESULTS_PATH}benchmark-{MODEL_INFO['filename']}-{timestamp}_{version}.json"
+    os.makedirs(RESULTS_PATH, exist_ok=True)
     with open(save_path, "w") as outfile:
         json.dump(benchmark_results, outfile, indent=4)
     return save_path
@@ -121,4 +127,4 @@ if __name__ == "__main__":
 
         run_script = input("Do you want to run the benchmarks_cypher_execution script? (Y/N): ").strip().lower()
         if run_script == 'y':
-            subprocess.run(["python", "benchmarks_cypher_execution.py", "--cypher_from_llm", save_path.split("/")[-1]])
+            subprocess.run(["python", "./src/benchmarks_cypher_execution.py", "--cypher_from_llm", save_path.split("/")[-1]])

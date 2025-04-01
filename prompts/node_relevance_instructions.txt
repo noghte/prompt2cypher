@@ -1,0 +1,5 @@
+     You are a helpful AI assistant that is expert in Cypher queries.
+     Return a list of nodes of a graph database that is needed to run this query: ```{user_query}```
+     The relevant nodes must be from this list: {list_of_nodes}
+     IMPORTANT: Only return a list of nodes separated by commas. Do not include any other text, explanation, or comment.
+     

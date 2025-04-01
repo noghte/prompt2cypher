@@ -709,7 +709,7 @@
     },
     {
         "title": "A6",
-        "query": "What family does EGFR protein belong to?",
+        "query": "Which families include the EGFR protein as a member?",
         "cypher": "MATCH (p:Protein {hasPrimaryName: 'EGFR'})<-[:ENCODEDIN]-(f:Family) RETURN DISTINCT f.hasPrimaryName LIMIT 100",
         "cypher_result": [
             [
@@ -786,7 +786,7 @@
     },
     {
         "title": "B1",
-        "query": "Show the list of structural motif of the EGFR protein",
+        "query": "What are the sequence motifs found in the amino acid sequence of the EGFR protein?",
         "cypher": "MATCH (p:Protein {hasPrimaryName: 'EGFR'})-[:HASSEQUENCE]->(s:Sequence)-[:HASMOTIF]->(sm:SequenceMotif) RETURN DISTINCT sm.hasPrimaryName AS StructuralMotif LIMIT 100",
         "cypher_result": [
             [
@@ -1248,7 +1248,7 @@
     },
     {
         "title": "B4",
-        "query": "Which samples have a missense mutation in the DCLK3 protein specifically in skin tissue?",
+        "query": "Which samples with primary site 'skin' have missense mutations in the protein 'DCLK3'? Please provide the sample names.",
         "cypher": "MATCH (p:Protein {hasPrimaryName: 'DCLK3'})-[:HASMUTATION]->(m:Missense)-[:INSAMPLE]->(s:Sample {hasPrimarySite: 'skin'}) RETURN DISTINCT s.hasSampleName LIMIT 100",
         "cypher_result": [
             [
@@ -1519,7 +1519,7 @@
     },
     {
         "title": "B5",
-        "query": "Which organisms have proteins that are present in the 'Plant' clade?",
+        "query": "List all organisms that are classified under the 'Plant' clade.",
         "cypher": "MATCH (c:Clade {hasPrimaryName: 'Plant'})<-[:ISPARTOF]-(o:Organism) RETURN DISTINCT o.hasPrimaryName LIMIT 100",
         "cypher_result": [
             [
@@ -1885,7 +1885,7 @@
     },
     {
         "title": "B8",
-        "query": "Which samples are implicated in cancer 'glioma_gliosarcoma'?",
+        "query": "List the names of samples implicated in cancer type 'glioma_gliosarcoma'.",
         "cypher": "MATCH (s:Sample)-[:IMPLICATEDIN]->(c:Cancer {hasPrimaryName: 'glioma_gliosarcoma'}) RETURN DISTINCT s.hasSampleName LIMIT 100",
         "cypher_result": [
             [
@@ -2247,7 +2247,7 @@
     },
     {
         "title": "B10",
-        "query": "Which proteins are present in the organism 'Mouse' have the cellular location of 'Cytoskeleton'?",
+        "query": "List the proteins with cellular location 'Cytoskeleton' that are found in the organism 'Mouse'.",
         "cypher": "MATCH (p:Protein {hasCellularLocation: 'Cytoskeleton'})-[:PRESENTIN]->(o:Organism {hasPrimaryName: 'Mouse'}) RETURN DISTINCT p.hasPrimaryName LIMIT 100",
         "cypher_result": [
             [
@@ -2299,7 +2299,7 @@
     },
     {
         "title": "C1",
-        "query": "What ligands interact with IRAK1 protein, and what is the type of interaction?",
+        "query": "What ligands interact with the sequence motifs of the IRAK1 protein, and what is the type of interaction?",
         "cypher": "MATCH (p:Protein {hasPrimaryName: 'IRAK1'})-[:HASSEQUENCE]->(s:Sequence)-[:HASMOTIF]->(sm:SequenceMotif)<-[:HASMOTIF]-(li:LigandInteraction)-[:HASLIGAND]->(l:Ligand) RETURN DISTINCT l.hasPrimaryName AS Ligand, li.hasType AS InteractionType LIMIT 100",
         "cypher_result": [
             [
@@ -2322,7 +2322,7 @@
     },
     {
         "title": "C2",
-        "query": "What types of cancer are associated with mutations in DCLK3 protein?",
+        "query": "List the cancer types linked to mutations found in the DCLK3 protein.",
         "cypher": "MATCH (p:Protein {hasPrimaryName: 'DCLK3'})-[:HASMUTATION]->(m)-[:INSAMPLE]->(s:Sample)-[:IMPLICATEDIN]->(c:Cancer) RETURN DISTINCT c.hasPrimaryName AS CancerType LIMIT 100",
         "cypher_result": [
             [
@@ -2666,7 +2666,7 @@
     },
     {
         "title": "C5",
-        "query": "What is the histology subtype of cancers associated with proteins that have mutations with id COSM4166151?",
+        "query": "What are the histology subtypes of cancers linked to samples that have proteins with mutation ID 'COSM4166151'?",
         "cypher": "MATCH (m:OtherMutation {hasMutationId: 'COSM4166151'}) MATCH (p:Protein)-[:HASMUTATION]->(m) MATCH (p)<-[:HASPROTEIN]-(ge:GeneExpression) MATCH (ge)-[:INSAMPLE]->(s:Sample)-[:IMPLICATEDIN]->(c:Cancer) RETURN DISTINCT c.hasHistologySubType AS HistologySubType LIMIT 100",
         "cypher_result": [
             [
@@ -2725,7 +2725,7 @@
     },
     {
         "title": "C7",
-        "query": "What pathways are potentially influenced by mutations occurring in proteins that have the functional domain 'PI3_PI4_kinase'? Show the pathway name and the mutation description.",
+        "query": "Find pathways that include proteins containing the functional domain 'PI3_PI4_kinase' and have mutations. Please provide the names of these pathways and descriptions of the mutations.",
         "cypher": "MATCH (fd:FunctionalDomain {hasPrimaryName: 'PI3_PI4_kinase'})<-[:HASFUNCTIONALDOMAIN]-(p:Protein)-[:HASMUTATION]->(m),(p)-[:PARTICIPATESIN]->(pw:Pathway) RETURN DISTINCT pw.hasPrimaryName AS Pathway, m.hasMutationDescription AS MutationDescription LIMIT 100",
         "cypher_result": [
             [
@@ -3148,7 +3148,7 @@
     },
     {
         "title": "C9",
-        "query": "Which mutations of BRAF protein are associated with samples implicated in 'carcinoma_blastoma'? Show mutation id and description.",
+        "query": "Which mutations of the protein 'BRAF' associated with samples implicated in 'carcinoma_blastoma'? Please provide the mutation IDs and mutation descriptions.",
         "cypher": "MATCH (p:Protein {hasPrimaryName: 'BRAF'})-[:HASMUTATION]->(m)-[:INSAMPLE]->(s:Sample)-[:IMPLICATEDIN]->(c:Cancer {hasPrimaryName: 'carcinoma_blastoma'}) RETURN DISTINCT m.hasMutationId, m.hasMutationDescription LIMIT 100",
         "cypher_result": [
             [

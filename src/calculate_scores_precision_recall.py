@@ -4,7 +4,7 @@ import argparse
 from dotenv import load_dotenv
 from tabulate import tabulate  # For printing tables
 
-DEFAULT_CYPHERRESULTS_FILENAME = "baseline_benchmark-o1-preview-2024_11_27-11_17_35_version_5-with_results.json"
+DEFAULT_CYPHERRESULTS_FILENAME = "baseline_benchmark-gpt-4o-mini-2025_04_01-16_14_33_version_1-with_results.json"
 IGNORE_EMPTY_PREDICTIONS = False  # Set to True to ignore empty predictions
 
 parser = argparse.ArgumentParser(description="Process CYPHERRESULTS_FILENAME argument")
@@ -18,12 +18,16 @@ args = parser.parse_args()
 CYPHERRESULTS_FILENAME = args.cypher_results # "." + ".".join(args.cypher_results.split(".")[2:])
 
 load_dotenv()
-KG_NAME = os.getenv("NEO4J_DATABASE_NAME")
 NEO4J_URI = os.getenv("NEO4J_URI")
 NEO4J_USERNAME = os.getenv("NEO4J_USERNAME")
 NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD")
-NEO4J_DATABASE_NAME = KG_NAME #Assuming the database name is the same as the KG name, otherwise change this line
-
+NEO4J_DATABASE_NAME = os.getenv("NEO4J_DATABASE_NAME")
+KG_NAME = None
+if NEO4J_DATABASE_NAME == "neo4j":
+    KG_NAME = "ionchannels"
+elif NEO4J_DATABASE_NAME == "prokino-kg":
+    KG_NAME = "prokino"
+    
 def load_json(file_path):
     with open(file_path, 'r') as file:
         return json.load(file)
@@ -50,7 +54,7 @@ def flatten_results(results):
     return flattened
 
 
-baseline_file_path = f'./kgmetadata/{KG_NAME}/test_queries-with_results.json'
+baseline_file_path = f'./data/{KG_NAME}/test_queries-with_results.json'
 prediction_file_path = f"./results/{KG_NAME}/{CYPHERRESULTS_FILENAME}"
 
 if not prediction_file_path.endswith("-with_results.json"):

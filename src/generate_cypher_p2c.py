@@ -47,8 +47,11 @@ def generate_cypher_query(user_query, llm_config, schema, instructions_path, max
     """
 
     client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-    list_of_nodes = list(schema["labels"].keys())
-
+    list_of_nodes = [] 
+    for node in list(schema["labels"].keys()):
+        if node in schema["nodes_description"]:
+            node = f"'{node}' ({schema['nodes_description'][node]})"
+        list_of_nodes.append(node)
     try:
         # Read node relevance instructions from file
         node_relevance_instructions = read_file_content('./prompts/node_relevance_instructions.txt')
@@ -75,7 +78,7 @@ def generate_cypher_query(user_query, llm_config, schema, instructions_path, max
         for r in relevant_relationships:
             r['comment'] = schema['relationship_comments'].get(r['name'], '')
         
-        # Step 5: Add nodes description and properties descriptions to the relevant nodes
+        # Step 3: Add nodes description and properties descriptions to the relevant nodes
         relevant_nodes_info = {}
         for node in relevant_nodes:
             node_description = schema['nodes_description'].get(node, "")
@@ -93,20 +96,20 @@ def generate_cypher_query(user_query, llm_config, schema, instructions_path, max
                 nodes_info_str += f"- {prop}: {prop_desc}\n"
             nodes_info_str += "\n"
 
-        # Step 3: Generate the Cypher query
-        with open(instructions_path.replace("[VERSION]", "v6"), "r") as file:
+        # Step 4: Generate the Cypher query
+        with open(instructions_path, "r") as file:
             instructions = file.read()
-            
-        # Read prompt instructions from file
-        prompt_template = read_file_content('./prompts/prompt_instructions.txt')
-        final_prompt = prompt_template.format(
-            user_query=user_query,
-            relevant_nodes=relevant_nodes,
-            relevant_relationships=relevant_relationships,
-            nodes_info_str=nodes_info_str,
-            instructions=instructions
-        )
-        
+
+        final_prompt = (
+            f"You are a helpful AI assistant that generates Cypher queries to answer user queries.\n"
+            f"Generate a Cypher query to answer the User query: ```{user_query}```\n"
+            f"Consider the following information:\n"
+            f"Given the relevant nodes ({relevant_nodes}) and all the relationships they are involved in: ```{relevant_relationships}```\n"
+            f"Information about the relevant nodes:\n{nodes_info_str}\n"
+            f"\nIMPORTANT Instructions: {instructions}\n"
+            f"The Cypher query should answer the user query which is: {user_query}\n"
+            f"Return only Cypher code with no explanations. Complete this task: the cypher query is: ...")
+                
         response = client.chat.completions.create(
             model=llm_config["config_list"][0]["model"],
             messages=[{"role": "user", "content": final_prompt}]

@@ -1,0 +1,302 @@
+[
+    {
+        "title": "A1",
+        "description": "What is the functional domain associated with EGFR protein?",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein {hasPrimaryName: 'EGFR'})-[:HASFUNCTIONALDOMAIN]->(fd:FunctionalDomain) RETURN fd.hasPrimaryName LIMIT 100",
+                "time_taken": 13.411312818527222
+            }
+        }
+    },
+    {
+        "title": "A2",
+        "description": "What are the amino acid changes and mutation descriptions for EGFR protein?",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein {hasPrimaryName: 'EGFR'})-[:HASMUTATION]->(m:Missense) RETURN m.hasWildTypeResidue, m.hasMutationDescription LIMIT 100",
+                "time_taken": 2.4328196048736572
+            }
+        }
+    },
+    {
+        "title": "A3",
+        "description": "In which organisms is DCLK1 protein present?",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein {hasPrimaryName: 'DCLK1'})-[:PRESENTIN]->(o:Organism) RETURN o.hasPrimaryName LIMIT 100",
+                "time_taken": 3.502814292907715
+            }
+        }
+    },
+    {
+        "title": "A4",
+        "description": "What pathways does EGFR protein participate in?",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein {hasPrimaryName: 'EGFR'})-[:PARTICIPATESIN]->(path:Pathway) RETURN path.hasPrimaryName LIMIT 100",
+                "time_taken": 1.8525505065917969
+            }
+        }
+    },
+    {
+        "title": "A5",
+        "description": "What reactions are produced by the 'RHOJ GTPase cycle' pathway?",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Pathway {hasPrimaryName: 'RHOJ GTPase cycle'})-[:HASREACTION]->(r:Reaction)  RETURN r.hasPrimaryName  LIMIT 100",
+                "time_taken": 2.2727017402648926
+            }
+        }
+    },
+    {
+        "title": "A6",
+        "description": "Which families include the EGFR protein as a member?",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein {hasPrimaryName: 'EGFR'})-[:ENCODEDIN]->(f:Family) RETURN f.hasPrimaryName LIMIT 100",
+                "time_taken": 1.4859907627105713
+            }
+        }
+    },
+    {
+        "title": "A7",
+        "description": "What is the tissue specificity of the EGFR protein?",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein {hasPrimaryName: 'EGFR'})  RETURN p.hasTissueSpecificity  LIMIT 100",
+                "time_taken": 1.6824498176574707
+            }
+        }
+    },
+    {
+        "title": "A8",
+        "description": "What is the chromosomal position of the EGFR protein?",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein {hasPrimaryName: 'EGFR'}) RETURN p.chromosomalPosition LIMIT 100",
+                "time_taken": 1.6789276599884033
+            }
+        }
+    },
+    {
+        "title": "A9",
+        "description": "Is HIPK1 protein a dark kinase?",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein {hasPrimaryName: 'HIPK1'}) RETURN p.isDarkKinase LIMIT 100",
+                "time_taken": 2.3547253608703613
+            }
+        }
+    },
+    {
+        "title": "A10",
+        "description": "What is the EC number of the EGFR protein?",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein {hasPrimaryName: 'EGFR'}) RETURN p.hasECNumber LIMIT 100",
+                "time_taken": 1.9694461822509766
+            }
+        }
+    },
+    {
+        "title": "B1",
+        "description": "What are the sequence motifs found in the amino acid sequence of the EGFR protein?",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein {hasPrimaryName: 'EGFR'})-[:HASSEQUENCE]->(s:Sequence)-[:HASMOTIF]->(m:SequenceMotif) RETURN m.hasPrimaryName LIMIT 100",
+                "time_taken": 1.7181651592254639
+            }
+        }
+    },
+    {
+        "title": "B2",
+        "description": "Which sample is associated with the gene expression of EGFR protein?",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein {hasPrimaryName: 'EGFR'})-[:HASPROTEIN]-(ge:GeneExpression) MATCH (ge)-[:INSAMPLE]-(s:Sample) RETURN s.hasSampleName LIMIT 100",
+                "time_taken": 2.619127035140991
+            }
+        }
+    },
+    {
+        "title": "B3",
+        "description": "What are functional domains in the EGFR protein that belong to Human?",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (o:Organism {hasPrimaryName: 'Human'})<-[:PRESENTIN]-(p:Protein {hasPrimaryName: 'EGFR'}) MATCH (p)-[:HASFUNCTIONALDOMAIN]->(fd:FunctionalDomain) RETURN fd.hasPrimaryName LIMIT 100",
+                "time_taken": 2.5179460048675537
+            }
+        }
+    },
+    {
+        "title": "B4",
+        "description": "Which samples with primary site 'skin' have missense mutations in the protein 'DCLK3'? Please provide the sample names.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (s:Sample) WHERE s.hasPrimarySite = 'skin' MATCH (m:Missense)-[:INSAMPLE]->(s) MATCH (p:Protein) WHERE p.hasPrimaryName = 'DCLK3' MATCH (p)<-[:HASMUTATION]-(m) RETURN s.hasSampleName LIMIT 100",
+                "time_taken": 4.015768766403198
+            }
+        }
+    },
+    {
+        "title": "B5",
+        "description": "List all organisms that are classified under the 'Plant' clade.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (c:Clade {hasPrimaryName: 'Plant'})<-[:ISPARTOF]-(o:Organism) RETURN o.hasPrimaryName LIMIT 100",
+                "time_taken": 2.641360282897949
+            }
+        }
+    },
+    {
+        "title": "B6",
+        "description": "Which proteins have functional domains named 'Pkinase'?",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (fd:FunctionalDomain {hasPrimaryName: 'Pkinase'})<-[:HASFUNCTIONALDOMAIN]-(p:Protein) RETURN p.hasPrimaryName LIMIT 100",
+                "time_taken": 3.302309989929199
+            }
+        }
+    },
+    {
+        "title": "B7",
+        "description": "What sequences are associated with EGFR protein?",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein {hasPrimaryName: 'EGFR'})-[:HASSEQUENCE]->(s:Sequence) RETURN s.hasPrimaryName LIMIT 100",
+                "time_taken": 2.9358372688293457
+            }
+        }
+    },
+    {
+        "title": "B8",
+        "description": "List the names of samples implicated in cancer type 'glioma_gliosarcoma'.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (c:Cancer {hasPrimaryName: 'glioma_gliosarcoma'})<-[:IMPLICATEDIN]-(s:Sample) RETURN s.hasSampleName LIMIT 100",
+                "time_taken": 2.106698989868164
+            }
+        }
+    },
+    {
+        "title": "B9",
+        "description": "Which proteins have mutations of type 'Missense'?",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (m:Missense)  WHERE m.hasMutantType = 'Missense'  MATCH (p:Protein)-[:HASMUTATION]->(m)  RETURN p.hasPrimaryName  LIMIT 100",
+                "time_taken": 1.7435259819030762
+            }
+        }
+    },
+    {
+        "title": "B10",
+        "description": "List the proteins with cellular location 'Cytoskeleton' that are found in the organism 'Mouse'.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (o:Organism {hasPrimaryName: 'Mouse'})<-[:PRESENTIN]-(p:Protein {hasCellularLocation: 'Cytoskeleton'}) RETURN p.hasPrimaryName LIMIT 100",
+                "time_taken": 7.386911630630493
+            }
+        }
+    },
+    {
+        "title": "C1",
+        "description": "What ligands interact with the sequence motifs of the IRAK1 protein, and what is the type of interaction?",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein {hasPrimaryName: 'IRAK1'})-[:HASSEQUENCE]->(s:Sequence)-[:HASMOTIF]->(sm:SequenceMotif)<-[:HASMOTIF]-(li:LigandInteraction)-[:HASLIGAND]->(l:Ligand) RETURN l.hasPrimaryName, li.hasType LIMIT 100",
+                "time_taken": 4.792193651199341
+            }
+        }
+    },
+    {
+        "title": "C2",
+        "description": "List the cancer types linked to mutations found in the DCLK3 protein.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein {hasPrimaryName: 'DCLK3'})-[:HASMUTATION]->(m:Missense)-[:INSAMPLE]->(s:Sample)-[:IMPLICATEDIN]->(c:Cancer) RETURN c.hasPrimaryName LIMIT 100",
+                "time_taken": 1.6492571830749512
+            }
+        }
+    },
+    {
+        "title": "C3",
+        "description": "Which cancer samples have under expression of AKT3 protein? Show sample name, regulation, and cancer type.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein {hasPrimaryName: 'AKT3'})-[r:HASPROTEIN]->(ge:GeneExpression {hasRegulation: 'under'}) MATCH (ge)-[:INSAMPLE]->(s:Sample) MATCH (s)-[:IMPLICATEDIN]->(c:Cancer) RETURN s.hasSampleName AS SampleName, ge.hasRegulation AS Regulation, c.hasPrimaryName AS CancerType LIMIT 100",
+                "time_taken": 3.531559944152832
+            }
+        }
+    },
+    {
+        "title": "C4",
+        "description": "Which sequence motifs are hallmarks for the Human_EGFR family?",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (f:Family {hasPrimaryName: 'Human_EGFR'})-[:ENCODEDIN]->(p:Protein) MATCH (p)-[:HASSEQUENCE]->(s:Sequence) MATCH (s)-[:HASMOTIF]->(m:SequenceMotif) RETURN m.hasPrimaryName LIMIT 100",
+                "time_taken": 4.0301079750061035
+            }
+        }
+    },
+    {
+        "title": "C5",
+        "description": "What are the histology subtypes of cancers linked to samples that have proteins with mutation ID 'COSM4166151'?",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein)-[:HASMUTATION]->(m:Missense {hasMutationId: 'COSM4166151'}) MATCH (p)<-[:HASPROTEIN]-(g:GeneExpression)-[:INSAMPLE]->(s:Sample) MATCH (s)-[:IMPLICATEDIN]->(c:Cancer) RETURN DISTINCT c.hasHistologySubType LIMIT 100",
+                "time_taken": 3.695132255554199
+            }
+        }
+    },
+    {
+        "title": "C6",
+        "description": "What is the name of the organism for proteins belonging to the Plant clade?",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (clade:CladeCladeTaxonomicgroupscategorizingorganismsbasedonsharedcharacteristics {hasPrimaryName: 'Plant'}) MATCH (organism:Organism)-[:ISPARTOF]->(clade) MATCH (protein:Protein)-[:PRESENTIN]->(organism) RETURN organism.hasPrimaryName LIMIT 100",
+                "time_taken": 3.126391649246216
+            }
+        }
+    },
+    {
+        "title": "C7",
+        "description": "Find pathways that include proteins containing the functional domain 'PI3_PI4_kinase' and have mutations. Please provide the names of these pathways and descriptions of the mutations.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (fd:FunctionalDomain {hasPrimaryName: 'PI3_PI4_kinase'})<-[:HASFUNCTIONALDOMAIN]-(p:Protein) MATCH (p)-[:HASMUTATION]->(m) MATCH (p)-[:PARTICIPATESIN]->(path:Pathway) RETURN DISTINCT path.hasPrimaryName AS pathwayName,         CASE             WHEN m:Missense THEN m.hasMutationDescription             ELSE m.hasMutationDescription         END AS mutationDescription LIMIT 100",
+                "time_taken": 4.89896035194397
+            }
+        }
+    },
+    {
+        "title": "C8",
+        "description": "List the organisms that have proteins containing the functional domain 'Cadherin'.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (f:FunctionalDomain {hasPrimaryName: 'Cadherin'})<-[:HASFUNCTIONALDOMAIN]-(p:Protein) MATCH (p)-[:PRESENTIN]->(o:Organism) RETURN o.hasPrimaryName LIMIT 100",
+                "time_taken": 1.5053927898406982
+            }
+        }
+    },
+    {
+        "title": "C9",
+        "description": "Which mutations of the protein 'BRAF' associated with samples implicated in 'carcinoma_blastoma'? Please provide the mutation IDs and mutation descriptions.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (c:Cancer {hasPrimaryName: 'carcinoma_blastoma'})<-[:IMPLICATEDIN]-(s:Sample) MATCH (s)-[:INSAMPLE]->(m:Missense)<-[:HASMUTATION]-(p:Protein {hasPrimaryName: 'BRAF'}) RETURN m.hasMutationId, m.hasMutationDescription LIMIT 100",
+                "time_taken": 3.0617518424987793
+            }
+        }
+    },
+    {
+        "title": "C10",
+        "description": "What are the reactions associated with pathways in which BRAF protein participates?",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein {hasPrimaryName: 'BRAF'})-[:PARTICIPATESIN]->(w:Pathway) MATCH (w)-[:HASREACTION]->(r:Reaction) RETURN r.hasPrimaryName LIMIT 100",
+                "time_taken": 2.154940128326416
+            }
+        }
+    }
+]
