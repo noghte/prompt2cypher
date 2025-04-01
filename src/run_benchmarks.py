@@ -82,9 +82,9 @@ def run_benchmark(generate_cypher_query_func, user_query):
         "time_taken": end_time - start_time,
     }
 
-def save_benchmark_results(benchmark_results, version):
+def save_benchmark_results(benchmark_results):
     timestamp = datetime.datetime.now().strftime("%Y_%m_%d-%H_%M_%S")
-    save_path = f"{RESULTS_PATH}benchmark-{MODEL_INFO['filename']}-{timestamp}_{version}.json"
+    save_path = f"{RESULTS_PATH}benchmark-{MODEL_INFO['filename']}-{timestamp}.json"
     os.makedirs(RESULTS_PATH, exist_ok=True)
     with open(save_path, "w") as outfile:
         json.dump(benchmark_results, outfile, indent=4)
@@ -122,7 +122,7 @@ if __name__ == "__main__":
             }
             benchmark_results.append(benchmark_entry)
         
-        save_path = save_benchmark_results(benchmark_results, version_name)
+        save_path = save_benchmark_results(benchmark_results)
         print(f"Benchmark results saved to {save_path}.")
 
         run_script = input("Do you want to run the benchmarks_cypher_execution script? (Y/N): ").strip().lower()
