@@ -31,39 +31,6 @@ Only if you need NLP scores (BLEU, ROUGE, ...): Run the `calculate_scores_nlp.py
 1. `./src/ablation/benchmarks_ablation_execution.py`: executes ablations
 1. `./src/ablation/calculate_ablation_scores.py`
 
- How the Script Works
-
-  1. Input Data Loading (lines 89-121):
-    - Loads the ablation study results containing Cypher queries and their execution results
-    - Attempts to load a baseline for comparison (falls back to using "with_instructions" condition as baseline if needed)
-  2. Metrics Calculation (lines 40-87, 123-159):
-    - For each query and each ablation condition, it calculates:
-        - Precision: What percentage of returned results were correct
-      - Recall: What percentage of expected results were actually returned
-      - F1 score: Harmonic mean of precision and recall
-    - These metrics are calculated by comparing query results against the baseline
-  3. Summary Generation (lines 165-261):
-    - Calculates average metrics across all queries for each ablation condition
-    - Creates a summary table of overall performance
-    - Generates category-specific metrics (e.g., all "A" type queries)
-    - Outputs results to console, JSON, and CSV formats
-
-  How to Interpret the Output
-
-  Main Summary Table
-
-  When you run the script, you'll see a summary table like this:
-
-  Ablation Study Summary:
-  +-------------------------+---------------+------------+---------+
-  | Ablation Type           | Avg Precision | Avg Recall | Avg F1  |
-  +-------------------------+---------------+------------+---------+
-  | with_instructions       | 0.9800        | 0.9800     | 0.9800  |
-  | without_instructions    | 0.8500        | 0.8200     | 0.8300  |
-  | without_schema_comments | 0.7200        | 0.6800     | 0.6900  |
-  | without_relevant_nodes  | 0.6500        | 0.5900     | 0.6100  |
-  +-------------------------+---------------+------------+---------+
-
   Interpretation:
   - Higher values are better for all metrics (range 0-1)
   - Precision: How accurate are the results returned? (% of returned results that are correct)
@@ -85,44 +52,3 @@ Only if you need NLP scores (BLEU, ROUGE, ...): Run the `calculate_scores_nlp.py
   +-------------------------+---------------+------------+---------+
 
   This helps you understand how each ablation affects different types of queries.
-
-  CSV Output
-
-  For detailed analysis, check the CSV file which includes:
-  - Per-query results
-  - All metrics for each ablation condition
-  - Raw counts of true positives, false positives, and false negatives
-
-  Key Insights to Look For
-
-  1. Impact of each ablation:
-    - If "without_instructions" shows a large drop in performance, instructions are critical
-    - If "without_schema_comments" shows a large drop, schema comments are important
-    - If "without_relevant_nodes" shows a large drop, filtering for relevant nodes matters
-  2. Query category analysis:
-    - Do certain query types (A, B, C) depend more on particular components?
-    - Are some query types robust to ablations while others degrade significantly?
-  3. Precision vs. Recall tradeoffs:
-    - Does removing a component affect precision more than recall or vice versa?
-    - For example, without node filtering, you might see lower precision but similar recall
-
-  The script provides both high-level insights through the summary tables and detailed data for in-depth analysis in the output files.
-
-    1. When no external baseline is provided or found, the script falls back to using the "with_instructions" condition as the baseline (line 149):
-  if not baseline_results_for_query:
-      with_instructions_results = results.get("with_instructions", {}).get("cypher_result", [])
-      baseline_results_for_query = with_instructions_results
-
-  2. When comparing "with_instructions" against itself, you'll naturally get perfect scores:
-    - Precision = 1.0 (every result matches the baseline)
-    - Recall = 1.0 (returns all baseline results)
-    - F1 = 1.0 (perfect harmony between precision and recall)
-
-  This is correct behavior because the ablation study is measuring the relative performance drop when removing components compared to the complete system.
-
-  To interpret your results:
-  - "without_instructions" drops to ~0.41-0.47, indicating instructions are very important
-  - "without_schema_comments" scores ~0.45-0.46, showing schema comments are similarly important
-  - "without_relevant_nodes" performs better at ~0.77, suggesting node filtering has less impact
-
-  For absolute performance measurement, you'd need to compare against a separate ground truth baseline rather than using "with_instructions" as the reference point.

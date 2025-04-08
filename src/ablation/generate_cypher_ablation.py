@@ -1,10 +1,10 @@
-from openai import OpenAI
 import re
 import os
 import json
-import time
 import datetime
 from typing import Dict, List, Any, Tuple
+from openai import OpenAI
+from helpers.schema_utils import load_schema 
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -423,12 +423,7 @@ def clean_cypher_query(query: str) -> str:
     return query.strip()
 
 if __name__ == "__main__":
-    import os
-    import json
-    from helpers.schema_utils import load_schema 
-    from dotenv import load_dotenv
 
-    load_dotenv()
     NEO4J_DATABASE_NAME = os.getenv("NEO4J_DATABASE_NAME")
     KG_NAME = None
     if NEO4J_DATABASE_NAME == "neo4j":
@@ -480,7 +475,7 @@ if __name__ == "__main__":
         ablation_entry = {
             "title": title,
             "query": user_query,
-            "ablation_results": results
+            "ablation_results": results  # Keep this for backwards compatibility 
         }
         ablation_results.append(ablation_entry)
     
