@@ -4,7 +4,8 @@ import argparse
 from dotenv import load_dotenv
 from tabulate import tabulate  # For printing tables
 
-DEFAULT_CYPHERRESULTS_FILENAME = "baseline_benchmark-gpt-4o-mini-2025_04_01-16_14_33_version_1-with_results.json"
+#DEFAULT_CYPHERRESULTS_FILENAME = "baseline_benchmark-gpt-4o-mini-2025_04_01-16_14_33_version_1-with_results.json" #ProKinO
+DEFAULT_CYPHERRESULTS_FILENAME = "ablation-gpt-4o-mini-2025_04_08-13_49_22-benchmark_format-with_results.json" #ICKG
 IGNORE_EMPTY_PREDICTIONS = False  # Set to True to ignore empty predictions
 
 parser = argparse.ArgumentParser(description="Process CYPHERRESULTS_FILENAME argument")
@@ -24,7 +25,7 @@ NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD")
 NEO4J_DATABASE_NAME = os.getenv("NEO4J_DATABASE_NAME")
 KG_NAME = None
 if NEO4J_DATABASE_NAME == "neo4j":
-    KG_NAME = "ionchannels"
+    KG_NAME = "ickg"
 elif NEO4J_DATABASE_NAME == "prokino-kg":
     KG_NAME = "prokino"
     

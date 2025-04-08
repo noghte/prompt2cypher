@@ -1,0 +1,220 @@
+{
+    "aggregated": {
+        "Precision": 0.0,
+        "Recall": 0.0,
+        "F1-Score": 0.0,
+        "Jaccard Similarity": 0.0
+    },
+    "individual": [
+        {
+            "title": "A1",
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1-Score": 0.0,
+            "Jaccard Similarity": 0.0
+        },
+        {
+            "title": "A2",
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1-Score": 0.0,
+            "Jaccard Similarity": 0.0
+        },
+        {
+            "title": "A3",
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1-Score": 0.0,
+            "Jaccard Similarity": 0.0
+        },
+        {
+            "title": "A4",
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1-Score": 0.0,
+            "Jaccard Similarity": 0.0
+        },
+        {
+            "title": "A5",
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1-Score": 0.0,
+            "Jaccard Similarity": 0.0
+        },
+        {
+            "title": "A6",
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1-Score": 0.0,
+            "Jaccard Similarity": 0.0
+        },
+        {
+            "title": "A7",
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1-Score": 0.0,
+            "Jaccard Similarity": 0.0
+        },
+        {
+            "title": "A8",
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1-Score": 0.0,
+            "Jaccard Similarity": 0.0
+        },
+        {
+            "title": "A9",
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1-Score": 0.0,
+            "Jaccard Similarity": 0.0
+        },
+        {
+            "title": "A10",
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1-Score": 0.0,
+            "Jaccard Similarity": 0.0
+        },
+        {
+            "title": "A11",
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1-Score": 0.0,
+            "Jaccard Similarity": 0.0
+        },
+        {
+            "title": "A12",
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1-Score": 0.0,
+            "Jaccard Similarity": 0.0
+        },
+        {
+            "title": "A13",
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1-Score": 0.0,
+            "Jaccard Similarity": 0.0
+        },
+        {
+            "title": "A14",
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1-Score": 0.0,
+            "Jaccard Similarity": 0.0
+        },
+        {
+            "title": "A15",
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1-Score": 0.0,
+            "Jaccard Similarity": 0.0
+        },
+        {
+            "title": "A16",
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1-Score": 0.0,
+            "Jaccard Similarity": 0.0
+        },
+        {
+            "title": "A17",
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1-Score": 0.0,
+            "Jaccard Similarity": 0.0
+        },
+        {
+            "title": "B1",
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1-Score": 0.0,
+            "Jaccard Similarity": 0.0
+        },
+        {
+            "title": "B2",
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1-Score": 0.0,
+            "Jaccard Similarity": 0.0
+        },
+        {
+            "title": "B3",
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1-Score": 0.0,
+            "Jaccard Similarity": 0.0
+        },
+        {
+            "title": "B4",
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1-Score": 0.0,
+            "Jaccard Similarity": 0.0
+        },
+        {
+            "title": "B5",
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1-Score": 0.0,
+            "Jaccard Similarity": 0.0
+        },
+        {
+            "title": "B6",
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1-Score": 0.0,
+            "Jaccard Similarity": 0.0
+        },
+        {
+            "title": "B7",
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1-Score": 0.0,
+            "Jaccard Similarity": 0.0
+        },
+        {
+            "title": "B8",
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1-Score": 0.0,
+            "Jaccard Similarity": 0.0
+        },
+        {
+            "title": "B9",
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1-Score": 0.0,
+            "Jaccard Similarity": 0.0
+        },
+        {
+            "title": "C1",
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1-Score": 0.0,
+            "Jaccard Similarity": 0.0
+        },
+        {
+            "title": "C2",
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1-Score": 0.0,
+            "Jaccard Similarity": 0.0
+        },
+        {
+            "title": "C3",
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1-Score": 0.0,
+            "Jaccard Similarity": 0.0
+        },
+        {
+            "title": "C4",
+            "Precision": 0.0,
+            "Recall": 0.0,
+            "F1-Score": 0.0,
+            "Jaccard Similarity": 0.0
+        }
+    ]
+}

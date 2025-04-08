@@ -29,7 +29,7 @@ NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD")
 NEO4J_DATABASE_NAME = os.getenv("NEO4J_DATABASE_NAME")
 KG_NAME = None
 if NEO4J_DATABASE_NAME == "neo4j":
-    KG_NAME = "ionchannels"
+    KG_NAME = "ickg"
 elif NEO4J_DATABASE_NAME == "prokino-kg":
     KG_NAME = "prokino"
 input_file_path = f'./results/{KG_NAME}/{CYPHERS_FROM_LLM}'

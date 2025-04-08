@@ -1,0 +1,3780 @@
+[
+    {
+        "title": "A1",
+        "description": "Find all proteins involved in the 'Muscle contraction' pathway.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein)-[:hasPathway]->(path:Pathway {label: 'Muscle contraction'})  RETURN DISTINCT p.label LIMIT 100",
+                "time_taken": 2.6257176399230957,
+                "cypher_result": [
+                    [
+                        "TMOD3"
+                    ],
+                    [
+                        "KCNK4 (TRAAK)"
+                    ],
+                    [
+                        "SCN3A (KIAA1356, NAC3)"
+                    ],
+                    [
+                        "KCND1"
+                    ],
+                    [
+                        "KCNIP2 (KCHIP2)"
+                    ],
+                    [
+                        "RANGRF MOG1 RANGNRF HSPC165 HSPC236 MDS5"
+                    ],
+                    [
+                        "HIPK2"
+                    ],
+                    [
+                        "WWTR1 TAZ"
+                    ],
+                    [
+                        "SORBS1 KIAA0894 KIAA1296 SH3D5"
+                    ],
+                    [
+                        "MYL10 MYLC2PL PLRLC"
+                    ],
+                    [
+                        "AKAP9 AKAP350 AKAP450 KIAA0803"
+                    ],
+                    [
+                        "TBX5"
+                    ],
+                    [
+                        "SCN2A (NAC2, SCN2A1, SCN2A2)"
+                    ],
+                    [
+                        "KCNK16 (TALK1)"
+                    ],
+                    [
+                        "MYL11 HSRLC MYLPF"
+                    ],
+                    [
+                        "ATP2A3"
+                    ],
+                    [
+                        "FGF14 FHF4"
+                    ],
+                    [
+                        "FGF11 FHF3"
+                    ],
+                    [
+                        "FGF13 FHF2"
+                    ],
+                    [
+                        "KAT2B PCAF"
+                    ],
+                    [
+                        "RYR2"
+                    ],
+                    [
+                        "TTN"
+                    ],
+                    [
+                        "KCNE4"
+                    ],
+                    [
+                        "HIPK1"
+                    ],
+                    [
+                        "KCNK18 (TRESK, TRIK)"
+                    ],
+                    [
+                        "TRIM72 MG53"
+                    ],
+                    [
+                        "KCNIP4 (CALP, KCHIP4)"
+                    ],
+                    [
+                        "ATP2B3"
+                    ],
+                    [
+                        "SCN9A (NENA)"
+                    ],
+                    [
+                        "MYLK"
+                    ],
+                    [
+                        "RYR3 (HBRR)"
+                    ],
+                    [
+                        "MYBPC3"
+                    ],
+                    [
+                        "KCNJ11"
+                    ],
+                    [
+                        "ITPR1 (INSP3R1)"
+                    ],
+                    [
+                        "ITPR3"
+                    ],
+                    [
+                        "ITPR2"
+                    ],
+                    [
+                        "SCN5A"
+                    ],
+                    [
+                        "KCNJ12 (IRK2, KCNJN1)"
+                    ],
+                    [
+                        "MYBPC2 MYBPCF"
+                    ],
+                    [
+                        "CACNA1C (CACH2, CACN2, CACNL1A1, CCHL1A1)"
+                    ],
+                    [
+                        "ATP1A4 ATP1AL2"
+                    ],
+                    [
+                        "STIM1 (GOK)"
+                    ],
+                    [
+                        "CAMK2D"
+                    ],
+                    [
+                        "CAMK2G"
+                    ],
+                    [
+                        "CAMK2B"
+                    ],
+                    [
+                        "PAK2"
+                    ],
+                    [
+                        "PAK1"
+                    ],
+                    [
+                        "KCNH2 (ERG, ERG1, HERG)"
+                    ],
+                    [
+                        "DMPK"
+                    ],
+                    [
+                        "CACNB2 (CACNLB2, MYSB)"
+                    ],
+                    [
+                        "ACTN3"
+                    ],
+                    [
+                        "CALD1 CAD CDM"
+                    ],
+                    [
+                        "CACNB1"
+                    ],
+                    [
+                        "MYL5"
+                    ],
+                    [
+                        "ATP2B2 PMCA2"
+                    ],
+                    [
+                        "MYL7 MYL2A MYLC2A"
+                    ],
+                    [
+                        "SCN7A (SCN6A)"
+                    ],
+                    [
+                        "MYBPC1 MYBPCS"
+                    ],
+                    [
+                        "ACTA1 ACTA"
+                    ],
+                    [
+                        "FKBP1B FKBP12.6 FKBP1L FKBP9 OTK4"
+                    ],
+                    [
+                        "ACTC1 ACTC"
+                    ],
+                    [
+                        "TNNC1 TNNC"
+                    ],
+                    [
+                        "ACTG2 ACTA3 ACTL3 ACTSG"
+                    ],
+                    [
+                        "KCNJ2 (IRK1)"
+                    ],
+                    [
+                        "ACTA2 ACTSA ACTVS GIG46"
+                    ],
+                    [
+                        "FGF12 FGF12B FHF1"
+                    ],
+                    [
+                        "MYL6"
+                    ],
+                    [
+                        "KCNK10 (TREK2)"
+                    ],
+                    [
+                        "SLC8A3 NCX3"
+                    ],
+                    [
+                        "CAV3"
+                    ],
+                    [
+                        "ITGA1"
+                    ],
+                    [
+                        "NKX2-5 CSX NKX2.5 NKX2E"
+                    ],
+                    [
+                        "KCNQ1 (KCNA8, KCNA9, KVLQT1)"
+                    ],
+                    [
+                        "ATP1A2 KIAA0778"
+                    ],
+                    [
+                        "PXN"
+                    ],
+                    [
+                        "TRPC1 (TRP1)"
+                    ],
+                    [
+                        "TNNI2"
+                    ],
+                    [
+                        "KCNJ4 (IRK3)"
+                    ],
+                    [
+                        "TNNT2"
+                    ],
+                    [
+                        "TNNT3"
+                    ],
+                    [
+                        "GATA4"
+                    ],
+                    [
+                        "MYH11 KIAA0866"
+                    ],
+                    [
+                        "ACTN2"
+                    ],
+                    [
+                        "SCN4A"
+                    ],
+                    [
+                        "SCN1A (NAC1, SCN1)"
+                    ],
+                    [
+                        "SLC8A1 CNC NCX1"
+                    ],
+                    [
+                        "SRI"
+                    ],
+                    [
+                        "NOS1"
+                    ],
+                    [
+                        "TMOD1 D9S57E TMOD"
+                    ],
+                    [
+                        "PLN PLB"
+                    ],
+                    [
+                        "MYL9 MLC2 MRLC1 MYRL2"
+                    ],
+                    [
+                        "ATP2B4 ATP2B2 MXRA1"
+                    ],
+                    [
+                        "NPPC CNP2"
+                    ],
+                    [
+                        "RYR1 (RYDR)"
+                    ],
+                    [
+                        "NPR2"
+                    ],
+                    [
+                        "ATP2B1 PMCA1"
+                    ],
+                    [
+                        "TNNI3 TNNC1"
+                    ],
+                    [
+                        "TNNI1"
+                    ],
+                    [
+                        "MYL12A MLCB MRLC3 RLC"
+                    ],
+                    [
+                        "VCL"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "title": "A2",
+        "description": "Retrieve all functional domains associated with the 'KCNC2' protein.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein {label: 'KCNC2'})-[:hasFunctionalDomain]->(fd:FunctionalDomain) RETURN DISTINCT fd.label LIMIT 100",
+                "time_taken": 1.7858068943023682,
+                "cypher_result": [
+                    [
+                        "Ion_trans"
+                    ],
+                    [
+                        "BTB_2"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "title": "A3",
+        "description": "List all diseases the protein 'CFTR' is implicated in.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein {label: 'CFTR'})-[:implicatedInDisease]->(d:Disease) RETURN DISTINCT d.label LIMIT 100",
+                "time_taken": 1.1666522026062012,
+                "cypher_result": [
+                    [
+                        "Substance-Related Disorders"
+                    ],
+                    [
+                        "Infertility, Male"
+                    ],
+                    [
+                        "Hernia, Diaphragmatic"
+                    ],
+                    [
+                        "Colorectal Neoplasms"
+                    ],
+                    [
+                        "Azoospermia"
+                    ],
+                    [
+                        "Rhinitis"
+                    ],
+                    [
+                        "Pancreatitis"
+                    ],
+                    [
+                        "Pancreatitis, Chronic"
+                    ],
+                    [
+                        "Choledochal Cyst"
+                    ],
+                    [
+                        "Cystic Fibrosis"
+                    ],
+                    [
+                        "Sinusitis"
+                    ],
+                    [
+                        "Congenital bilateral aplasia of vas deferens"
+                    ],
+                    [
+                        "Hereditary renal agenesis"
+                    ],
+                    [
+                        "Hereditary pancreatitis"
+                    ],
+                    [
+                        "Bronchiectasis With Or Without Elevated Sweat Chloride 1"
+                    ],
+                    [
+                        "Polycystic Kidney, Autosomal Recessive"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "title": "A4",
+        "description": "Find all proteins interacting with the light ion channel 'KCNQ3'.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (lic:LightIonChannel {label: 'KCNQ3'})-[:interact]-(p:Protein)  RETURN DISTINCT p.label LIMIT 100",
+                "time_taken": 1.5815668106079102,
+                "cypher_result": [
+                    [
+                        "SCN8A (MED)"
+                    ],
+                    [
+                        "CHRNA4 (NACRA4)"
+                    ],
+                    [
+                        "KCNJ4 (IRK3)"
+                    ],
+                    [
+                        "KCNQ1 (KCNA8, KCNA9, KVLQT1)"
+                    ],
+                    [
+                        "KCNJ2 (IRK1)"
+                    ],
+                    [
+                        "KCNQ2"
+                    ],
+                    [
+                        "KCNAB2 (KCNA2B, KCNK2)"
+                    ],
+                    [
+                        "SCN1A (NAC1, SCN1)"
+                    ],
+                    [
+                        "KCNQ5"
+                    ],
+                    [
+                        "KCNAB3 (KCNA3B)"
+                    ],
+                    [
+                        "KCNQ4"
+                    ],
+                    [
+                        "KCNAB1 (KCNA1B)"
+                    ],
+                    [
+                        "KCNE1"
+                    ],
+                    [
+                        "SCN2A (NAC2, SCN2A1, SCN2A2)"
+                    ],
+                    [
+                        "SCN1B"
+                    ],
+                    [
+                        "KCNJ14 (IRK4)"
+                    ],
+                    [
+                        "KCNJ18"
+                    ],
+                    [
+                        "KCNJ12 (IRK2, KCNJN1)"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "title": "A5",
+        "description": "List all biological processes the protein 'CFTR' is involved in.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein {label: 'CFTR'})-[:hasBiologicalProcess]->(bp:BiologicalProcess) RETURN DISTINCT bp.label LIMIT 100",
+                "time_taken": 1.6542935371398926,
+                "cypher_result": [
+                    [
+                        "inorganic anion transport"
+                    ],
+                    [
+                        "bicarbonate transport"
+                    ],
+                    [
+                        "monoatomic anion transmembrane transport"
+                    ],
+                    [
+                        "organic anion transport"
+                    ],
+                    [
+                        "inorganic anion transmembrane transport"
+                    ],
+                    [
+                        "chloride transmembrane transport"
+                    ],
+                    [
+                        "inorganic ion transmembrane transport"
+                    ],
+                    [
+                        "chloride transport"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "title": "A6",
+        "description": "Retrieve all molecular functions associated with the dark ion channel 'KCNG3'.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (d:DarkIonChannel {label: 'KCNG3'})-[r:hasMolecularFunction]->(m:MolecularFunction) RETURN DISTINCT m.label LIMIT 100",
+                "time_taken": 1.953852653503418,
+                "cypher_result": [
+                    [
+                        "protein binding"
+                    ],
+                    [
+                        "voltage-gated monoatomic cation channel activity"
+                    ],
+                    [
+                        "voltage-gated monoatomic ion channel activity"
+                    ],
+                    [
+                        "gated channel activity"
+                    ],
+                    [
+                        "potassium ion transmembrane transporter activity"
+                    ],
+                    [
+                        "metal ion transmembrane transporter activity"
+                    ],
+                    [
+                        "monoatomic cation channel activity"
+                    ],
+                    [
+                        "voltage-gated potassium channel activity"
+                    ],
+                    [
+                        "passive transmembrane transporter activity"
+                    ],
+                    [
+                        "monoatomic ion channel activity"
+                    ],
+                    [
+                        "delayed rectifier potassium channel activity"
+                    ],
+                    [
+                        "voltage-gated channel activity"
+                    ],
+                    [
+                        "potassium channel activity"
+                    ],
+                    [
+                        "channel activity"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "title": "A7",
+        "description": "Find all cellular components the protein 'CFTR' is associated with.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein {label: 'CFTR'})-[:hasCellularComponent]->(c:CellularComponent) RETURN DISTINCT c.label LIMIT 100",
+                "time_taken": 3.6369779109954834,
+                "cypher_result": [
+                    [
+                        "apical plasma membrane"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "title": "A8",
+        "description": "List all chemicals associated with the 'Chemical and Drug Induced Liver Injury' disease.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (d:Disease {label: 'Chemical and Drug Induced Liver Injury'})<-[:assoWithDisease]-(c:Chemical) RETURN DISTINCT c.label LIMIT 100",
+                "time_taken": 1.2780835628509521,
+                "cypher_result": [
+                    [
+                        "Nickel"
+                    ],
+                    [
+                        "Niacin"
+                    ],
+                    [
+                        "Naproxen"
+                    ],
+                    [
+                        "Naltrexone"
+                    ],
+                    [
+                        "Nalidixic Acid"
+                    ],
+                    [
+                        "Nafcillin"
+                    ],
+                    [
+                        "NAD"
+                    ],
+                    [
+                        "Mycophenolic Acid"
+                    ],
+                    [
+                        "Morphine"
+                    ],
+                    [
+                        "Monocrotophos"
+                    ],
+                    [
+                        "Mitoxantrone"
+                    ],
+                    [
+                        "Mitotane"
+                    ],
+                    [
+                        "Mitogens"
+                    ],
+                    [
+                        "Minocycline"
+                    ],
+                    [
+                        "Miconazole"
+                    ],
+                    [
+                        "Mexiletine"
+                    ],
+                    [
+                        "Metyrapone"
+                    ],
+                    [
+                        "Metronidazole"
+                    ],
+                    [
+                        "Cyclosporine"
+                    ],
+                    [
+                        "Methyltestosterone"
+                    ],
+                    [
+                        "Methylprednisolone"
+                    ],
+                    [
+                        "Tacrolimus"
+                    ],
+                    [
+                        "Carboplatin"
+                    ],
+                    [
+                        "Methylphenidate"
+                    ],
+                    [
+                        "Didanosine"
+                    ],
+                    [
+                        "Zalcitabine"
+                    ],
+                    [
+                        "Ethylene Dibromide"
+                    ],
+                    [
+                        "Ganciclovir"
+                    ],
+                    [
+                        "Mefloquine"
+                    ],
+                    [
+                        "Albendazole"
+                    ],
+                    [
+                        "Methylmercury Compounds"
+                    ],
+                    [
+                        "Methylene Chloride"
+                    ],
+                    [
+                        "Methylene Blue"
+                    ],
+                    [
+                        "Methyldopa"
+                    ],
+                    [
+                        "Propofol"
+                    ],
+                    [
+                        "tris(1,3-dichloro-2-propyl)phosphate"
+                    ],
+                    [
+                        "Methyl n-Butyl Ketone"
+                    ],
+                    [
+                        "Famotidine"
+                    ],
+                    [
+                        "Mifepristone"
+                    ],
+                    [
+                        "Fluconazole"
+                    ],
+                    [
+                        "Trimethoprim, Sulfamethoxazole Drug Combination"
+                    ],
+                    [
+                        "sulforaphane"
+                    ],
+                    [
+                        "photomirex"
+                    ],
+                    [
+                        "1-nitronaphthalene"
+                    ],
+                    [
+                        "4-(N-methyl-N-nitrosamino)-1-(3-pyridyl)-1-butanone"
+                    ],
+                    [
+                        "2,4-dinitrotoluene"
+                    ],
+                    [
+                        "Roxithromycin"
+                    ],
+                    [
+                        "lonidamine"
+                    ],
+                    [
+                        "Fatty Acids, Omega-3"
+                    ],
+                    [
+                        "cobra venom factor"
+                    ],
+                    [
+                        "chelerythrine"
+                    ],
+                    [
+                        "tetrachloroethane"
+                    ],
+                    [
+                        "Isotretinoin"
+                    ],
+                    [
+                        "sodium bichromate"
+                    ],
+                    [
+                        "pantogab"
+                    ],
+                    [
+                        "2,6-dichloro-4-nitrophenol"
+                    ],
+                    [
+                        "Cefotiam"
+                    ],
+                    [
+                        "Citalopram"
+                    ],
+                    [
+                        "schizandrin B"
+                    ],
+                    [
+                        "Octreotide"
+                    ],
+                    [
+                        "Epirubicin"
+                    ],
+                    [
+                        "Methoxyflurane"
+                    ],
+                    [
+                        "Gemfibrozil"
+                    ],
+                    [
+                        "Ofloxacin"
+                    ],
+                    [
+                        "Methoxsalen"
+                    ],
+                    [
+                        "Zidovudine"
+                    ],
+                    [
+                        "9,10-Dimethyl-1,2-benzanthracene"
+                    ],
+                    [
+                        "Particulate Matter"
+                    ],
+                    [
+                        "arsenite"
+                    ],
+                    [
+                        "acetylhydrazine"
+                    ],
+                    [
+                        "diethyl maleate"
+                    ],
+                    [
+                        "Grape Seed Proanthocyanidins"
+                    ],
+                    [
+                        "Methotrexate"
+                    ],
+                    [
+                        "Apigenin"
+                    ],
+                    [
+                        "hydroxyflutamide"
+                    ],
+                    [
+                        "beta-Glucans"
+                    ],
+                    [
+                        "Thiazolidinediones"
+                    ],
+                    [
+                        "Proanthocyanidins"
+                    ],
+                    [
+                        "2,3,7,8-tetrachlorodibenzofuran"
+                    ],
+                    [
+                        "methotrexate polyglutamate"
+                    ],
+                    [
+                        "Methionine"
+                    ],
+                    [
+                        "Methimazole"
+                    ],
+                    [
+                        "2,2',4,4'-tetrabromodiphenyl ether"
+                    ],
+                    [
+                        "dimethyl-4,4'-dimethoxy-5,6,5',6'-dimethylene dioxybiphenyl-2,2'-dicarboxylate"
+                    ],
+                    [
+                        "Methazolamide"
+                    ],
+                    [
+                        "zingerone"
+                    ],
+                    [
+                        "neohesperidin dihydrochalcone"
+                    ],
+                    [
+                        "necrostatin-1"
+                    ],
+                    [
+                        "mangiferin"
+                    ],
+                    [
+                        "diethylene glycol"
+                    ],
+                    [
+                        "Nanotubes, Carbon"
+                    ],
+                    [
+                        "Estramustine"
+                    ],
+                    [
+                        "Plant Preparations"
+                    ],
+                    [
+                        "S-Nitroso-N-Acetylpenicillamine"
+                    ],
+                    [
+                        "sodium boranocarbonate"
+                    ],
+                    [
+                        "Permethrin"
+                    ],
+                    [
+                        "alpha-Tocopherol"
+                    ],
+                    [
+                        "tesaglitazar"
+                    ],
+                    [
+                        "Thallium"
+                    ],
+                    [
+                        "hesperetin"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "title": "A9",
+        "description": "Retrieve all ions associated with the light ion channel 'HTR3E'.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (lic:LightIonChannel {label: 'HTR3E'})-[:hasIonAsso]->(ion:Ion)  RETURN DISTINCT ion.label LIMIT 100",
+                "time_taken": 1.5127003192901611,
+                "cypher_result": [
+                    [
+                        "non-selective"
+                    ],
+                    [
+                        "cation"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "title": "A10",
+        "description": "Find all proteins that have the PTM 'Prkaa2'",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein)-[:hasPTM]->(ptm:PTM {label: 'Prkaa2'}) RETURN DISTINCT p.label LIMIT 100",
+                "time_taken": 1.2368340492248535,
+                "cypher_result": [
+                    [
+                        "Ikbkb Ikkb"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "title": "A11",
+        "description": "List all dark ion channels that interact with the 'CACNB1' protein.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein {label: 'CACNB1'})-[:interact]-(d:DarkIonChannel) RETURN DISTINCT d.label LIMIT 100",
+                "time_taken": 1.8298320770263672,
+                "cypher_result": [
+                    [
+                        "CACNG3"
+                    ],
+                    [
+                        "CACNA2D3"
+                    ],
+                    [
+                        "CACNG1 (CACNLG)"
+                    ],
+                    [
+                        "CACNG4"
+                    ],
+                    [
+                        "CACNG8 (CACNG6)"
+                    ],
+                    [
+                        "CACNG5"
+                    ],
+                    [
+                        "CACNA2D2 (KIAA0558)"
+                    ],
+                    [
+                        "CACNG7"
+                    ],
+                    [
+                        "CACNA2D4"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "title": "A12",
+        "description": "List all the ion channels from the family TRP.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (f:Family {label: 'TRP'})<-[:hasFamily]-(ic:LightIonChannel) RETURN DISTINCT ic.label LIMIT 100 UNION MATCH (f:Family {label: 'TRP'})<-[:hasFamily]-(ic:DarkIonChannel) RETURN DISTINCT ic.label LIMIT 100",
+                "time_taken": 2.840444564819336,
+                "cypher_result": [
+                    [
+                        "TRPV2 (VRL)"
+                    ],
+                    [
+                        "TRPC6 (TRP6)"
+                    ],
+                    [
+                        "TRPC5 (TRP5)"
+                    ],
+                    [
+                        "TRPC4"
+                    ],
+                    [
+                        "PKD2L1 (PKD2L, PKDL, TRPP3)"
+                    ],
+                    [
+                        "TRPM5 (LTRPC5, MTR1)"
+                    ],
+                    [
+                        "TRPV5 (ECAC1)"
+                    ],
+                    [
+                        "TRPC7 (TRP7)"
+                    ],
+                    [
+                        "TRPV4 (VRL2, VROAC)"
+                    ],
+                    [
+                        "TRPV6 (ECAC2)"
+                    ],
+                    [
+                        "MCOLN1 (ML4, TRPML1)"
+                    ],
+                    [
+                        "TRPM6"
+                    ],
+                    [
+                        "TRPM7"
+                    ],
+                    [
+                        "MCOLN3"
+                    ],
+                    [
+                        "TRPM4 (LTRPC4)"
+                    ],
+                    [
+                        "TRPV3"
+                    ],
+                    [
+                        "TRPV1 (VR1)"
+                    ],
+                    [
+                        "MCOLN2"
+                    ],
+                    [
+                        "TRPM1 (LTRPC1, MLSN, MLSN1)"
+                    ],
+                    [
+                        "TRPM8 (LTRPC6, TRPP8)"
+                    ],
+                    [
+                        "PKD2 (TRPP2)"
+                    ],
+                    [
+                        "PKD1"
+                    ],
+                    [
+                        "TRPC3 (TRP3)"
+                    ],
+                    [
+                        "TRPC1 (TRP1)"
+                    ],
+                    [
+                        "TRPM2 (EREG1, KNP3, LTRPC2, TRPC7)"
+                    ],
+                    [
+                        "TRPA1 (ANKTM1)"
+                    ],
+                    [
+                        "PKD1L2 (KIAA1879, PC1L2)"
+                    ],
+                    [
+                        "PKD1L3"
+                    ],
+                    [
+                        "PKD2L2"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "title": "A13",
+        "description": "Which family has the largest number of dark ion channels?",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (d:DarkIonChannel)-[:hasFamily]->(f:Family) WITH f, COUNT(d) AS darkIonChannelCount ORDER BY darkIonChannelCount DESC RETURN DISTINCT f.label LIMIT 100",
+                "time_taken": 1.8861374855041504,
+                "cypher_result": [
+                    [
+                        "Unclassified"
+                    ],
+                    [
+                        "Auxiliary unclassified"
+                    ],
+                    [
+                        "K"
+                    ],
+                    [
+                        "TRP"
+                    ],
+                    [
+                        "Unclassified auxiliary"
+                    ],
+                    [
+                        "nACh"
+                    ],
+                    [
+                        "CIC"
+                    ],
+                    [
+                        "Na"
+                    ],
+                    [
+                        "ASICs"
+                    ],
+                    [
+                        "CatSper"
+                    ],
+                    [
+                        "CaCC"
+                    ],
+                    [
+                        "GABA"
+                    ],
+                    [
+                        "CLIC"
+                    ],
+                    [
+                        "Ionotropic"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "title": "A14",
+        "description": "List all dark ion channels that belong to the family labeled 'Unclassified'.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (d:DarkIonChannel)-[:hasFamily]->(f:Family) WHERE f.label = 'Unclassified' RETURN DISTINCT d.label LIMIT 100",
+                "time_taken": 1.4112598896026611,
+                "cypher_result": [
+                    [
+                        "PLLP (PMLP, TM4SF11)"
+                    ],
+                    [
+                        "TMEM63A (KIAA0489, KIAA0792)"
+                    ],
+                    [
+                        "TTYH2 (C17orf29)"
+                    ],
+                    [
+                        "TMC5"
+                    ],
+                    [
+                        "CALHM6 (C6orf187, FAM26F)"
+                    ],
+                    [
+                        "CALHM4 (C6orf78, FAM26D)"
+                    ],
+                    [
+                        "BEST4 (VMD2L2)"
+                    ],
+                    [
+                        "TMC3"
+                    ],
+                    [
+                        "TMEM38B (C9orf87)"
+                    ],
+                    [
+                        "GPR89A (GPHRA, GPR89, SH120)"
+                    ],
+                    [
+                        "TTYH1"
+                    ],
+                    [
+                        "GPR89B (GPHRB, GPR89C)"
+                    ],
+                    [
+                        "TMC7"
+                    ],
+                    [
+                        "TMEM63B (C6orf110)"
+                    ],
+                    [
+                        "TMC4"
+                    ],
+                    [
+                        "CALHM5 (C6orf188, FAM26E)"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "title": "A15",
+        "description": "What molecular functions are associated with light ion channels that belong to the 'GABA' family?",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (lic:LightIonChannel)-[:hasFamily]->(f:Family {label: 'GABA'}) MATCH (lic)-[:hasMolecularFunction]->(mf:MolecularFunction) RETURN DISTINCT mf.label LIMIT 100",
+                "time_taken": 2.1495845317840576,
+                "cypher_result": [
+                    [
+                        "neurotransmitter receptor activity"
+                    ],
+                    [
+                        "GABA-A receptor activity"
+                    ],
+                    [
+                        "protein binding"
+                    ],
+                    [
+                        "neurotransmitter transmembrane transporter activity"
+                    ],
+                    [
+                        "extracellular ligand-gated monoatomic ion channel activity"
+                    ],
+                    [
+                        "transmembrane signaling receptor activity"
+                    ],
+                    [
+                        "GABA-gated chloride ion channel activity"
+                    ],
+                    [
+                        "transmitter-gated monoatomic ion channel activity involved in regulation of postsynaptic membrane potential"
+                    ],
+                    [
+                        "GABA receptor binding"
+                    ],
+                    [
+                        "monoatomic anion channel activity"
+                    ],
+                    [
+                        "neurotransmitter receptor activity involved in regulation of postsynaptic membrane potential"
+                    ],
+                    [
+                        "gated channel activity"
+                    ],
+                    [
+                        "chloride transmembrane transporter activity"
+                    ],
+                    [
+                        "ligand-gated channel activity"
+                    ],
+                    [
+                        "benzodiazepine receptor activity"
+                    ],
+                    [
+                        "postsynaptic neurotransmitter receptor activity"
+                    ],
+                    [
+                        "monoatomic ion channel activity"
+                    ],
+                    [
+                        "ligand-gated monoatomic anion channel activity"
+                    ],
+                    [
+                        "chloride channel activity"
+                    ],
+                    [
+                        "transmitter-gated monoatomic ion channel activity"
+                    ],
+                    [
+                        "inhibitory extracellular ligand-gated monoatomic ion channel activity"
+                    ],
+                    [
+                        "channel activity"
+                    ],
+                    [
+                        "transmitter-gated channel activity"
+                    ],
+                    [
+                        "passive transmembrane transporter activity"
+                    ],
+                    [
+                        "inorganic anion transmembrane transporter activity"
+                    ],
+                    [
+                        "monoatomic anion transmembrane transporter activity"
+                    ],
+                    [
+                        "ligand-gated monoatomic ion channel activity"
+                    ],
+                    [
+                        "GABA receptor activity"
+                    ],
+                    [
+                        "ligand-gated monoatomic ion channel activity involved in regulation of presynaptic membrane potential"
+                    ],
+                    [
+                        "signaling receptor activity"
+                    ],
+                    [
+                        "protein domain specific binding"
+                    ],
+                    [
+                        "identical protein binding"
+                    ],
+                    [
+                        "protein-containing complex binding"
+                    ],
+                    [
+                        "G protein-coupled neurotransmitter receptor activity involved in regulation of presynaptic membrane potential"
+                    ],
+                    [
+                        null
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "title": "A16",
+        "description": "List all the ions and gating mechanisms for the 'K' family of dark ion channels.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (family:Family {label: 'K'})<-[:hasFamily]-(darkIonChannel:DarkIonChannel) MATCH (darkIonChannel)-[:hasIonAsso]-(ion:Ion) MATCH (darkIonChannel)-[:hasGateMechanism]-(gateMechanism:GateMechanism) RETURN DISTINCT ion.label AS Ion, gateMechanism.label AS GateMechanism LIMIT 100",
+                "time_taken": 5.037876129150391,
+                "cypher_result": [
+                    [
+                        "potassium",
+                        "voltage-gated"
+                    ],
+                    [
+                        "potassium",
+                        "ligand-gated (calcium)"
+                    ],
+                    [
+                        "potassium",
+                        "voltage-gated (inward rectifier)"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "title": "A17",
+        "description": "Find all proteins involved in the 'Fatty acid metabolism' pathway.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein)-[:hasPathway]->(path:Pathway {label: 'Fatty acid metabolism'}) RETURN DISTINCT p.label LIMIT 100",
+                "time_taken": 1.5471928119659424,
+                "cypher_result": [
+                    [
+                        "TECR GPSN2 SC2"
+                    ],
+                    [
+                        "HAO2 HAOX2 GIG16"
+                    ],
+                    [
+                        "ELOVL5 ELOVL2 PRO0530"
+                    ],
+                    [
+                        "ELOVL2 ELG3 SSC2"
+                    ],
+                    [
+                        "DECR2 PDCR SDR17C1"
+                    ],
+                    [
+                        "ELOVL3 CIG30"
+                    ],
+                    [
+                        "ELOVL6 FACE LCE"
+                    ],
+                    [
+                        "ALOXE3"
+                    ],
+                    [
+                        "PECR SDR29C1 PRO1004"
+                    ],
+                    [
+                        "ELOVL1 SSC1 CGI-88"
+                    ],
+                    [
+                        "MECR NBRF1 CGI-63"
+                    ],
+                    [
+                        "ACBD6"
+                    ],
+                    [
+                        "ACOX2"
+                    ],
+                    [
+                        "ACSBG1 BGM KIAA0631 LPD"
+                    ],
+                    [
+                        "ACSF2 UNQ493/PRO1009"
+                    ],
+                    [
+                        "THRSP"
+                    ],
+                    [
+                        "CPT1B KIAA1670"
+                    ],
+                    [
+                        "HSD17B8 FABGL HKE6 RING2 SDR30C1"
+                    ],
+                    [
+                        "ACOT4 PTE2B PTEIB"
+                    ],
+                    [
+                        "ACBD7"
+                    ],
+                    [
+                        "CBR4 SDR45C1"
+                    ],
+                    [
+                        "MCAT MT"
+                    ],
+                    [
+                        "MMAA"
+                    ],
+                    [
+                        "ACOT1 CTE1"
+                    ],
+                    [
+                        "SCD5 ACOD4 SCD2 SCD4"
+                    ],
+                    [
+                        "CYP2U1"
+                    ],
+                    [
+                        "ACAD11"
+                    ],
+                    [
+                        "HACD2 PTPLB"
+                    ],
+                    [
+                        "ACAD10"
+                    ],
+                    [
+                        "FAAH2 AMDD"
+                    ],
+                    [
+                        "HACD4 PTPLAD2"
+                    ],
+                    [
+                        "CYP4A22"
+                    ],
+                    [
+                        "ACBD5 KIAA1996"
+                    ],
+                    [
+                        "THEM4 CTMP"
+                    ],
+                    [
+                        "TECRL SRD5A2L2"
+                    ],
+                    [
+                        "ACSBG2 BGR UNQ2443/PRO5005"
+                    ],
+                    [
+                        "AWAT1 DGA2 DGAT2L3"
+                    ],
+                    [
+                        "HSD17B12 SDR12C1"
+                    ],
+                    [
+                        "ACSF3 PSEC0197"
+                    ],
+                    [
+                        "ACOT6 C14orf42"
+                    ],
+                    [
+                        "HADH HAD HAD1 HADHSC SCHAD"
+                    ],
+                    [
+                        "DECR1 DECR SDR18C1"
+                    ],
+                    [
+                        "CYP1B1"
+                    ],
+                    [
+                        "PTGIS CYP8 CYP8A1"
+                    ],
+                    [
+                        "PTGES3 P23 TEBP"
+                    ],
+                    [
+                        "PON2"
+                    ],
+                    [
+                        "ACACA ACAC ACC1 ACCA"
+                    ],
+                    [
+                        "CYP4F3 LTB4H"
+                    ],
+                    [
+                        "EHHADH ECHD"
+                    ],
+                    [
+                        "PPARD NR1C2 PPARB"
+                    ],
+                    [
+                        "CYP4A11 CYP4A2"
+                    ],
+                    [
+                        "CYP4F8"
+                    ],
+                    [
+                        "CYP4F2"
+                    ],
+                    [
+                        "HADHB MSTP029"
+                    ],
+                    [
+                        "PRKAA2"
+                    ],
+                    [
+                        "ACLY"
+                    ],
+                    [
+                        "SLC25A1 SLC20A3"
+                    ],
+                    [
+                        "HSD17B4 EDH17B4 SDR8C1"
+                    ],
+                    [
+                        "CYP2J2"
+                    ],
+                    [
+                        "PPT1 CLN1 PPT"
+                    ],
+                    [
+                        "CPT1A CPT1"
+                    ],
+                    [
+                        "ACOT2 PTE2 PTE2A"
+                    ],
+                    [
+                        "ACADVL VLCAD"
+                    ],
+                    [
+                        "FASN FAS"
+                    ],
+                    [
+                        "MAPKAPK2"
+                    ],
+                    [
+                        "PLA2G4A CPLA2 PLA2G4"
+                    ],
+                    [
+                        "CRAT CAT1"
+                    ],
+                    [
+                        "ACAA2"
+                    ],
+                    [
+                        "ECI1 DCI"
+                    ],
+                    [
+                        "PTGDS PDS"
+                    ],
+                    [
+                        "HADHA HADH"
+                    ],
+                    [
+                        "HSD17B3 EDH17B3 SDR12C2"
+                    ],
+                    [
+                        "GPX4"
+                    ],
+                    [
+                        "PTGS2 COX2"
+                    ],
+                    [
+                        "EPHX2"
+                    ],
+                    [
+                        "ABCC1 MRP MRP1"
+                    ],
+                    [
+                        "CYP2C19"
+                    ],
+                    [
+                        "ACSL1 FACL1 FACL2 LACS LACS1 LACS2"
+                    ],
+                    [
+                        "ECHS1"
+                    ],
+                    [
+                        "TBXAS1 CYP5 CYP5A1 TXAS"
+                    ],
+                    [
+                        "CPT2 CPT1"
+                    ],
+                    [
+                        "PTGS1 COX1"
+                    ],
+                    [
+                        "RXRA NR2B1"
+                    ],
+                    [
+                        "ALOX12 12LO LOG12"
+                    ],
+                    [
+                        "CBR1 CBR CRN SDR21C1"
+                    ],
+                    [
+                        "ALOX15 LOG15"
+                    ],
+                    [
+                        "CYP2C9 CYP2C10"
+                    ],
+                    [
+                        "ACADM"
+                    ],
+                    [
+                        "CYP2C8"
+                    ],
+                    [
+                        "LTA4H LTA4"
+                    ],
+                    [
+                        "ALOX5 LOG5"
+                    ],
+                    [
+                        "ACAA1 ACAA PTHIO"
+                    ],
+                    [
+                        "GPX1"
+                    ],
+                    [
+                        "DBI"
+                    ],
+                    [
+                        "CYP1A2"
+                    ],
+                    [
+                        "PCCA"
+                    ],
+                    [
+                        "CYP1A1"
+                    ],
+                    [
+                        "ACSL3 ACS3 FACL3 LACS3"
+                    ],
+                    [
+                        "HPGDS GSTS PGDS PTGDS2"
+                    ],
+                    [
+                        "ACSL4 ACS4 FACL4 LACS4"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "title": "B1",
+        "description": "Find all light ion channels that are involved in the same biological process as the protein 'CFTR'.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein {label: 'CFTR'})-[:hasBiologicalProcess]->(bp:BiologicalProcess)<-[:hasBiologicalProcess]-(lic:LightIonChannel) RETURN DISTINCT lic.label LIMIT 100",
+                "time_taken": 6.4198291301727295,
+                "cypher_result": [
+                    [
+                        "KCNK1 (HOHO1, KCNO1, TWIK1)"
+                    ],
+                    [
+                        "CACNA1A (CACH4, CACN3, CACNL1A4)"
+                    ],
+                    [
+                        "CLIC2"
+                    ],
+                    [
+                        "GRIN2D (GluN2D, NMDAR2D)"
+                    ],
+                    [
+                        "KCNN4 (IK1, IKCA1, KCA4, SK4)"
+                    ],
+                    [
+                        "AQP9 (SSC1)"
+                    ],
+                    [
+                        "KCNQ3"
+                    ],
+                    [
+                        "KCNQ2"
+                    ],
+                    [
+                        "CLIC4"
+                    ],
+                    [
+                        "HCN1 (BCNG1)"
+                    ],
+                    [
+                        "TRPA1 (ANKTM1)"
+                    ],
+                    [
+                        "TRPM2 (EREG1, KNP3, LTRPC2, TRPC7)"
+                    ],
+                    [
+                        "KCNK2 (TREK, TREK1)"
+                    ],
+                    [
+                        "KCNH1 (EAG, EAG1)"
+                    ],
+                    [
+                        "CFTR (ABCC7)"
+                    ],
+                    [
+                        "GABRA1"
+                    ],
+                    [
+                        "KCNA2"
+                    ],
+                    [
+                        "GJA1 (GJAL) (CX43)"
+                    ],
+                    [
+                        "GABRB1"
+                    ],
+                    [
+                        "GABRG2"
+                    ],
+                    [
+                        "VDAC1 (VDAC)"
+                    ],
+                    [
+                        "RYR1 (RYDR)"
+                    ],
+                    [
+                        "KCNA3 (HGK5)"
+                    ],
+                    [
+                        "KCNA4 (KCNA4L)"
+                    ],
+                    [
+                        "KCNA5"
+                    ],
+                    [
+                        "GABRR1"
+                    ],
+                    [
+                        "GABRB3"
+                    ],
+                    [
+                        "GABRR2"
+                    ],
+                    [
+                        "AQP1 (CHIP28)"
+                    ],
+                    [
+                        "SCN1A (NAC1, SCN1)"
+                    ],
+                    [
+                        "SCN4A"
+                    ],
+                    [
+                        "CLCN1 (CLC1)"
+                    ],
+                    [
+                        "SCNN1A (SCNN1)"
+                    ],
+                    [
+                        "VDAC2"
+                    ],
+                    [
+                        "GABRB2"
+                    ],
+                    [
+                        "KCNJ1 (ROMK1)"
+                    ],
+                    [
+                        "KCNJ4 (IRK3)"
+                    ],
+                    [
+                        "KCNJ6 (GIRK2, KATP2, KCNJ7)"
+                    ],
+                    [
+                        "GABRA4"
+                    ],
+                    [
+                        "KCNJ5 (GIRK4)"
+                    ],
+                    [
+                        "KCNC1"
+                    ],
+                    [
+                        "KCNJ3 (GIRK1)"
+                    ],
+                    [
+                        "TRPC1 (TRP1)"
+                    ],
+                    [
+                        "SCNN1B"
+                    ],
+                    [
+                        "SCNN1G"
+                    ],
+                    [
+                        "SCNN1D (DNACH)"
+                    ],
+                    [
+                        "KCNQ1 (KCNA8, KCNA9, KVLQT1)"
+                    ],
+                    [
+                        "CLCN2 (ClC-2)"
+                    ],
+                    [
+                        "CLCN4"
+                    ],
+                    [
+                        "CLCN5 (CLCK2) (ClC-5)"
+                    ],
+                    [
+                        "CLCN7"
+                    ],
+                    [
+                        "KCNQ4"
+                    ],
+                    [
+                        "KCNK10 (TREK2)"
+                    ],
+                    [
+                        "KCNJ2 (IRK1)"
+                    ],
+                    [
+                        "ASIC1 (ACCN2, BNAC2)"
+                    ],
+                    [
+                        "KCNJ10"
+                    ],
+                    [
+                        "PKD1"
+                    ],
+                    [
+                        "CACNA1D (CACH3, CACN4, CACNL1A2, CCHL1A2)"
+                    ],
+                    [
+                        "KCNC4 (C1orf30)"
+                    ],
+                    [
+                        "GRIN1 (NMDAR1)"
+                    ],
+                    [
+                        "KCNA1"
+                    ],
+                    [
+                        "KCNH2 (ERG, ERG1, HERG)"
+                    ],
+                    [
+                        "GRIN2B (NMDAR2B)"
+                    ],
+                    [
+                        "TRPC3 (TRP3)"
+                    ],
+                    [
+                        "PKD2 (TRPP2)"
+                    ],
+                    [
+                        "CACNA1C (CACH2, CACN2, CACNL1A1, CCHL1A1)"
+                    ],
+                    [
+                        "KCNC3"
+                    ],
+                    [
+                        "KCNJ12 (IRK2, KCNJN1)"
+                    ],
+                    [
+                        "SCN5A"
+                    ],
+                    [
+                        "ITPR2"
+                    ],
+                    [
+                        "ITPR3"
+                    ],
+                    [
+                        "ITPR1 (INSP3R1)"
+                    ],
+                    [
+                        "KCNJ11"
+                    ],
+                    [
+                        "KCNB1"
+                    ],
+                    [
+                        "GRIN2C (NMDAR2C)"
+                    ],
+                    [
+                        "RYR3 (HBRR)"
+                    ],
+                    [
+                        "KCNJ8"
+                    ],
+                    [
+                        "SCN9A (NENA)"
+                    ],
+                    [
+                        "KCNA10"
+                    ],
+                    [
+                        "LRRC8E"
+                    ],
+                    [
+                        "LRRC8B (KIAA0231)"
+                    ],
+                    [
+                        "KCNV1"
+                    ],
+                    [
+                        "LRRC8D (LRRC5)"
+                    ],
+                    [
+                        "TRPM8 (LTRPC6, TRPP8)"
+                    ],
+                    [
+                        "KCNK18 (TRESK, TRIK)"
+                    ],
+                    [
+                        "TRPM1 (LTRPC1, MLSN, MLSN1)"
+                    ],
+                    [
+                        "LRRC8A (KIAA1437, LRRC8, SWELL1)"
+                    ],
+                    [
+                        "MCOLN2"
+                    ],
+                    [
+                        "KCNH5 (EAG2)"
+                    ],
+                    [
+                        "TRPV1 (VR1)"
+                    ],
+                    [
+                        "TRPV3"
+                    ],
+                    [
+                        "TRPM4 (LTRPC4)"
+                    ],
+                    [
+                        "MCOLN3"
+                    ],
+                    [
+                        "KCNV2"
+                    ],
+                    [
+                        "LRRC8C (AD158, FAD158)"
+                    ],
+                    [
+                        "RYR2"
+                    ],
+                    [
+                        "KCNJ9 (GIRK3)"
+                    ],
+                    [
+                        "KCNB2"
+                    ],
+                    [
+                        "KCNC2"
+                    ],
+                    [
+                        "TRPM7"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "title": "B2",
+        "description": "Find all dark ion channels that are involved in the same pathway as the 'CACNG6' dark ion channel.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (d1:DarkIonChannel {label: 'CACNG6'})-[:hasPathway]->(p:Pathway)<-[:hasPathway]-(d2:DarkIonChannel) RETURN DISTINCT d2.label LIMIT 100",
+                "time_taken": 1.827376365661621,
+                "cypher_result": [
+                    [
+                        "CACNG7"
+                    ],
+                    [
+                        "CACNG8 (CACNG6)"
+                    ],
+                    [
+                        "CACNG4"
+                    ],
+                    [
+                        "CACNA2D2 (KIAA0558)"
+                    ],
+                    [
+                        "SCN7A (SCN6A)"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "title": "B3",
+        "description": "Find all diseases that are linked to proteins that bind to the 'ferric oxide' chemical.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (c:Chemical {label: 'ferric oxide'})-[:assoWithGene]-(p:Protein) MATCH (p)-[:implicatedInDisease]-(d:Disease) RETURN DISTINCT d.label LIMIT 100",
+                "time_taken": 1.4160852432250977,
+                "cypher_result": [
+                    [
+                        "Rhinitis, Allergic"
+                    ],
+                    [
+                        "Non-alcoholic Fatty Liver Disease"
+                    ],
+                    [
+                        "Fetal Alcohol Spectrum Disorders"
+                    ],
+                    [
+                        "Chemical and Drug Induced Liver Injury"
+                    ],
+                    [
+                        "Acute Lung Injury"
+                    ],
+                    [
+                        "Premature Birth"
+                    ],
+                    [
+                        "Acatalasia"
+                    ],
+                    [
+                        "Chromosome Breakage"
+                    ],
+                    [
+                        "Disease Progression"
+                    ],
+                    [
+                        "Lymphoma, Large B-Cell, Diffuse"
+                    ],
+                    [
+                        "Osteoporosis, Postmenopausal"
+                    ],
+                    [
+                        "Myocardial Reperfusion Injury"
+                    ],
+                    [
+                        "Reperfusion Injury"
+                    ],
+                    [
+                        "Ureteral Calculi"
+                    ],
+                    [
+                        "Turner Syndrome"
+                    ],
+                    [
+                        "Stomach Ulcer"
+                    ],
+                    [
+                        "Status Epilepticus"
+                    ],
+                    [
+                        "Seizures"
+                    ],
+                    [
+                        "Pulmonary Fibrosis"
+                    ],
+                    [
+                        "Pulmonary Embolism"
+                    ],
+                    [
+                        "Pulmonary Edema"
+                    ],
+                    [
+                        "Psoriasis"
+                    ],
+                    [
+                        "Protein Deficiency"
+                    ],
+                    [
+                        "Precancerous Conditions"
+                    ],
+                    [
+                        "Phobic Disorders"
+                    ],
+                    [
+                        "Neoplasms"
+                    ],
+                    [
+                        "Neoplasm Metastasis"
+                    ],
+                    [
+                        "Neoplasm Invasiveness"
+                    ],
+                    [
+                        "Necrosis"
+                    ],
+                    [
+                        "Myocardial Infarction"
+                    ],
+                    [
+                        "Cardiomyopathies"
+                    ],
+                    [
+                        "Mesothelioma"
+                    ],
+                    [
+                        "Marfan Syndrome"
+                    ],
+                    [
+                        "Lupus Erythematosus, Systemic"
+                    ],
+                    [
+                        "Liver Cirrhosis, Alcoholic"
+                    ],
+                    [
+                        "Kidney Failure, Chronic"
+                    ],
+                    [
+                        "Kidney Calculi"
+                    ],
+                    [
+                        "Keratosis"
+                    ],
+                    [
+                        "Hypotension"
+                    ],
+                    [
+                        "Hyperthyroidism"
+                    ],
+                    [
+                        "Hypertension"
+                    ],
+                    [
+                        "Hyperemia"
+                    ],
+                    [
+                        "Hepatitis, Chronic"
+                    ],
+                    [
+                        "Hepatitis"
+                    ],
+                    [
+                        "Heart Failure"
+                    ],
+                    [
+                        "Glioma"
+                    ],
+                    [
+                        "Fatty Liver"
+                    ],
+                    [
+                        "Edema"
+                    ],
+                    [
+                        "Dyskinesia, Drug-Induced"
+                    ],
+                    [
+                        "Diabetic Neuropathies"
+                    ],
+                    [
+                        "Diabetes Mellitus, Type 2"
+                    ],
+                    [
+                        "Diabetes Mellitus, Type 1"
+                    ],
+                    [
+                        "Diabetes Mellitus, Experimental"
+                    ],
+                    [
+                        "Diabetes Mellitus"
+                    ],
+                    [
+                        "Depressive Disorder, Major"
+                    ],
+                    [
+                        "Cholestasis"
+                    ],
+                    [
+                        "Brain Ischemia"
+                    ],
+                    [
+                        "Cell Transformation, Neoplastic"
+                    ],
+                    [
+                        "Carcinoma, Non-Small-Cell Lung"
+                    ],
+                    [
+                        "Breast Neoplasms"
+                    ],
+                    [
+                        "Behcet Syndrome"
+                    ],
+                    [
+                        "Autistic Disorder"
+                    ],
+                    [
+                        "Asthma"
+                    ],
+                    [
+                        "Asphyxia Neonatorum"
+                    ],
+                    [
+                        "Arthritis, Rheumatoid"
+                    ],
+                    [
+                        "Arthritis, Experimental"
+                    ],
+                    [
+                        "Aortic Diseases"
+                    ],
+                    [
+                        "Abnormalities, Drug-Induced"
+                    ],
+                    [
+                        "Neurotoxicity Syndromes"
+                    ],
+                    [
+                        "Sepsis"
+                    ],
+                    [
+                        "Subarachnoid Hemorrhage"
+                    ],
+                    [
+                        "Spinal Cord Injuries"
+                    ],
+                    [
+                        "Retinal Detachment"
+                    ],
+                    [
+                        "Nervous System Diseases"
+                    ],
+                    [
+                        "Nerve Degeneration"
+                    ],
+                    [
+                        "Mycoplasma Infections"
+                    ],
+                    [
+                        "Heart Valve Diseases"
+                    ],
+                    [
+                        "Diabetic Retinopathy"
+                    ],
+                    [
+                        "Diabetic Angiopathies"
+                    ],
+                    [
+                        "Cryptorchidism"
+                    ],
+                    [
+                        "Colitis, Ulcerative"
+                    ],
+                    [
+                        "Cerebral Hemorrhage"
+                    ],
+                    [
+                        "Calcinosis"
+                    ],
+                    [
+                        "Alzheimer Disease"
+                    ],
+                    [
+                        "Copper-Overload Cirrhosis"
+                    ],
+                    [
+                        null
+                    ],
+                    [
+                        "Cardiotoxicity"
+                    ],
+                    [
+                        "Angina, Stable"
+                    ],
+                    [
+                        "Asthma, Occupational"
+                    ],
+                    [
+                        "Acute Kidney Injury"
+                    ],
+                    [
+                        "Diabetic Cardiomyopathies"
+                    ],
+                    [
+                        "Vascular System Injuries"
+                    ],
+                    [
+                        "Lung Injury"
+                    ],
+                    [
+                        "Anthracosis"
+                    ],
+                    [
+                        "Venous Thromboembolism"
+                    ],
+                    [
+                        "Acute Coronary Syndrome"
+                    ],
+                    [
+                        "Atherosclerosis"
+                    ],
+                    [
+                        "Pulmonary Disease, Chronic Obstructive"
+                    ],
+                    [
+                        "Coronary Restenosis"
+                    ],
+                    [
+                        "Stroke"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "title": "B4",
+        "description": "Find all functional domains that the protein 'CFTR' shares with other proteins.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein {label: 'CFTR'})-[:hasFunctionalDomain]->(fd:FunctionalDomain) MATCH (other:Protein)-[:hasFunctionalDomain]->(fd) RETURN DISTINCT fd.label LIMIT 100",
+                "time_taken": 4.791711091995239,
+                "cypher_result": [
+                    [
+                        "CFTR_R"
+                    ],
+                    [
+                        "ABC_tran"
+                    ],
+                    [
+                        "ABC_membrane"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "title": "B5",
+        "description": "Find all the proteins that are associated with the same pathways and conduct the same ions as the protein 'KCNG3'.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein {label: 'KCNG3'})-[:hasPathway]->(pw:Pathway)<-[:hasPathway]-(p2:Protein) MATCH (p)-[:hasIonAsso]->(i:Ion)<-[:hasIonAsso]-(p2) RETURN DISTINCT p2.label LIMIT 100",
+                "time_taken": 1.557614803314209,
+                "cypher_result": [
+                    [
+                        "KCNAB3 (KCNA3B)"
+                    ],
+                    [
+                        "KCNAB2 (KCNA2B, KCNK2)"
+                    ],
+                    [
+                        "KCNAB1 (KCNA1B)"
+                    ],
+                    [
+                        "KCNH4"
+                    ],
+                    [
+                        "KCNS2 (KIAA1144)"
+                    ],
+                    [
+                        "KCNH3 (KIAA1282)"
+                    ],
+                    [
+                        "KCND3"
+                    ],
+                    [
+                        "KCNG2 (KCNF2)"
+                    ],
+                    [
+                        "KCNG1"
+                    ],
+                    [
+                        "KCND2 (KIAA1044)"
+                    ],
+                    [
+                        "KCND1"
+                    ],
+                    [
+                        "KCNH7 (ERG3)"
+                    ],
+                    [
+                        "KCNQ5"
+                    ],
+                    [
+                        "KCNF1"
+                    ],
+                    [
+                        "KCNH6 (ERG2)"
+                    ],
+                    [
+                        "KCNS3"
+                    ],
+                    [
+                        "KCNA7"
+                    ],
+                    [
+                        "KCNC2"
+                    ],
+                    [
+                        "KCNH8"
+                    ],
+                    [
+                        "KCNS1"
+                    ],
+                    [
+                        "KCNB2"
+                    ],
+                    [
+                        "KCNV2"
+                    ],
+                    [
+                        "KCNG4 (KCNG3)"
+                    ],
+                    [
+                        "KCNH5 (EAG2)"
+                    ],
+                    [
+                        "KCNV1"
+                    ],
+                    [
+                        "KCNA10"
+                    ],
+                    [
+                        "KCNB1"
+                    ],
+                    [
+                        "KCNC3"
+                    ],
+                    [
+                        "KCNH2 (ERG, ERG1, HERG)"
+                    ],
+                    [
+                        "KCNA1"
+                    ],
+                    [
+                        "KCNC4 (C1orf30)"
+                    ],
+                    [
+                        "KCNQ4"
+                    ],
+                    [
+                        "KCNQ1 (KCNA8, KCNA9, KVLQT1)"
+                    ],
+                    [
+                        "KCNC1"
+                    ],
+                    [
+                        "KCNA5"
+                    ],
+                    [
+                        "KCNA4 (KCNA4L)"
+                    ],
+                    [
+                        "KCNA3 (HGK5)"
+                    ],
+                    [
+                        "KCNA6"
+                    ],
+                    [
+                        "KCNA2"
+                    ],
+                    [
+                        "KCNH1 (EAG, EAG1)"
+                    ],
+                    [
+                        "KCNQ2"
+                    ],
+                    [
+                        "KCNQ3"
+                    ],
+                    [
+                        "KCNJ16"
+                    ],
+                    [
+                        "KCNJ15 (KCNJ14)"
+                    ],
+                    [
+                        "KCNJ9 (GIRK3)"
+                    ],
+                    [
+                        "KCNJ8"
+                    ],
+                    [
+                        "KCNJ11"
+                    ],
+                    [
+                        "KCNJ12 (IRK2, KCNJN1)"
+                    ],
+                    [
+                        "KCNJ10"
+                    ],
+                    [
+                        "KCNJ2 (IRK1)"
+                    ],
+                    [
+                        "KCNJ3 (GIRK1)"
+                    ],
+                    [
+                        "KCNJ5 (GIRK4)"
+                    ],
+                    [
+                        "KCNJ6 (GIRK2, KATP2, KCNJ7)"
+                    ],
+                    [
+                        "KCNJ4 (IRK3)"
+                    ],
+                    [
+                        "KCNJ1 (ROMK1)"
+                    ],
+                    [
+                        "KCNN3 (K3)"
+                    ],
+                    [
+                        "KCNN2"
+                    ],
+                    [
+                        "KCNN1 (SK)"
+                    ],
+                    [
+                        "KCNMA1 (KCNMA, SLO)"
+                    ],
+                    [
+                        "KCNN4 (IK1, IKCA1, KCA4, SK4)"
+                    ],
+                    [
+                        "KCNK6 (TOSS, TWIK2)"
+                    ],
+                    [
+                        "KCNK4 (TRAAK)"
+                    ],
+                    [
+                        "KCNK16 (TALK1)"
+                    ],
+                    [
+                        "KCNK18 (TRESK, TRIK)"
+                    ],
+                    [
+                        "KCNK10 (TREK2)"
+                    ],
+                    [
+                        "KCNK2 (TREK, TREK1)"
+                    ],
+                    [
+                        "KCNK1 (HOHO1, KCNO1, TWIK1)"
+                    ],
+                    [
+                        "HCN4"
+                    ],
+                    [
+                        "HCN2 (BCNG2)"
+                    ],
+                    [
+                        "HCN3 (KIAA1535)"
+                    ],
+                    [
+                        "HCN1 (BCNG1)"
+                    ],
+                    [
+                        "GRIK3 (GLUR7)"
+                    ],
+                    [
+                        "GRIA2 (GLUR2)"
+                    ],
+                    [
+                        "CHRNA4 (NACRA4)"
+                    ],
+                    [
+                        "CHRNA7 (NACHRA7)"
+                    ],
+                    [
+                        "CHRNA3 (NACHRA3)"
+                    ],
+                    [
+                        "CHRNB4"
+                    ],
+                    [
+                        "CHRNA5 (NACHRA5)"
+                    ],
+                    [
+                        "CHRNB2"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "title": "B6",
+        "description": "List all biological processes that are connected to chemicals associated with the protein 'TRPM8'.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (protein:Protein {label: 'TRPM8'})-[:assoWithGene]-(chemical:Chemical) MATCH (chemical)-[:assoWithBiologicalProcess]-(biologicalProcess:BiologicalProcess) RETURN DISTINCT biologicalProcess.label LIMIT 100",
+                "time_taken": 1.7522790431976318,
+                "cypher_result": [
+                    [
+                        "positive regulation of reactive oxygen species biosynthetic process"
+                    ],
+                    [
+                        "transepithelial transport"
+                    ],
+                    [
+                        "regulation of calcium ion transport"
+                    ],
+                    [
+                        "positive regulation of release of sequestered calcium ion into cytosol"
+                    ],
+                    [
+                        "behavioral response to pain"
+                    ],
+                    [
+                        null
+                    ],
+                    [
+                        "vasoconstriction"
+                    ],
+                    [
+                        "positive regulation of monoatomic ion transmembrane transport"
+                    ],
+                    [
+                        "cellular response to oxidative stress"
+                    ],
+                    [
+                        "triglyceride biosynthetic process"
+                    ],
+                    [
+                        "lipid catabolic process"
+                    ],
+                    [
+                        "urinary bladder smooth muscle contraction"
+                    ],
+                    [
+                        "positive regulation of G2/M transition of mitotic cell cycle"
+                    ],
+                    [
+                        "negative regulation of cell population proliferation"
+                    ],
+                    [
+                        "cell population proliferation"
+                    ],
+                    [
+                        "positive regulation of cytosolic calcium ion concentration"
+                    ],
+                    [
+                        "glutathione biosynthetic process"
+                    ],
+                    [
+                        "glutathione metabolic process"
+                    ],
+                    [
+                        "cholesterol biosynthetic process"
+                    ],
+                    [
+                        "gluconeogenesis"
+                    ],
+                    [
+                        "urea cycle"
+                    ],
+                    [
+                        "positive regulation of cysteine-type endopeptidase activity involved in execution phase of apoptosis"
+                    ],
+                    [
+                        "positive regulation of autophagosome assembly"
+                    ],
+                    [
+                        "regulation of miRNA metabolic process"
+                    ],
+                    [
+                        "positive regulation of reactive oxygen species metabolic process"
+                    ],
+                    [
+                        "positive regulation of response to endoplasmic reticulum stress"
+                    ],
+                    [
+                        "lysosomal protein catabolic process"
+                    ],
+                    [
+                        "positive regulation of adipose tissue development"
+                    ],
+                    [
+                        "reactive oxygen species biosynthetic process"
+                    ],
+                    [
+                        "positive regulation of glutathione peroxidase activity"
+                    ],
+                    [
+                        "regulation of axon guidance"
+                    ],
+                    [
+                        "positive regulation of apoptotic DNA fragmentation"
+                    ],
+                    [
+                        "chloride transmembrane transport"
+                    ],
+                    [
+                        "positive regulation of p38MAPK cascade"
+                    ],
+                    [
+                        "positive regulation of cellular response to oxidative stress"
+                    ],
+                    [
+                        "activation of cysteine-type endopeptidase activity"
+                    ],
+                    [
+                        "regulation of membrane permeability"
+                    ],
+                    [
+                        "DNA biosynthetic process"
+                    ],
+                    [
+                        "nuclear membrane organization"
+                    ],
+                    [
+                        "adipose tissue development"
+                    ],
+                    [
+                        "positive regulation of respiratory burst"
+                    ],
+                    [
+                        "positive regulation of phagocytosis"
+                    ],
+                    [
+                        "host-mediated regulation of intestinal microbiota composition"
+                    ],
+                    [
+                        "membrane lipid catabolic process"
+                    ],
+                    [
+                        "negative regulation of neuron differentiation"
+                    ],
+                    [
+                        "positive regulation of neuron apoptotic process"
+                    ],
+                    [
+                        "positive regulation of apoptotic process"
+                    ],
+                    [
+                        "glucose homeostasis"
+                    ],
+                    [
+                        "dopamine metabolic process"
+                    ],
+                    [
+                        "regulation of growth"
+                    ],
+                    [
+                        "locomotory exploration behavior"
+                    ],
+                    [
+                        "positive regulation of peptidyl-serine phosphorylation"
+                    ],
+                    [
+                        "RNA biosynthetic process"
+                    ],
+                    [
+                        "prostaglandin secretion"
+                    ],
+                    [
+                        "activation of protein kinase B activity"
+                    ],
+                    [
+                        "locomotion involved in locomotory behavior"
+                    ],
+                    [
+                        "neuron projection development"
+                    ],
+                    [
+                        "positive regulation of cell migration"
+                    ],
+                    [
+                        "insulin secretion"
+                    ],
+                    [
+                        "actin filament polymerization"
+                    ],
+                    [
+                        "protein oxidation"
+                    ],
+                    [
+                        "negative regulation of translation"
+                    ],
+                    [
+                        "cell growth"
+                    ],
+                    [
+                        "mercury ion transport"
+                    ],
+                    [
+                        "myotube differentiation"
+                    ],
+                    [
+                        "microglia development"
+                    ],
+                    [
+                        "negative regulation of neuron projection development"
+                    ],
+                    [
+                        "regulation of gastrulation"
+                    ],
+                    [
+                        "embryo development"
+                    ],
+                    [
+                        "response to glucose"
+                    ],
+                    [
+                        "response to toxic substance"
+                    ],
+                    [
+                        "larval locomotory behavior"
+                    ],
+                    [
+                        "cell death"
+                    ],
+                    [
+                        "memory"
+                    ],
+                    [
+                        "learning"
+                    ],
+                    [
+                        "adult fat body development"
+                    ],
+                    [
+                        "axonogenesis"
+                    ],
+                    [
+                        "gamma-aminobutyric acid signaling pathway"
+                    ],
+                    [
+                        "mitochondrion organization"
+                    ],
+                    [
+                        "nucleus organization"
+                    ],
+                    [
+                        "response to oxidative stress"
+                    ],
+                    [
+                        "immune response"
+                    ],
+                    [
+                        "apoptotic process"
+                    ],
+                    [
+                        "intracellular calcium ion homeostasis"
+                    ],
+                    [
+                        "nitric oxide biosynthetic process"
+                    ],
+                    [
+                        "apoptotic DNA fragmentation"
+                    ],
+                    [
+                        "positive regulation of type 2 immune response"
+                    ],
+                    [
+                        "release of cytochrome c from mitochondria"
+                    ],
+                    [
+                        "kidney development"
+                    ],
+                    [
+                        "formation of cytoplasmic translation initiation complex"
+                    ],
+                    [
+                        "behavioral fear response"
+                    ],
+                    [
+                        "positive regulation of NF-kappaB transcription factor activity"
+                    ],
+                    [
+                        "positive regulation of cell size"
+                    ],
+                    [
+                        "positive regulation of superoxide anion generation"
+                    ],
+                    [
+                        "positive regulation of proteasomal ubiquitin-dependent protein catabolic process"
+                    ],
+                    [
+                        "positive regulation of protein ubiquitination"
+                    ],
+                    [
+                        "fatty acid oxidation"
+                    ],
+                    [
+                        "fatty acid transport"
+                    ],
+                    [
+                        "pericardium morphogenesis"
+                    ],
+                    [
+                        "neuron projection extension"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "title": "B7",
+        "description": "Identify all pathways that connect the dark ion channel 'CACNG3' to diseases through proteins implicated in those diseases.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (d:DarkIonChannel {label: 'CACNG3'})-[:hasPathway]->(p:Pathway) MATCH (p)<-[:hasPathway]-(prot:Protein)-[:implicatedInDisease]->(disease:Disease) RETURN DISTINCT disease.label LIMIT 100",
+                "time_taken": 1.7352979183197021,
+                "cypher_result": [
+                    [
+                        null
+                    ],
+                    [
+                        "Ichthyosis Bullosa of Siemens"
+                    ],
+                    [
+                        "Dermatitis, Contact"
+                    ],
+                    [
+                        "Stomach Neoplasms"
+                    ],
+                    [
+                        "Skin Neoplasms"
+                    ],
+                    [
+                        "Carcinoma, Squamous Cell"
+                    ],
+                    [
+                        "Vohwinkel Syndrome, Variant Form"
+                    ],
+                    [
+                        "Ichthyosis Vulgaris"
+                    ],
+                    [
+                        "Eczema"
+                    ],
+                    [
+                        "Dermatitis, Atopic"
+                    ],
+                    [
+                        "Dermatitis"
+                    ],
+                    [
+                        "Dermatitis, Atopic, 2"
+                    ],
+                    [
+                        "Polycystic Ovary Syndrome"
+                    ],
+                    [
+                        "Dyslipidemias"
+                    ],
+                    [
+                        "Mammary Neoplasms, Animal"
+                    ],
+                    [
+                        "Hypertriglyceridemia"
+                    ],
+                    [
+                        "Prostatic Neoplasms"
+                    ],
+                    [
+                        "Pancreatitis"
+                    ],
+                    [
+                        "Obesity"
+                    ],
+                    [
+                        "Necrosis"
+                    ],
+                    [
+                        "Cardiomyopathies"
+                    ],
+                    [
+                        "Mammary Neoplasms, Experimental"
+                    ],
+                    [
+                        "Liver Cirrhosis, Experimental"
+                    ],
+                    [
+                        "Hyperlipoproteinemia Type I"
+                    ],
+                    [
+                        "Hypertension"
+                    ],
+                    [
+                        "Hyperlipidemia, Familial Combined"
+                    ],
+                    [
+                        "Hyperlipidemias"
+                    ],
+                    [
+                        "Hyperlipoproteinemia Type II"
+                    ],
+                    [
+                        "Hypercholesterolemia"
+                    ],
+                    [
+                        "Hepatitis C"
+                    ],
+                    [
+                        "Colonic Neoplasms"
+                    ],
+                    [
+                        "Celiac Disease"
+                    ],
+                    [
+                        "Cardiovascular Diseases"
+                    ],
+                    [
+                        "Carcinoma"
+                    ],
+                    [
+                        "Disease Progression"
+                    ],
+                    [
+                        "Neoplasm Metastasis"
+                    ],
+                    [
+                        "Glioblastoma"
+                    ],
+                    [
+                        "Nasopharyngeal Carcinoma"
+                    ],
+                    [
+                        "Exfoliative Ichthyosis, Autosomal Recessive, Ichthyosis Bullosa of Siemens-like"
+                    ],
+                    [
+                        "Monilethrix"
+                    ],
+                    [
+                        "Xerocytosis, hereditary"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "title": "B8",
+        "description": "Retrieve all molecular functions associated with proteins implicated in 'Seizures' disease.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (d:Disease {label: 'Seizures'})<-[:implicatedInDisease]-(p:Protein) MATCH (p)-[:hasMolecularFunction]->(mf:MolecularFunction) RETURN DISTINCT mf.label LIMIT 100",
+                "time_taken": 1.956923007965088,
+                "cypher_result": [
+                    [
+                        "hexosyltransferase activity"
+                    ],
+                    [
+                        "glycosyltransferase activity"
+                    ],
+                    [
+                        "mannosyltransferase activity"
+                    ],
+                    [
+                        "protein heterodimerization activity"
+                    ],
+                    [
+                        "protein dimerization activity"
+                    ],
+                    [
+                        "metal ion transmembrane transporter activity"
+                    ],
+                    [
+                        "magnesium ion transmembrane transporter activity"
+                    ],
+                    [
+                        "sodium channel inhibitor activity"
+                    ],
+                    [
+                        "ion channel regulator activity"
+                    ],
+                    [
+                        "ubiquitin-like protein ligase activity"
+                    ],
+                    [
+                        "ion channel inhibitor activity"
+                    ],
+                    [
+                        "channel inhibitor activity"
+                    ],
+                    [
+                        "sodium channel regulator activity"
+                    ],
+                    [
+                        "ubiquitin protein ligase activity"
+                    ],
+                    [
+                        "channel regulator activity"
+                    ],
+                    [
+                        "G protein-coupled receptor binding"
+                    ],
+                    [
+                        "UDP-xylosyltransferase activity"
+                    ],
+                    [
+                        "protein xylosyltransferase activity"
+                    ],
+                    [
+                        "pentosyltransferase activity"
+                    ],
+                    [
+                        "UDP-glycosyltransferase activity"
+                    ],
+                    [
+                        "xylosyltransferase activity"
+                    ],
+                    [
+                        "signaling receptor regulator activity"
+                    ],
+                    [
+                        "hormone activity"
+                    ],
+                    [
+                        "neuropeptide hormone activity"
+                    ],
+                    [
+                        "receptor ligand activity"
+                    ],
+                    [
+                        "signaling receptor activator activity"
+                    ],
+                    [
+                        "nitric-oxide synthase activity"
+                    ],
+                    [
+                        "FMN binding"
+                    ],
+                    [
+                        "oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen"
+                    ],
+                    [
+                        "oxidoreductase activity, acting on NAD(P)H, heme protein as acceptor"
+                    ],
+                    [
+                        "oxidoreductase activity, acting on NAD(P)H"
+                    ],
+                    [
+                        "oxidoreductase activity, acting on paired donors, with incorporation or reduction of molecular oxygen, NAD(P)H as one donor, and incorporation of one atom of oxygen"
+                    ],
+                    [
+                        "monooxygenase activity"
+                    ],
+                    [
+                        "NADPH-hemoprotein reductase activity"
+                    ],
+                    [
+                        "flavin adenine dinucleotide binding"
+                    ],
+                    [
+                        "calcium:monoatomic cation antiporter activity"
+                    ],
+                    [
+                        "active monoatomic ion transmembrane transporter activity"
+                    ],
+                    [
+                        "secondary active transmembrane transporter activity"
+                    ],
+                    [
+                        "active transmembrane transporter activity"
+                    ],
+                    [
+                        null
+                    ],
+                    [
+                        "metal cation:proton antiporter activity"
+                    ],
+                    [
+                        "antiporter activity"
+                    ],
+                    [
+                        "calcium:proton antiporter activity"
+                    ],
+                    [
+                        "proton transmembrane transporter activity"
+                    ],
+                    [
+                        "calcium ion transmembrane transporter activity"
+                    ],
+                    [
+                        "sodium channel activity"
+                    ],
+                    [
+                        "voltage-gated sodium channel activity"
+                    ],
+                    [
+                        "sodium ion transmembrane transporter activity"
+                    ],
+                    [
+                        "monoatomic cation channel activity"
+                    ],
+                    [
+                        "monoatomic ion channel activity"
+                    ],
+                    [
+                        "ethanolamine kinase activity"
+                    ],
+                    [
+                        "choline kinase activity"
+                    ],
+                    [
+                        "hydro-lyase activity"
+                    ],
+                    [
+                        "porphobilinogen synthase activity"
+                    ],
+                    [
+                        "zinc ion binding"
+                    ],
+                    [
+                        "transition metal ion binding"
+                    ],
+                    [
+                        "carbon-oxygen lyase activity"
+                    ],
+                    [
+                        "lyase activity"
+                    ],
+                    [
+                        "sphingolipid floppase activity"
+                    ],
+                    [
+                        "lipid transporter activity"
+                    ],
+                    [
+                        "phosphatidylcholine floppase activity"
+                    ],
+                    [
+                        "ubiquitin protein ligase binding"
+                    ],
+                    [
+                        "efflux transmembrane transporter activity"
+                    ],
+                    [
+                        "flippase activity"
+                    ],
+                    [
+                        "sphingolipid transporter activity"
+                    ],
+                    [
+                        "intramembrane lipid transporter activity"
+                    ],
+                    [
+                        "phosphatidylethanolamine flippase activity"
+                    ],
+                    [
+                        "ceramide floppase activity"
+                    ],
+                    [
+                        "primary active transmembrane transporter activity"
+                    ],
+                    [
+                        "ATPase-coupled intramembrane lipid transporter activity"
+                    ],
+                    [
+                        "ATP binding"
+                    ],
+                    [
+                        "floppase activity"
+                    ],
+                    [
+                        "ubiquitin-like protein ligase binding"
+                    ],
+                    [
+                        "ABC-type transporter activity"
+                    ],
+                    [
+                        "adenyl ribonucleotide binding"
+                    ],
+                    [
+                        "adenyl nucleotide binding"
+                    ],
+                    [
+                        "phospholipid transporter activity"
+                    ],
+                    [
+                        "ABC-type xenobiotic transporter activity"
+                    ],
+                    [
+                        "glycerophospholipid flippase activity"
+                    ],
+                    [
+                        "phosphatidylcholine transporter activity"
+                    ],
+                    [
+                        "xenobiotic transmembrane transporter activity"
+                    ],
+                    [
+                        "ATPase-coupled transmembrane transporter activity"
+                    ],
+                    [
+                        "protein-folding chaperone binding"
+                    ],
+                    [
+                        "protease binding"
+                    ],
+                    [
+                        "insulin receptor binding"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "title": "B9",
+        "description": "Retrieve the functional domains of proteins that are associated with the chemical 'ferric oxide'.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (c:Chemical {label: 'ferric oxide'})-[:assoWithGene]->(p:Protein)-[:hasFunctionalDomain]->(f:FunctionalDomain)  RETURN DISTINCT f.label LIMIT 100",
+                "time_taken": 1.5614190101623535,
+                "cypher_result": [
+                    [
+                        "Catalase-rel"
+                    ],
+                    [
+                        "Catalase"
+                    ],
+                    [
+                        "Peptidase_C14"
+                    ],
+                    [
+                        "TNF"
+                    ],
+                    [
+                        "TIMP"
+                    ],
+                    [
+                        "IL8"
+                    ],
+                    [
+                        "Bcl-2"
+                    ],
+                    [
+                        "Peptidase_M10"
+                    ],
+                    [
+                        "PG_binding_1"
+                    ],
+                    [
+                        "IL6"
+                    ],
+                    [
+                        "IL1_propep"
+                    ],
+                    [
+                        "IL1"
+                    ],
+                    [
+                        "ICAM_N"
+                    ],
+                    [
+                        "Histone_H2A_C"
+                    ],
+                    [
+                        "Histone"
+                    ],
+                    [
+                        "Pyr_redox_dim"
+                    ],
+                    [
+                        "Pyr_redox_2"
+                    ],
+                    [
+                        "zf-PARP"
+                    ],
+                    [
+                        "WGR"
+                    ],
+                    [
+                        "PARP_reg"
+                    ],
+                    [
+                        "PARP"
+                    ],
+                    [
+                        "BRCT"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "title": "C1",
+        "description": "Which family and group does the ion channel 'HTR3E' belong to?",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (ic:LightIonChannel {label: 'HTR3E'})-[:hasFamily]->(f:Family) MATCH (f)-[:hasGroup]->(g:Group) RETURN DISTINCT f.label AS Family, g.label AS Group LIMIT 100",
+                "time_taken": 1.688429355621338,
+                "cypher_result": [
+                    [
+                        "5-HT3",
+                        "LGIC"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "title": "C2",
+        "description": "Find all ion channels that are connected to the 'Neuronal System' pathway through interacting proteins.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Pathway {label: 'Neuronal System'})<-[:hasPathway]-(protein:Protein) MATCH (protein)-[:interact]-(ionChannel) WHERE (ionChannel:LightIonChannel OR ionChannel:DarkIonChannel) RETURN DISTINCT ionChannel.label LIMIT 100",
+                "time_taken": 2.0753211975097656,
+                "cypher_result": [
+                    [
+                        "HTR3E"
+                    ],
+                    [
+                        "KCNU1 (KCNMA3, KCNMC1, SLO3)"
+                    ],
+                    [
+                        "KCNK1 (HOHO1, KCNO1, TWIK1)"
+                    ],
+                    [
+                        "CACNA1A (CACH4, CACN3, CACNL1A4)"
+                    ],
+                    [
+                        "GRIN2D (GluN2D, NMDAR2D)"
+                    ],
+                    [
+                        "KCNN4 (IK1, IKCA1, KCA4, SK4)"
+                    ],
+                    [
+                        "KCNAB3 (KCNA3B)"
+                    ],
+                    [
+                        "KCNQ3"
+                    ],
+                    [
+                        "KCNQ2"
+                    ],
+                    [
+                        "CACNG3"
+                    ],
+                    [
+                        "HCN1 (BCNG1)"
+                    ],
+                    [
+                        "GJB3 (CX31)"
+                    ],
+                    [
+                        "KCNK2 (TREK, TREK1)"
+                    ],
+                    [
+                        "KCNH1 (EAG, EAG1)"
+                    ],
+                    [
+                        "HTR3B"
+                    ],
+                    [
+                        "GJB6 (CX30)"
+                    ],
+                    [
+                        "CHRNA1 (ACHRA, CHNRA)"
+                    ],
+                    [
+                        "CHRNG (ACHRG)"
+                    ],
+                    [
+                        "GJB1 (CX32)"
+                    ],
+                    [
+                        "CFTR (ABCC7)"
+                    ],
+                    [
+                        "GABRA1"
+                    ],
+                    [
+                        "KCNA2"
+                    ],
+                    [
+                        "GJA1 (GJAL) (CX43)"
+                    ],
+                    [
+                        "KCNA6"
+                    ],
+                    [
+                        "CHRNB2"
+                    ],
+                    [
+                        "GABRB1"
+                    ],
+                    [
+                        "GABRG2"
+                    ],
+                    [
+                        "RYR1 (RYDR)"
+                    ],
+                    [
+                        "KCNA3 (HGK5)"
+                    ],
+                    [
+                        "KCNA4 (KCNA4L)"
+                    ],
+                    [
+                        "KCNA5"
+                    ],
+                    [
+                        "GABRR1"
+                    ],
+                    [
+                        "GABRB3"
+                    ],
+                    [
+                        "GABRR2"
+                    ],
+                    [
+                        "GJB2 (CX26)"
+                    ],
+                    [
+                        "CHRNA5 (NACHRA5)"
+                    ],
+                    [
+                        "CHRNB4"
+                    ],
+                    [
+                        "CHRNA3 (NACHRA3)"
+                    ],
+                    [
+                        "GJA4 (CX37)"
+                    ],
+                    [
+                        "SCN1A (NAC1, SCN1)"
+                    ],
+                    [
+                        "SCN4A"
+                    ],
+                    [
+                        "GJA5 (CX40)"
+                    ],
+                    [
+                        "GJC1 (GJA7)(CX45)"
+                    ],
+                    [
+                        "CHRNA7 (NACHRA7)"
+                    ],
+                    [
+                        "SCNN1A (SCNN1)"
+                    ],
+                    [
+                        "GRIK1 (GLUR5)"
+                    ],
+                    [
+                        "AQP2"
+                    ],
+                    [
+                        "GRIA1 (GLUH1, GLUR1)"
+                    ],
+                    [
+                        "GRIA2 (GLUR2)"
+                    ],
+                    [
+                        "GRIA3 (GLUR3, GLURC)"
+                    ],
+                    [
+                        "CHRNA4 (NACRA4)"
+                    ],
+                    [
+                        "HTR3A (5HT3R, HTR3)"
+                    ],
+                    [
+                        "GABRB2"
+                    ],
+                    [
+                        "KCNJ1 (ROMK1)"
+                    ],
+                    [
+                        "KCNJ4 (IRK3)"
+                    ],
+                    [
+                        "KCNJ6 (GIRK2, KATP2, KCNJ7)"
+                    ],
+                    [
+                        "GRIA4 (GLUR4)"
+                    ],
+                    [
+                        "GABRA4"
+                    ],
+                    [
+                        "KCNJ5 (GIRK4)"
+                    ],
+                    [
+                        "KCNC1"
+                    ],
+                    [
+                        "KCNJ3 (GIRK1)"
+                    ],
+                    [
+                        "TRPC1 (TRP1)"
+                    ],
+                    [
+                        "SCNN1B"
+                    ],
+                    [
+                        "SCNN1G"
+                    ],
+                    [
+                        "P2RX1 (P2X1)"
+                    ],
+                    [
+                        "KCNQ1 (KCNA8, KCNA9, KVLQT1)"
+                    ],
+                    [
+                        "CLCN2 (ClC-2)"
+                    ],
+                    [
+                        "CLCN5 (CLCK2) (ClC-5)"
+                    ],
+                    [
+                        "KCNQ4"
+                    ],
+                    [
+                        "KCNK10 (TREK2)"
+                    ],
+                    [
+                        "KCNJ2 (IRK1)"
+                    ],
+                    [
+                        "KCNJ10"
+                    ],
+                    [
+                        "CACNA1B (CACH5, CACNL1A5)"
+                    ],
+                    [
+                        "CACNA1D (CACH3, CACN4, CACNL1A2, CCHL1A2)"
+                    ],
+                    [
+                        "KCNC4 (C1orf30)"
+                    ],
+                    [
+                        "CHRNE (ACHRE)"
+                    ],
+                    [
+                        "GRIN1 (NMDAR1)"
+                    ],
+                    [
+                        "CHRNB3"
+                    ],
+                    [
+                        "CHRND (ACHRD)"
+                    ],
+                    [
+                        "KCNA1"
+                    ],
+                    [
+                        "KCNMA1 (KCNMA, SLO)"
+                    ],
+                    [
+                        "KCNH2 (ERG, ERG1, HERG)"
+                    ],
+                    [
+                        "GRIK2 (GLUR6)"
+                    ],
+                    [
+                        "GRIK3 (GLUR7)"
+                    ],
+                    [
+                        "GRIN2B (NMDAR2B)"
+                    ],
+                    [
+                        "KCNAB2 (KCNA2B, KCNK2)"
+                    ],
+                    [
+                        "CACNA1C (CACH2, CACN2, CACNL1A1, CCHL1A1)"
+                    ],
+                    [
+                        "KCNC3"
+                    ],
+                    [
+                        "KCNJ12 (IRK2, KCNJN1)"
+                    ],
+                    [
+                        "SCN5A"
+                    ],
+                    [
+                        "KCNJ11"
+                    ],
+                    [
+                        "KCNB1"
+                    ],
+                    [
+                        "GRIN2C (NMDAR2C)"
+                    ],
+                    [
+                        "CHRNA2"
+                    ],
+                    [
+                        "CHRNA6"
+                    ],
+                    [
+                        "KCNJ8"
+                    ],
+                    [
+                        "SCN9A (NENA)"
+                    ],
+                    [
+                        "CACNA1E (CACH6, CACNL1A6)"
+                    ],
+                    [
+                        "GRIK4 (GRIK)"
+                    ],
+                    [
+                        "KCNA10"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "title": "C3",
+        "description": "List the functional domains that are present in the light ion channels of the Chloride channels group.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (g:Group {label: 'Chloride channels'}) MATCH (f:Family)-[:hasGroup]->(g) MATCH (lic:LightIonChannel)-[:hasFamily]->(f) MATCH (lic)-[:hasFunctionalDomain]->(fd:FunctionalDomain) RETURN DISTINCT fd.label LIMIT 100",
+                "time_taken": 2.343029022216797,
+                "cypher_result": [
+                    [
+                        "GST_N_2"
+                    ],
+                    [
+                        "GST_C_2"
+                    ],
+                    [
+                        "GST_N_3"
+                    ],
+                    [
+                        "Pannexin_like"
+                    ],
+                    [
+                        "LRR_8"
+                    ],
+                    [
+                        "Porin_3"
+                    ],
+                    [
+                        "Anoctamin"
+                    ],
+                    [
+                        "CFTR_R"
+                    ],
+                    [
+                        "ABC_tran"
+                    ],
+                    [
+                        "ABC_membrane"
+                    ],
+                    [
+                        "Voltage_CLC"
+                    ],
+                    [
+                        "CBS"
+                    ]
+                ]
+            }
+        }
+    },
+    {
+        "title": "C4",
+        "description": "Which ions are connected to the chemical 'Ozone' through biological processes that involve proteins?",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (c:Chemical {label: 'Ozone'})-[:assoWithGene]->(p:Protein) MATCH (p)-[:hasBiologicalProcess]->(bp:BiologicalProcess) MATCH (bp)<-[:hasBiologicalProcess]-(p2:Protein) MATCH (p2)-[:hasIonAsso]->(i:Ion) RETURN DISTINCT i.label LIMIT 100",
+                "time_taken": 3.524101972579956,
+                "cypher_result": [
+                    [
+                        "sodium"
+                    ],
+                    [
+                        "calcium"
+                    ],
+                    [
+                        "potassium"
+                    ],
+                    [
+                        "non-selective cation"
+                    ],
+                    [
+                        "chloride"
+                    ],
+                    [
+                        "anion"
+                    ],
+                    [
+                        "proton"
+                    ],
+                    [
+                        "cation"
+                    ],
+                    [
+                        "non-selective"
+                    ],
+                    [
+                        "non-specific cation"
+                    ],
+                    [
+                        "ammonia"
+                    ],
+                    [
+                        "water"
+                    ],
+                    [
+                        "non-selective anion"
+                    ],
+                    [
+                        "glycerol"
+                    ],
+                    [
+                        "cesium"
+                    ],
+                    [
+                        "monocarboxylates"
+                    ],
+                    [
+                        "urea"
+                    ],
+                    [
+                        "protons"
+                    ],
+                    [
+                        "magnesium"
+                    ],
+                    [
+                        "monovalent cation"
+                    ],
+                    [
+                        "anions"
+                    ],
+                    [
+                        "lithuim"
+                    ]
+                ]
+            }
+        }
+    }
+]

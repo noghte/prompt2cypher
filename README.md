@@ -29,6 +29,7 @@ Only if you need NLP scores (BLEU, ROUGE, ...): Run the `calculate_scores_nlp.py
 ### Ablation
 1. `./src/ablation/generate_cypher_ablation.py`: generates cypher by turning on and off different features
 1. `./src/ablation/benchmarks_ablation_execution.py`: executes ablations
+1. `./src/calculate_scores_precision_recall.py`: run this file with the output of the previous step as the input (the file ending with `benchmark_format-with_results.json`)
 1. `./src/ablation/calculate_ablation_scores.py`
 
   Interpretation:

@@ -1,0 +1,302 @@
+[
+    {
+        "title": "A1",
+        "description": "Find all proteins involved in the 'Muscle contraction' pathway.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein)-[:hasPathway]->(path:Pathway {label: 'Muscle contraction'})  RETURN DISTINCT p.label LIMIT 100",
+                "time_taken": 2.6257176399230957
+            }
+        }
+    },
+    {
+        "title": "A2",
+        "description": "Retrieve all functional domains associated with the 'KCNC2' protein.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein {label: 'KCNC2'})-[:hasFunctionalDomain]->(fd:FunctionalDomain) RETURN DISTINCT fd.label LIMIT 100",
+                "time_taken": 1.7858068943023682
+            }
+        }
+    },
+    {
+        "title": "A3",
+        "description": "List all diseases the protein 'CFTR' is implicated in.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein {label: 'CFTR'})-[:implicatedInDisease]->(d:Disease) RETURN DISTINCT d.label LIMIT 100",
+                "time_taken": 1.1666522026062012
+            }
+        }
+    },
+    {
+        "title": "A4",
+        "description": "Find all proteins interacting with the light ion channel 'KCNQ3'.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (lic:LightIonChannel {label: 'KCNQ3'})-[:interact]-(p:Protein)  RETURN DISTINCT p.label LIMIT 100",
+                "time_taken": 1.5815668106079102
+            }
+        }
+    },
+    {
+        "title": "A5",
+        "description": "List all biological processes the protein 'CFTR' is involved in.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein {label: 'CFTR'})-[:hasBiologicalProcess]->(bp:BiologicalProcess) RETURN DISTINCT bp.label LIMIT 100",
+                "time_taken": 1.6542935371398926
+            }
+        }
+    },
+    {
+        "title": "A6",
+        "description": "Retrieve all molecular functions associated with the dark ion channel 'KCNG3'.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (d:DarkIonChannel {label: 'KCNG3'})-[r:hasMolecularFunction]->(m:MolecularFunction) RETURN DISTINCT m.label LIMIT 100",
+                "time_taken": 1.953852653503418
+            }
+        }
+    },
+    {
+        "title": "A7",
+        "description": "Find all cellular components the protein 'CFTR' is associated with.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein {label: 'CFTR'})-[:hasCellularComponent]->(c:CellularComponent) RETURN DISTINCT c.label LIMIT 100",
+                "time_taken": 3.6369779109954834
+            }
+        }
+    },
+    {
+        "title": "A8",
+        "description": "List all chemicals associated with the 'Chemical and Drug Induced Liver Injury' disease.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (d:Disease {label: 'Chemical and Drug Induced Liver Injury'})<-[:assoWithDisease]-(c:Chemical) RETURN DISTINCT c.label LIMIT 100",
+                "time_taken": 1.2780835628509521
+            }
+        }
+    },
+    {
+        "title": "A9",
+        "description": "Retrieve all ions associated with the light ion channel 'HTR3E'.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (lic:LightIonChannel {label: 'HTR3E'})-[:hasIonAsso]->(ion:Ion)  RETURN DISTINCT ion.label LIMIT 100",
+                "time_taken": 1.5127003192901611
+            }
+        }
+    },
+    {
+        "title": "A10",
+        "description": "Find all proteins that have the PTM 'Prkaa2'",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein)-[:hasPTM]->(ptm:PTM {label: 'Prkaa2'}) RETURN DISTINCT p.label LIMIT 100",
+                "time_taken": 1.2368340492248535
+            }
+        }
+    },
+    {
+        "title": "A11",
+        "description": "List all dark ion channels that interact with the 'CACNB1' protein.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein {label: 'CACNB1'})-[:interact]-(d:DarkIonChannel) RETURN DISTINCT d.label LIMIT 100",
+                "time_taken": 1.8298320770263672
+            }
+        }
+    },
+    {
+        "title": "A12",
+        "description": "List all the ion channels from the family TRP.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (f:Family {label: 'TRP'})<-[:hasFamily]-(ic:LightIonChannel) RETURN DISTINCT ic.label LIMIT 100 UNION MATCH (f:Family {label: 'TRP'})<-[:hasFamily]-(ic:DarkIonChannel) RETURN DISTINCT ic.label LIMIT 100",
+                "time_taken": 2.840444564819336
+            }
+        }
+    },
+    {
+        "title": "A13",
+        "description": "Which family has the largest number of dark ion channels?",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (d:DarkIonChannel)-[:hasFamily]->(f:Family) WITH f, COUNT(d) AS darkIonChannelCount ORDER BY darkIonChannelCount DESC RETURN DISTINCT f.label LIMIT 100",
+                "time_taken": 1.8861374855041504
+            }
+        }
+    },
+    {
+        "title": "A14",
+        "description": "List all dark ion channels that belong to the family labeled 'Unclassified'.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (d:DarkIonChannel)-[:hasFamily]->(f:Family) WHERE f.label = 'Unclassified' RETURN DISTINCT d.label LIMIT 100",
+                "time_taken": 1.4112598896026611
+            }
+        }
+    },
+    {
+        "title": "A15",
+        "description": "What molecular functions are associated with light ion channels that belong to the 'GABA' family?",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (lic:LightIonChannel)-[:hasFamily]->(f:Family {label: 'GABA'}) MATCH (lic)-[:hasMolecularFunction]->(mf:MolecularFunction) RETURN DISTINCT mf.label LIMIT 100",
+                "time_taken": 2.1495845317840576
+            }
+        }
+    },
+    {
+        "title": "A16",
+        "description": "List all the ions and gating mechanisms for the 'K' family of dark ion channels.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (family:Family {label: 'K'})<-[:hasFamily]-(darkIonChannel:DarkIonChannel) MATCH (darkIonChannel)-[:hasIonAsso]-(ion:Ion) MATCH (darkIonChannel)-[:hasGateMechanism]-(gateMechanism:GateMechanism) RETURN DISTINCT ion.label AS Ion, gateMechanism.label AS GateMechanism LIMIT 100",
+                "time_taken": 5.037876129150391
+            }
+        }
+    },
+    {
+        "title": "A17",
+        "description": "Find all proteins involved in the 'Fatty acid metabolism' pathway.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein)-[:hasPathway]->(path:Pathway {label: 'Fatty acid metabolism'}) RETURN DISTINCT p.label LIMIT 100",
+                "time_taken": 1.5471928119659424
+            }
+        }
+    },
+    {
+        "title": "B1",
+        "description": "Find all light ion channels that are involved in the same biological process as the protein 'CFTR'.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein {label: 'CFTR'})-[:hasBiologicalProcess]->(bp:BiologicalProcess)<-[:hasBiologicalProcess]-(lic:LightIonChannel) RETURN DISTINCT lic.label LIMIT 100",
+                "time_taken": 6.4198291301727295
+            }
+        }
+    },
+    {
+        "title": "B2",
+        "description": "Find all dark ion channels that are involved in the same pathway as the 'CACNG6' dark ion channel.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (d1:DarkIonChannel {label: 'CACNG6'})-[:hasPathway]->(p:Pathway)<-[:hasPathway]-(d2:DarkIonChannel) RETURN DISTINCT d2.label LIMIT 100",
+                "time_taken": 1.827376365661621
+            }
+        }
+    },
+    {
+        "title": "B3",
+        "description": "Find all diseases that are linked to proteins that bind to the 'ferric oxide' chemical.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (c:Chemical {label: 'ferric oxide'})-[:assoWithGene]-(p:Protein) MATCH (p)-[:implicatedInDisease]-(d:Disease) RETURN DISTINCT d.label LIMIT 100",
+                "time_taken": 1.4160852432250977
+            }
+        }
+    },
+    {
+        "title": "B4",
+        "description": "Find all functional domains that the protein 'CFTR' shares with other proteins.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein {label: 'CFTR'})-[:hasFunctionalDomain]->(fd:FunctionalDomain) MATCH (other:Protein)-[:hasFunctionalDomain]->(fd) RETURN DISTINCT fd.label LIMIT 100",
+                "time_taken": 4.791711091995239
+            }
+        }
+    },
+    {
+        "title": "B5",
+        "description": "Find all the proteins that are associated with the same pathways and conduct the same ions as the protein 'KCNG3'.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Protein {label: 'KCNG3'})-[:hasPathway]->(pw:Pathway)<-[:hasPathway]-(p2:Protein) MATCH (p)-[:hasIonAsso]->(i:Ion)<-[:hasIonAsso]-(p2) RETURN DISTINCT p2.label LIMIT 100",
+                "time_taken": 1.557614803314209
+            }
+        }
+    },
+    {
+        "title": "B6",
+        "description": "List all biological processes that are connected to chemicals associated with the protein 'TRPM8'.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (protein:Protein {label: 'TRPM8'})-[:assoWithGene]-(chemical:Chemical) MATCH (chemical)-[:assoWithBiologicalProcess]-(biologicalProcess:BiologicalProcess) RETURN DISTINCT biologicalProcess.label LIMIT 100",
+                "time_taken": 1.7522790431976318
+            }
+        }
+    },
+    {
+        "title": "B7",
+        "description": "Identify all pathways that connect the dark ion channel 'CACNG3' to diseases through proteins implicated in those diseases.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (d:DarkIonChannel {label: 'CACNG3'})-[:hasPathway]->(p:Pathway) MATCH (p)<-[:hasPathway]-(prot:Protein)-[:implicatedInDisease]->(disease:Disease) RETURN DISTINCT disease.label LIMIT 100",
+                "time_taken": 1.7352979183197021
+            }
+        }
+    },
+    {
+        "title": "B8",
+        "description": "Retrieve all molecular functions associated with proteins implicated in 'Seizures' disease.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (d:Disease {label: 'Seizures'})<-[:implicatedInDisease]-(p:Protein) MATCH (p)-[:hasMolecularFunction]->(mf:MolecularFunction) RETURN DISTINCT mf.label LIMIT 100",
+                "time_taken": 1.956923007965088
+            }
+        }
+    },
+    {
+        "title": "B9",
+        "description": "Retrieve the functional domains of proteins that are associated with the chemical 'ferric oxide'.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (c:Chemical {label: 'ferric oxide'})-[:assoWithGene]->(p:Protein)-[:hasFunctionalDomain]->(f:FunctionalDomain)  RETURN DISTINCT f.label LIMIT 100",
+                "time_taken": 1.5614190101623535
+            }
+        }
+    },
+    {
+        "title": "C1",
+        "description": "Which family and group does the ion channel 'HTR3E' belong to?",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (ic:LightIonChannel {label: 'HTR3E'})-[:hasFamily]->(f:Family) MATCH (f)-[:hasGroup]->(g:Group) RETURN DISTINCT f.label AS Family, g.label AS Group LIMIT 100",
+                "time_taken": 1.688429355621338
+            }
+        }
+    },
+    {
+        "title": "C2",
+        "description": "Find all ion channels that are connected to the 'Neuronal System' pathway through interacting proteins.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (p:Pathway {label: 'Neuronal System'})<-[:hasPathway]-(protein:Protein) MATCH (protein)-[:interact]-(ionChannel) WHERE (ionChannel:LightIonChannel OR ionChannel:DarkIonChannel) RETURN DISTINCT ionChannel.label LIMIT 100",
+                "time_taken": 2.0753211975097656
+            }
+        }
+    },
+    {
+        "title": "C3",
+        "description": "List the functional domains that are present in the light ion channels of the Chloride channels group.",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (g:Group {label: 'Chloride channels'}) MATCH (f:Family)-[:hasGroup]->(g) MATCH (lic:LightIonChannel)-[:hasFamily]->(f) MATCH (lic)-[:hasFunctionalDomain]->(fd:FunctionalDomain) RETURN DISTINCT fd.label LIMIT 100",
+                "time_taken": 2.343029022216797
+            }
+        }
+    },
+    {
+        "title": "C4",
+        "description": "Which ions are connected to the chemical 'Ozone' through biological processes that involve proteins?",
+        "results": {
+            "version_1": {
+                "cypher_query": "MATCH (c:Chemical {label: 'Ozone'})-[:assoWithGene]->(p:Protein) MATCH (p)-[:hasBiologicalProcess]->(bp:BiologicalProcess) MATCH (bp)<-[:hasBiologicalProcess]-(p2:Protein) MATCH (p2)-[:hasIonAsso]->(i:Ion) RETURN DISTINCT i.label LIMIT 100",
+                "time_taken": 3.524101972579956
+            }
+        }
+    }
+]

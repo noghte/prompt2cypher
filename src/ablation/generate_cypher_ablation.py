@@ -1,10 +1,13 @@
 import re
+import sys
 import os
 import json
 import datetime
 from typing import Dict, List, Any, Tuple
 from openai import OpenAI
-from helpers.schema_utils import load_schema 
+project_root = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.append(project_root)
+from src.helpers import load_schema
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -427,7 +430,7 @@ if __name__ == "__main__":
     NEO4J_DATABASE_NAME = os.getenv("NEO4J_DATABASE_NAME")
     KG_NAME = None
     if NEO4J_DATABASE_NAME == "neo4j":
-        KG_NAME = "ionchannels"
+        KG_NAME = "ickg"
     elif NEO4J_DATABASE_NAME == "prokino-kg":
         KG_NAME = "prokino"
     NEO4J_URI = os.getenv("NEO4J_URI")

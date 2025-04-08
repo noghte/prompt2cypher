@@ -8,9 +8,12 @@ from tabulate import tabulate
 # Load environment variables
 load_dotenv()
 
+# ICKG
+# DEFAULT_CYPHER_RESULTS = "ablation-gpt-4o-mini-2025_04_08-13_49_22-benchmark_format-with_results.json"
+# DEFAULT_BASELINE_RESULTS = "ablation-gpt-4o-mini-2025_04_08-13_49_22-metrics(precision_recall_f1).json"
+# ProKino
 DEFAULT_CYPHER_RESULTS = "ablation-gpt-4o-mini-2025_04_01-17_02_40-benchmark_format-metrics(precision_recall_f1).json"
-# The baseline file should already be produced with calculate_scores_precision_recall.py
-DEFAULT_BASELINE_RESULTS = "baseline_benchmark-gpt-4o-mini-2025_04_01-16_14_33_version_1-metrics(precision_recall_f1).json"
+DEFAULT_BASELINE_RESULTS = "baseline_benchmark-gpt-4o-mini-2025_04_01-16_14_33_version_1-metrics(precision_recall_f1).json" # The baseline file should already be produced with calculate_scores_precision_recall.py
 
 parser = argparse.ArgumentParser(description="Process ablation results for metric calculation")
 parser.add_argument("--cypher_results", 
@@ -21,16 +24,26 @@ parser.add_argument("--baseline_results",
                     type=str,
                     default=DEFAULT_BASELINE_RESULTS,
                     help="The JSON file containing the baseline benchmark results for comparison")
+parser.add_argument("--ground_truth",
+                    type=str,
+                    default=None,
+                    help="Optional path to a JSON file containing ground truth results for comparison")
+parser.add_argument("--use_with_instructions_as_ground_truth",
+                    action="store_true",
+                    default=False,
+                    help="Use with_instructions results as ground truth instead of comparing each ablation to itself")
 
 args = parser.parse_args()
 CYPHER_RESULTS = args.cypher_results
 BASELINE_RESULTS = args.baseline_results
+GROUND_TRUTH_FILE = args.ground_truth
+USE_WITH_INSTRUCTIONS = args.use_with_instructions_as_ground_truth
 
 # Database and KG settings
 NEO4J_DATABASE_NAME = os.getenv("NEO4J_DATABASE_NAME")
 KG_NAME = None
 if NEO4J_DATABASE_NAME == "neo4j":
-    KG_NAME = "ionchannels"
+    KG_NAME = "ickg"
 elif NEO4J_DATABASE_NAME == "prokino-kg":
     KG_NAME = "prokino"
 
@@ -112,6 +125,9 @@ except json.JSONDecodeError as e:
 # Load the baseline results if available
 baseline_data = None
 original_baseline_data = None
+ground_truth_data = None
+
+# Load baseline file
 try:
     with open(baseline_results_path, 'r') as file:
         original_baseline_data = json.load(file)
@@ -159,16 +175,90 @@ try:
 except (json.JSONDecodeError, FileNotFoundError) as e:
     print(f"Failed to load baseline file: {e}. Using ablation 'with_instructions' as baseline.")
 
-# Let's check if the benchmark data is already in metrics format
+# Load ground truth file if provided
+if GROUND_TRUTH_FILE:
+    ground_truth_path = f'./results/{KG_NAME}/{GROUND_TRUTH_FILE}'
+    try:
+        with open(ground_truth_path, 'r') as file:
+            ground_truth_data = json.load(file)
+            print(f"Loaded ground truth file: {ground_truth_path}")
+    except (json.JSONDecodeError, FileNotFoundError) as e:
+        print(f"Failed to load ground truth file: {e}. Will continue without ground truth.")
+
+# If using with_instructions as ground truth, ensure we load that data
+if USE_WITH_INSTRUCTIONS and baseline_data:
+    if not original_baseline_data or not isinstance(original_baseline_data, dict) or "individual" not in original_baseline_data:
+        # Create a structure to hold the ground truth
+        if not original_baseline_data:
+            original_baseline_data = {"individual": []}
+        elif isinstance(original_baseline_data, list):
+            # Convert list to dict with individual field
+            temp_data = {"individual": []}
+            for item in original_baseline_data:
+                if "title" in item:
+                    temp_data["individual"].append(item)
+            original_baseline_data = temp_data
+        elif isinstance(original_baseline_data, dict) and "individual" not in original_baseline_data:
+            original_baseline_data["individual"] = []
+            
+    # Process the benchmark data to extract with_instructions as ground truth
+    if isinstance(benchmark_data, list):
+        for entry in benchmark_data:
+            title = entry.get("title", "Unknown")
+            if "results" in entry and "with_instructions" in entry["results"]:
+                # Find or create entry in original_baseline_data
+                found = False
+                for ind_entry in original_baseline_data["individual"]:
+                    if ind_entry.get("title") == title:
+                        ind_entry["ground_truth"] = entry["results"]["with_instructions"].get("cypher_result", [])
+                        found = True
+                        break
+                if not found:
+                    original_baseline_data["individual"].append({
+                        "title": title,
+                        "ground_truth": entry["results"]["with_instructions"].get("cypher_result", [])
+                    })
+            elif "ablation_results" in entry and "with_instructions" in entry["ablation_results"]:
+                # Find or create entry in original_baseline_data
+                found = False
+                for ind_entry in original_baseline_data["individual"]:
+                    if ind_entry.get("title") == title:
+                        ind_entry["ground_truth"] = entry["ablation_results"]["with_instructions"].get("cypher_result", [])
+                        found = True
+                        break
+                if not found:
+                    original_baseline_data["individual"].append({
+                        "title": title,
+                        "ground_truth": entry["ablation_results"]["with_instructions"].get("cypher_result", [])
+                    })
+        print("Added with_instructions results as ground truth for comparison")
+
+# Let's check if the benchmark data is already in metrics format with content
 is_metrics_format = False
 if benchmark_data and len(benchmark_data) > 0:
     sample_entry = benchmark_data[0]
-    if "metrics" in sample_entry and isinstance(sample_entry["metrics"], dict):
+    if ("metrics" in sample_entry and 
+        isinstance(sample_entry["metrics"], dict) and 
+        len(sample_entry["metrics"]) > 0):
         is_metrics_format = True
-        print("\nDetected benchmark file is already in metrics format, using it directly")
+        print("\nDetected benchmark file is already in metrics format with content, using it directly")
+    elif "metrics" in sample_entry and isinstance(sample_entry["metrics"], dict):
+        print("\nDetected empty metrics object - will need to calculate metrics")
+
+# Check for alternative data structures that may be encountered
+has_ablation_results = False
+has_results = False
+if benchmark_data and len(benchmark_data) > 0:
+    sample_entry = benchmark_data[0]
+    if "ablation_results" in sample_entry and isinstance(sample_entry["ablation_results"], dict):
+        has_ablation_results = True
+        print("\nDetected file contains ablation_results structure")
+    elif "results" in sample_entry and isinstance(sample_entry["results"], dict):
+        has_results = True
+        print("\nDetected file contains results structure")
 
 if is_metrics_format:
-    # Data is already in metrics format, use it directly
+    # Data is already in metrics format with content, use it directly
     metrics_data = benchmark_data
     print(f"Loaded {len(metrics_data)} entries with metrics")
     
@@ -178,9 +268,68 @@ if is_metrics_format:
         print(f"Sample metrics keys: {list(sample_metrics.keys())}")
         for key, value in list(sample_metrics.items())[:2]:  # Show first 2 metrics
             print(f"  {key}: {value}")
-else:
-    # Need to calculate metrics from results
-    print("\nCalculating metrics from benchmark results")
+elif has_ablation_results:
+    # Convert ablation_results structure to benchmark format
+    print("\nConverting ablation_results to benchmark format")
+    metrics_data = []
+    
+    for entry in benchmark_data:
+        title = entry.get("title", "Unknown")
+        query = entry.get("query", "")
+        ablation_results = entry.get("ablation_results", {})
+        
+        entry_metrics = {
+            "title": title,
+            "query": query,
+            "metrics": {}
+        }
+        
+        # Determine the baseline results
+        # Use 'with_instructions' as the baseline as it's the default
+        with_instructions_result = ablation_results.get("with_instructions", {})
+        baseline_results_for_query = []
+        if isinstance(with_instructions_result, dict) and "cypher_result" in with_instructions_result:
+            baseline_results_for_query = with_instructions_result.get("cypher_result", [])
+        
+        # If no baseline results were found and we have baseline_data, look there
+        if not baseline_results_for_query and baseline_data:
+            if isinstance(baseline_data, list):
+                # Look for matching title in baseline data
+                for b_entry in baseline_data:
+                    if b_entry.get("title") == title and "ablation_results" in b_entry:
+                        b_result = b_entry.get("ablation_results", {}).get("with_instructions", {})
+                        if isinstance(b_result, dict) and "cypher_result" in b_result:
+                            baseline_results_for_query = b_result.get("cypher_result", [])
+                            print(f"Found baseline results for {title} in baseline data")
+                            break
+            
+        # If still no baseline results found, check for ground truth
+        if not baseline_results_for_query:
+            if isinstance(original_baseline_data, dict) and "individual" in original_baseline_data:
+                # Look for this query in individual metrics
+                for ind_entry in original_baseline_data["individual"]:
+                    if ind_entry.get("title") == title and "ground_truth" in ind_entry:
+                        baseline_results_for_query = ind_entry.get("ground_truth", [])
+                        print(f"Using ground truth from baseline metrics for query: {title}")
+                        break
+            
+            # If still no baseline results found, log it
+            if not baseline_results_for_query:
+                print(f"No baseline results found for query: {title}. Using empty baseline.")
+        
+        # Calculate metrics for each ablation type
+        for ablation_type, ablation_result in ablation_results.items():
+            cypher_result = []
+            if isinstance(ablation_result, dict) and "cypher_result" in ablation_result:
+                cypher_result = ablation_result.get("cypher_result", [])
+            
+            metrics = calculate_precision_recall_f1(cypher_result, baseline_results_for_query)
+            entry_metrics["metrics"][ablation_type] = metrics
+        
+        metrics_data.append(entry_metrics)
+elif has_results:
+    # Data is in benchmark format already, calculate metrics
+    print("\nCalculating metrics from benchmark format results")
     metrics_data = []
     
     for entry in benchmark_data:
@@ -209,15 +358,103 @@ else:
                         print(f"Found metrics file for {title}, but it doesn't contain results. Using 'with_instructions' as baseline.")
                     break
         
-        # If no baseline was found, use "with_instructions" as the baseline
+        # If no baseline was found, try finding ground truth in the baseline metrics
         if not baseline_results_for_query:
-            with_instructions_results = results.get("with_instructions", {}).get("cypher_result", [])
-            baseline_results_for_query = with_instructions_results
-            print(f"Using 'with_instructions' as baseline for query: {title}")
+            if isinstance(original_baseline_data, dict) and "individual" in original_baseline_data:
+                # Look for this query in individual metrics
+                for ind_entry in original_baseline_data["individual"]:
+                    if ind_entry.get("title") == title and "ground_truth" in ind_entry:
+                        baseline_results_for_query = ind_entry.get("ground_truth", [])
+                        print(f"Using ground truth from baseline metrics for query: {title}")
+                        break
+                
+            # If still no baseline, use "with_instructions" as the baseline
+            if not baseline_results_for_query:
+                with_instructions_results = results.get("with_instructions", {}).get("cypher_result", [])
+                baseline_results_for_query = with_instructions_results
+                print(f"Using 'with_instructions' as baseline for query: {title}")
         
         # Calculate metrics for each ablation type
         for ablation_type, ablation_results in results.items():
             cypher_result = ablation_results.get("cypher_result", [])
+            metrics = calculate_precision_recall_f1(cypher_result, baseline_results_for_query)
+            entry_metrics["metrics"][ablation_type] = metrics
+        
+        metrics_data.append(entry_metrics)
+else:
+    # Check if we have empty metrics but ablation_results in benchmark data
+    print("\nTrying to extract metrics from the data structure")
+    metrics_data = []
+    
+    for entry in benchmark_data:
+        title = entry.get("title", "Unknown")
+        query = entry.get("query", "") or entry.get("description", "")
+        
+        # Check for different possible structures
+        if "ablation_results" in entry:
+            ablation_results = entry.get("ablation_results", {})
+        elif "results" in entry:
+            ablation_results = entry.get("results", {})
+        else:
+            ablation_results = {}
+        
+        entry_metrics = {
+            "title": title,
+            "query": query,
+            "metrics": {}
+        }
+        
+        # Determine baseline results
+        baseline_results_for_query = []
+        
+        # Check if benchmark_data has with_instructions results
+        if "with_instructions" in ablation_results:
+            with_instructions = ablation_results.get("with_instructions", {})
+            if isinstance(with_instructions, dict) and "cypher_result" in with_instructions:
+                baseline_results_for_query = with_instructions.get("cypher_result", [])
+            
+        # If we didn't find baseline results and we have baseline_data
+        if not baseline_results_for_query and baseline_data:
+            if isinstance(baseline_data, list):
+                # Look for matching title in baseline data
+                for b_entry in baseline_data:
+                    if b_entry.get("title") == title:
+                        if "ablation_results" in b_entry:
+                            b_result = b_entry.get("ablation_results", {}).get("with_instructions", {})
+                            if isinstance(b_result, dict) and "cypher_result" in b_result:
+                                baseline_results_for_query = b_result.get("cypher_result", [])
+                                print(f"Found baseline results for {title} in baseline data")
+                                break
+            elif isinstance(baseline_data, dict) and "ablation_results" in baseline_data:
+                # Handle older format where baseline might be a single entry
+                for title_key, result in baseline_data.get("ablation_results", {}).items():
+                    if title_key == title:
+                        if "with_instructions" in result:
+                            b_result = result.get("with_instructions", {})
+                            if isinstance(b_result, dict) and "cypher_result" in b_result:
+                                baseline_results_for_query = b_result.get("cypher_result", [])
+                                print(f"Found baseline results for {title} in baseline data")
+                                break
+                        
+        if not baseline_results_for_query:
+            if isinstance(original_baseline_data, dict) and "individual" in original_baseline_data:
+                # Look for this query in individual metrics
+                for ind_entry in original_baseline_data["individual"]:
+                    if ind_entry.get("title") == title and "ground_truth" in ind_entry:
+                        baseline_results_for_query = ind_entry.get("ground_truth", [])
+                        print(f"Using ground truth from baseline metrics for query: {title}")
+                        break
+            
+            # If still no baseline results found, log it
+            if not baseline_results_for_query:
+                print(f"No baseline results found for query: {title}. Using empty baseline.")
+        
+        # Calculate metrics for each ablation type
+        for ablation_type, ablation_result in ablation_results.items():
+            cypher_result = []
+            if isinstance(ablation_result, dict) and "cypher_result" in ablation_result:
+                cypher_result = ablation_result.get("cypher_result", [])
+            
             metrics = calculate_precision_recall_f1(cypher_result, baseline_results_for_query)
             entry_metrics["metrics"][ablation_type] = metrics
         

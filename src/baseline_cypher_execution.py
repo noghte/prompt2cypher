@@ -8,7 +8,7 @@ load_dotenv()
 NEO4J_DATABASE_NAME = os.getenv("NEO4J_DATABASE_NAME")
 KG_NAME = None # the folder name in kgmetadata and results should match this name
 if NEO4J_DATABASE_NAME == "neo4j":
-    KG_NAME = "ionchannels"
+    KG_NAME = "ickg"
 elif NEO4J_DATABASE_NAME == "prokino-kg":
     KG_NAME = "prokino"
 NEO4J_URI = os.getenv("NEO4J_URI")

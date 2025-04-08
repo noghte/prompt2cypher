@@ -10,7 +10,8 @@ from neo4j.graph import Node
 # Load environment variables
 load_dotenv()
 
-DEFAULT_ABLATION_FILE = "ablation-gpt-4o-mini-2025_04_01-17_02_40.json"
+# DEFAULT_ABLATION_FILE = "ablation-gpt-4o-mini-2025_04_01-17_02_40.json" #ProKinO
+DEFAULT_ABLATION_FILE = "ablation-gpt-4o-mini-2025_04_08-13_49_22.json" #ICKG
 
 parser = argparse.ArgumentParser(description="Process ablation study results")
 parser.add_argument("--ablation_file", 
@@ -28,7 +29,7 @@ NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD")
 NEO4J_DATABASE_NAME = os.getenv("NEO4J_DATABASE_NAME")
 KG_NAME = None
 if NEO4J_DATABASE_NAME == "neo4j":
-    KG_NAME = "ionchannels"
+    KG_NAME = "ickg"
 elif NEO4J_DATABASE_NAME == "prokino-kg":
     KG_NAME = "prokino"
 
@@ -71,21 +72,34 @@ for item in data:
     title = item.get("title", "Unknown")
     print(f"Processing query: {title}")
     
+    # Check if the 'metrics' field is empty and remove it if it is
+    if "metrics" in item and (not item["metrics"] or not isinstance(item["metrics"], dict) or len(item["metrics"]) == 0):
+        del item["metrics"]
+    
     ablation_results = item.get("ablation_results", {})
     
     # For each ablation type, execute the Cypher query
     for ablation_type, cypher_query in ablation_results.items():
         print(f"  Running {ablation_type}...")
         try:
-            cypher_result = run_cypher_query(cypher_query)
+            # Handle both string queries and dict objects with cypher_query field
+            query_to_run = cypher_query
+            if isinstance(cypher_query, dict) and "cypher_query" in cypher_query:
+                query_to_run = cypher_query["cypher_query"]
+            
+            cypher_result = run_cypher_query(query_to_run)
             ablation_results[ablation_type] = {
-                "cypher_query": cypher_query,
+                "cypher_query": query_to_run,
                 "cypher_result": cypher_result
             }
         except Exception as e:
             print(f"  Error running query for {ablation_type}: {e}")
+            query_str = cypher_query
+            if isinstance(cypher_query, dict) and "cypher_query" in cypher_query:
+                query_str = cypher_query["cypher_query"]
+                
             ablation_results[ablation_type] = {
-                "cypher_query": cypher_query,
+                "cypher_query": query_str,
                 "cypher_result": [],
                 "error": str(e)
             }
@@ -119,10 +133,18 @@ def convert_to_benchmark_format(ablation_data):
         
         # Add each ablation type as a separate version
         for ablation_type, result in ablation_results.items():
-            benchmark_entry["results"][ablation_type] = {
-                "cypher_query": result.get("cypher_query", ""),
-                "cypher_result": result.get("cypher_result", [])
-            }
+            if isinstance(result, dict) and "cypher_query" in result:
+                # Already in the right format with cypher_query and cypher_result
+                benchmark_entry["results"][ablation_type] = {
+                    "cypher_query": result.get("cypher_query", ""),
+                    "cypher_result": result.get("cypher_result", [])
+                }
+            else:
+                # Handle case where result is just a string (cypher query without results yet)
+                benchmark_entry["results"][ablation_type] = {
+                    "cypher_query": result if isinstance(result, str) else "",
+                    "cypher_result": []
+                }
         
         benchmark_format.append(benchmark_entry)
     
@@ -136,7 +158,3 @@ with open(benchmark_format_path, 'w') as file:
     json.dump(benchmark_format_data, file, indent=4)
 
 print(f"Benchmark format saved as {benchmark_format_path}")
-
-run_script = input("Do you want to run the calculate_scores_precision_recall script on the benchmark format? (Y/N): ").strip().lower()
-if run_script == 'y':
-    subprocess.run(["python", "./src/calculate_scores_precision_recall.py", "--cypher_results", benchmark_format_path.split("/")[-1]])
