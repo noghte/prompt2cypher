@@ -1,0 +1,7 @@
+Knowledge Graph,Query Complexity,Approach,Precision,Recall,F1 Score,Jaccard
+ICKG,1-hop (simple),P2C,0.9258,0.9248,0.8993,0.8797
+ICKG,2-hop (medium),P2C,0.8907,0.7936,0.7943,0.7357
+ICKG,3-hop (complex),P2C,0.8514,0.8032,0.7719,0.6632
+ProKinO,1-hop (simple),P2C,0.805,0.7509,0.7682,0.7508
+ProKinO,2-hop (medium),P2C,0.8,0.8,0.8,0.8
+ProKinO,3-hop (complex),P2C,0.6,0.4863,0.5193,0.4863
